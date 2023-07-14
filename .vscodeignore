@@ -1,0 +1,9 @@
+.vscode
+.gitignore
+.eslint*
+*.vsix
+scripts
+node_modules
+pnpm-lock.yaml
+src
+examples

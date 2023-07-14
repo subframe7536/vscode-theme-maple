@@ -1,0 +1,121 @@
+/* 1. Example -------------------------------- */
+
+@import 'mixins';
+
+$foreground-color: #333;
+$background-color: hsl(30, 100%, 96%);
+
+html {
+  font-family: 'Lucida Grande', Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $foreground-color;
+  background-color: $background-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($link-color, 5%);
+  }
+}
+
+.avatar {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+:is(body, body .print) {
+  --font-ui-smaller: 13px;
+  --font-ui-small: 14px;
+  --font-ui-medium: 16px;
+  --line-height-normal: 2.1;
+  --background-modifier-border-focus: var(--accent-inactive);
+  --color-red-rgb: 228, 52, 52 !important;
+  --color-red: rgba(228, 52, 52, var(--color-opacity)) !important;
+  --color-green-rgb: 81, 188, 0 !important;
+  --color-green: rgba(81, 188, 0, var(--color-opacity)) !important;
+  --color-yellow: rgba(245, 200, 145, var(--color-opacity)) !important;
+  --color-orange: rgba(228, 152, 12, var(--color-opacity)) !important;
+  --color-orange-rgb: 228, 152, 12;
+  --color-blue: rgba(18, 158, 222, var(--color-opacity)) !important;
+  --color-blue-rgb: 18, 158, 222;
+  --color-cyan: rgba(99, 201, 201, var(--color-opacity)) !important;
+  --color-purple: rgba(144, 132, 233, var(--color-opacity)) !important;
+  --background-modifier-error: rgba(var(--color-red-rgb), 0.8);
+  --background-modifier-cover: hsla(var(--background-secondary-hsl), 0.6);
+  --interactive-accent: var(--accent-active);
+  --radius-xl: var(--size-4-3);
+
+  --animation: var(--setting-animation-time, 200ms) var(--anim-motion-smooth);
+  --animation-slow: calc(var(--setting-animation-time, 200ms) * 2) var(--anim-motion-smooth);
+  --animation-delay: calc(4 * var(--setting-animation-time, 150ms));
+  --bg-opacity: 1;
+}
+
+/* 2. Tests -------------------------------- */
+
+@import 'variables';
+
+.variables {
+  --test: 2;
+  $variable: 10px;
+  $another-variable: $variable;
+
+  width: $variable + $another-variable;
+  width: $variable * 2;
+  width: var(--test);
+}
+
+.functions {
+  color: hue(orange);
+  color: lighten(@color, 10%);
+  color: mix(@color, #000, 25%);
+  width: max(5, 10);
+  width: unit(5, px);
+}
+
+.nested {
+  .class {}
+
+  &::before {}
+
+  &+& {}
+
+  .class & {}
+
+  @media screen {}
+}
+
+@mixin size($var) {}
+
+;
+
+.use-mixin {
+  @include size(10px);
+}
+
+.class {}
+
+.extended {
+  @extend .class;
+  background: blue;
+}
+
+:is(body, .div) {
+  background: blue;
+}
+
+.class {
+  &__nested {
+    background: blue;
+  }
+
+  &-nested {
+    background: blue;
+  }
+}

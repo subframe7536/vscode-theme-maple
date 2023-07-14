@@ -1,0 +1,63 @@
+{
+  "publisher": "subframe7536",
+  "name": "theme-maple",
+  "displayName": "Maple Theme",
+  "version": "0.1.0",
+  "description": "Maple theme for VS Code",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subframe7536/vscode-theme-maple"
+  },
+  "bugs": {
+    "url": "https://github.com/subframe7536/vscode-theme-maple/issues"
+  },
+  "keywords": [
+    "theme",
+    "maple",
+    "light",
+    "dark"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "icon": "icon.png",
+  "files": [
+    "themes"
+  ],
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Maple Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/maple-dark-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "esno src/index.ts",
+    "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
+    "vscode:prepublish": "pnpm run build",
+    "update:key": "esno scripts/update-keys.ts",
+    "lint": "eslint . --cache --fix",
+    "preview": "vsce package --no-dependencies",
+    "release": "bumpp --all && vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "@subframe7536/eslint-config": "^0.1.12",
+    "@types/node": "^20.4.1",
+    "@types/tinycolor2": "^1.4.3",
+    "@vscode/vsce": "^2.19.0",
+    "eslint": "^8.44.0",
+    "esno": "^0.16.3",
+    "nodemon": "^3.0.1",
+    "object-standard-path": "^0.3.0",
+    "tinycolor2": "^1.6.0",
+    "typescript": "^5.1.6"
+  },
+  "preview": true
+}
