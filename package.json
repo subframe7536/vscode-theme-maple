@@ -22,7 +22,7 @@
   "categories": [
     "Themes"
   ],
-  "icon": "icon.png",
+  "icon": "./resources/icon.png",
   "files": [
     "themes"
   ],
@@ -42,7 +42,7 @@
     "build": "esno src/index.ts",
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
     "vscode:prepublish": "pnpm run build",
-    "update:key": "esno scripts/update-keys.ts",
+    "update:key": "esno resources/update-keys.ts",
     "lint": "eslint . --cache --fix",
     "preview": "vsce package --no-dependencies",
     "release": "bumpp --all && vsce publish --no-dependencies"
