@@ -5,6 +5,7 @@ export const baseColor = {
   red: parseColor('hsl(0, 100%, 76%)'),
   orange: parseColor('hsl(20, 80%, 72%)'),
   yellow: parseColor('hsl(36, 78%, 78%)'),
+  yellowLight: parseColor('hsl(28, 32%, 84%)'),
   greenLight: parseColor('hsl(76, 72%, 70%)'),
   green: parseColor('hsl(130, 35%, 65%)'),
   cyan: parseColor('hsl(180, 40%, 78%)'),
@@ -12,7 +13,6 @@ export const baseColor = {
   blue: parseColor('hsl(210, 100%, 72%)'),
   purple: parseColor('hsl(247, 100%, 82%)'),
   pink: parseColor('hsl(328, 70%, 78%)'),
-  pinkLight: parseColor('hsl(356, 36%, 86%)'),
 }
 
 function getColors({
@@ -27,7 +27,7 @@ function getColors({
   purple,
   red,
   yellow,
-  pinkLight,
+  yellowLight,
 }: typeof baseColor) {
   return {
     htmlTag: red,
@@ -40,8 +40,8 @@ function getColors({
     operator: sky,
     function: blue,
     property: {
-      normal: pinkLight,
-      declaration: pinkLight,
+      normal: yellowLight,
+      declaration: yellowLight,
       defaultLib: greenLight,
     },
     parameter: yellow,

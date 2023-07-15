@@ -187,8 +187,8 @@
       "foreground": "#f3d09b",
       "underline": true
     },
-    "property.declaration": "#e8ced0",
-    "property.readonly": "#e8ced0",
+    "property.declaration": "#e3d5c9",
+    "property.readonly": "#e3d5c9",
     "property.defaultLibrary": "#ccea7b",
     "interface": "#f1a57e",
     "interface.defaultLibrary": {
@@ -369,7 +369,7 @@
     {
       "scope": "support",
       "settings": {
-        "foreground": "#e8ced0"
+        "foreground": "#e3d5c9"
       }
     },
     {
@@ -383,7 +383,7 @@
         "variable.other.property"
       ],
       "settings": {
-        "foreground": "#e8ced0"
+        "foreground": "#e3d5c9"
       }
     },
     {
@@ -405,7 +405,7 @@
         "source.css support.type.property-name"
       ],
       "settings": {
-        "foreground": "#e8ced0"
+        "foreground": "#e3d5c9"
       }
     },
     {
@@ -923,6 +923,14 @@
       ],
       "settings": {
         "foreground": "#f3d09b"
+      }
+    },
+    {
+      "scope": [
+        "meta.jsx.children"
+      ],
+      "settings": {
+        "foreground": "#cbd5e1"
       }
     }
   ]
