@@ -55,7 +55,6 @@ const colors = {
   },
 }
 
-// reference from https://glitchbone.github.io/vscode-base16-term/#/material-darker
 const terminal: UI = {
   terminalCursor: {
     background: colors.background,
@@ -64,22 +63,22 @@ const terminal: UI = {
   terminal: {
     background: colors.background,
     foreground: colors.foreground,
-    ansiBlack: '#212121',
-    ansiBlue: '#82AAFF',
-    ansiBrightBlack: '#4A4A4A',
-    ansiBrightBlue: '#82AAFF',
-    ansiBrightCyan: '#89DDFF',
-    ansiBrightGreen: '#C3E88D',
-    ansiBrightMagenta: '#C792EA',
-    ansiBrightRed: '#F07178',
-    ansiBrightWhite: '#FFFFFF',
-    ansiBrightYellow: '#FFCB6B',
-    ansiCyan: '#89DDFF',
-    ansiGreen: '#C3E88D',
-    ansiMagenta: '#C792EA',
-    ansiRed: '#F07178',
-    ansiWhite: '#EEFFFF',
-    ansiYellow: '#FFCB6B',
+    ansiBrightBlack: blue[900],
+    ansiBrightBlue: baseColor.blue,
+    ansiBrightCyan: '#94dddd',
+    ansiBrightGreen: baseColor.green,
+    ansiBrightMagenta: baseColor.purple,
+    ansiBrightRed: baseColor.red,
+    ansiBrightWhite: blue[50],
+    ansiBrightYellow: baseColor.yellow,
+    ansiBlack: blue[950],
+    ansiBlue: baseColor.blue,
+    ansiCyan: '#94dddd',
+    ansiGreen: baseColor.green,
+    ansiMagenta: baseColor.purple,
+    ansiRed: baseColor.red,
+    ansiWhite: blue[50],
+    ansiYellow: baseColor.yellow,
   },
 }
 
