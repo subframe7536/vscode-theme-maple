@@ -496,6 +496,7 @@ export function getTokenColors() {
         'keyword.control.directive',
         'keyword.control.import',
         'keyword.control.from',
+        'keyword.control.export',
         'keyword.package',
         'keyword.other.package',
         'keyword.import',
