@@ -1,6 +1,7 @@
 /* eslint-disable quote-props */
 import { type Path, pathGet } from 'object-standard-path'
 import { parseColor } from '../util'
+import { UIColors } from '../ui/config'
 import { colors } from './color'
 
 const fontStyles = ['italic', 'bold', 'underline', 'strikethrough'] as const
@@ -567,6 +568,12 @@ export function getTokenColors() {
         'entity.name.namespace',
       ],
       foreground: maple('java.import'),
+    },
+    {
+      scope: [
+        'meta.jsx.children',
+      ],
+      foreground: UIColors.foreground,
     },
   ]
   return {

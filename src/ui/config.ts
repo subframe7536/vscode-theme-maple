@@ -32,7 +32,7 @@ const gray = {
   950: '#0f0f0f',
 }
 
-const colors = {
+export const UIColors = {
   foreground: blue[300],
   background: '#171718',
   backgroundEditor: '#1e1e1f',
@@ -57,12 +57,12 @@ const colors = {
 
 const terminal: UI = {
   terminalCursor: {
-    background: colors.background,
-    foreground: colors.foreground,
+    background: UIColors.background,
+    foreground: UIColors.foreground,
   },
   terminal: {
-    background: colors.background,
-    foreground: colors.foreground,
+    background: UIColors.background,
+    foreground: UIColors.foreground,
     ansiBrightBlack: blue[900],
     ansiBrightBlue: baseColor.blue,
     ansiBrightCyan: '#94dddd',
@@ -83,26 +83,26 @@ const terminal: UI = {
 }
 
 const base: UI = {
-  focusBorder: colors.borderActive,
-  foreground: colors.foreground,
+  focusBorder: UIColors.borderActive,
+  foreground: UIColors.foreground,
   // selection in workbench
   selection: {
     background: parseColor(blue[600], 0.8),
   },
   widget: {
-    border: colors.borderNormal,
+    border: UIColors.borderNormal,
     shadow: '#000000aa',
   },
   // draggable widge split line
   sash: {
-    hoverBorder: colors.primary,
+    hoverBorder: UIColors.primary,
   },
 }
 
 const editor: UI = {
   editor: {
-    foreground: colors.foreground,
-    background: colors.backgroundEditor,
+    foreground: UIColors.foreground,
+    background: UIColors.backgroundEditor,
 
     // selection
     selectionBackground: blue[700],
@@ -114,33 +114,33 @@ const editor: UI = {
     wordHighlightStrongBackground: parseColor(blue[600], 0.6),
     wordHighlightTextBorder: parseColor(blue[600], 0.6),
     // document search
-    findMatchBackground: parseColor(colors.secondary, 0.3),
-    findMatchBorder: colors.borderActive,
-    findMatchHighlightBackground: parseColor(colors.secondary, 0.2),
-    findRangeHighlightBackground: colors.range.background,
-    findRangeHighlightBorder: colors.range.border,
+    findMatchBackground: parseColor(UIColors.secondary, 0.3),
+    findMatchBorder: UIColors.borderActive,
+    findMatchHighlightBackground: parseColor(UIColors.secondary, 0.2),
+    findRangeHighlightBackground: UIColors.range.background,
+    findRangeHighlightBorder: UIColors.range.border,
     // hover panel matched text
     hoverHighlightBackground: blue[700],
     // current line
     lineHighlightBackground: parseColor(blue[600], 0.2),
-    lineHighlightBorder: parseColor(colors.borderNormal, 0.1),
+    lineHighlightBorder: parseColor(UIColors.borderNormal, 0.1),
     // range highlight
-    rangeHighlightBackground: colors.range.background,
-    rangeHighlightBorder: colors.range.border,
+    rangeHighlightBackground: UIColors.range.background,
+    rangeHighlightBorder: UIColors.range.border,
   },
   editorLink: {
-    activeForeground: colors.primary,
+    activeForeground: UIColors.primary,
   },
   editorGroupHeader: {
-    tabsBackground: colors.background,
-    tabsBorder: colors.backgroundEditorAlt,
+    tabsBackground: UIColors.background,
+    tabsBorder: UIColors.backgroundEditorAlt,
   },
   editorLineNumber: {
     foreground: brighten(gray[600], 5),
     activeForeground: blue[300],
   },
   editorCursor: {
-    foreground: brighten(colors.primary, 8),
+    foreground: brighten(UIColors.primary, 8),
   },
   editorIndentGuide: {
     activeBackground: parseColor(gray[50], 0.3),
@@ -151,136 +151,136 @@ const editor: UI = {
     background: parseColor('hsl(211, 36%, 36%)'),
   },
   peekView: {
-    border: colors.borderNormal,
+    border: UIColors.borderNormal,
   },
   peekViewEditor: {
-    background: colors.background,
-    matchHighlightBackground: parseColor(colors.secondary, 0.2),
-    matchHighlightBorder: colors.secondary,
+    background: UIColors.background,
+    matchHighlightBackground: parseColor(UIColors.secondary, 0.2),
+    matchHighlightBorder: UIColors.secondary,
   },
   peekViewResult: {
-    background: brighten(colors.background, 4),
-    matchHighlightBackground: parseColor(colors.secondary, 0.2),
-    selectionBackground: parseColor(colors.primary, 0.2),
+    background: brighten(UIColors.background, 4),
+    matchHighlightBackground: parseColor(UIColors.secondary, 0.2),
+    selectionBackground: parseColor(UIColors.primary, 0.2),
   },
   peekViewTitle: {
     background: blue[700],
   },
   editorError: {
-    foreground: colors.red,
+    foreground: UIColors.red,
   },
   editorWarning: {
-    foreground: colors.yellow,
+    foreground: UIColors.yellow,
   },
   editorInfo: {
-    foreground: colors.blue,
+    foreground: UIColors.blue,
   },
   editorGutter: {
-    addedBackground: parseColor(colors.green, 0.8),
-    deletedBackground: parseColor(colors.red, 0.8),
-    modifiedBackground: parseColor(colors.blue, 0.8),
+    addedBackground: parseColor(UIColors.green, 0.8),
+    deletedBackground: parseColor(UIColors.red, 0.8),
+    modifiedBackground: parseColor(UIColors.blue, 0.8),
   },
   diffEditor: {
-    insertedTextBackground: parseColor(colors.green, 0.3),
-    insertedLineBackground: parseColor(colors.green, 0.1),
-    removedTextBackground: parseColor(colors.red, 0.3),
-    removedLineBackground: parseColor(colors.red, 0.1),
+    insertedTextBackground: parseColor(UIColors.green, 0.3),
+    insertedLineBackground: parseColor(UIColors.green, 0.1),
+    removedTextBackground: parseColor(UIColors.red, 0.3),
+    removedLineBackground: parseColor(UIColors.red, 0.1),
   },
 }
 
 const views: UI = {
   activityBar: {
-    background: colors.background,
-    border: colors.borderNormal,
+    background: UIColors.background,
+    border: UIColors.borderNormal,
     foreground: blue[300],
-    activeBorder: colors.primary,
+    activeBorder: UIColors.primary,
   },
   activityBarBadge: {
     foreground: blue[800],
-    background: colors.secondary,
+    background: UIColors.secondary,
   },
   sideBar: {
-    foreground: colors.foreground,
-    background: colors.background,
-    border: colors.borderNormal,
+    foreground: UIColors.foreground,
+    background: UIColors.background,
+    border: UIColors.borderNormal,
   },
   sideBarSectionHeader: {
-    background: colors.background,
-    border: colors.borderNormal,
+    background: UIColors.background,
+    border: UIColors.borderNormal,
   },
   gitDecoration: {
-    addedResourceForeground: colors.green,
-    untrackedResourceForeground: colors.blue,
-    conflictingResourceForeground: colors.blue,
-    deletedResourceForeground: colors.red,
-    modifiedResourceForeground: colors.yellow,
+    addedResourceForeground: UIColors.green,
+    untrackedResourceForeground: UIColors.blue,
+    conflictingResourceForeground: UIColors.blue,
+    deletedResourceForeground: UIColors.red,
+    modifiedResourceForeground: UIColors.yellow,
   },
   minimap: {
-    background: parseColor(colors.background, 0.8),
-    findMatchHighlight: parseColor(colors.secondary, 0.8),
-    selectionHighlight: parseColor(colors.secondary, 0.5),
-    errorHighlight: parseColor(colors.red, 0.6),
+    background: parseColor(UIColors.background, 0.8),
+    findMatchHighlight: parseColor(UIColors.secondary, 0.8),
+    selectionHighlight: parseColor(UIColors.secondary, 0.5),
+    errorHighlight: parseColor(UIColors.red, 0.6),
   },
   titleBar: {
-    activeBackground: colors.background,
-    activeForeground: colors.foreground,
-    border: colors.borderNormal,
+    activeBackground: UIColors.background,
+    activeForeground: UIColors.foreground,
+    border: UIColors.borderNormal,
   },
   statusBar: {
-    background: brighten(colors.background, 6),
-    foreground: parseColor(colors.foreground, 0.8),
-    debuggingForeground: colors.background,
-    debuggingBackground: colors.secondary,
-    debuggingBorder: colors.borderNormal,
-    noFolderForeground: parseColor(colors.foreground, 0.3),
+    background: brighten(UIColors.background, 6),
+    foreground: parseColor(UIColors.foreground, 0.8),
+    debuggingForeground: UIColors.background,
+    debuggingBackground: UIColors.secondary,
+    debuggingBorder: UIColors.borderNormal,
+    noFolderForeground: parseColor(UIColors.foreground, 0.3),
     noFolderBackground: gray[900],
   },
   statusBarItem: {
-    prominentBackground: colors.secondary,
-    prominentForeground: colors.background,
-    remoteBackground: colors.secondary,
-    remoteForeground: colors.background,
-    errorBackground: colors.red,
-    errorForeground: colors.background,
-    warningBackground: colors.yellow,
-    warningForeground: colors.background,
+    prominentBackground: UIColors.secondary,
+    prominentForeground: UIColors.background,
+    remoteBackground: UIColors.secondary,
+    remoteForeground: UIColors.background,
+    errorBackground: UIColors.red,
+    errorForeground: UIColors.background,
+    warningBackground: UIColors.yellow,
+    warningForeground: UIColors.background,
   },
 }
 
 const element: UI = {
   textCodeBlock: {
-    background: colors.background,
+    background: UIColors.background,
   },
   textLink: {
-    foreground: brighten(colors.primary, 12),
-    activeForeground: brighten(colors.primary, 20),
+    foreground: brighten(UIColors.primary, 12),
+    activeForeground: brighten(UIColors.primary, 20),
   },
   textBlockQuote: {
-    border: colors.borderNormal,
+    border: UIColors.borderNormal,
   },
   toolbar: {
-    hoverBackground: colors.background,
+    hoverBackground: UIColors.background,
   },
   button: {
-    background: parseColor(colors.primary, 0.8),
+    background: parseColor(UIColors.primary, 0.8),
     foreground: blue[200],
-    hoverBackground: colors.primary,
+    hoverBackground: UIColors.primary,
   },
   input: {
-    border: colors.borderNormal,
-    background: colors.backgroundEditor,
+    border: UIColors.borderNormal,
+    background: UIColors.backgroundEditor,
     placeholderForeground: gray[500],
   },
   inputOption: {
-    activeBackground: colors.hover.background,
-    activeForeground: colors.hover.foreground,
-    activeBorder: colors.borderActive,
+    activeBackground: UIColors.hover.background,
+    activeForeground: UIColors.hover.foreground,
+    activeBorder: UIColors.borderActive,
   },
   dropdown: {
-    background: colors.backgroundEditor,
-    foreground: colors.foreground,
-    border: colors.borderNormal,
-    listBackground: colors.backgroundEditor,
+    background: UIColors.backgroundEditor,
+    foreground: UIColors.foreground,
+    border: UIColors.borderNormal,
+    listBackground: UIColors.backgroundEditor,
   },
   scrollbar: {
     shadow: gray[800],
@@ -291,11 +291,11 @@ const element: UI = {
     activeBackground: blue[600],
   },
   badge: {
-    background: colors.secondary,
-    foreground: colors.background,
+    background: UIColors.secondary,
+    foreground: UIColors.background,
   },
   progressBar: {
-    background: colors.primary,
+    background: UIColors.primary,
   },
   list: {
     activeSelectionBackground: blue[700],
@@ -303,19 +303,19 @@ const element: UI = {
     focusBackground: parseColor(blue[800], 0.8), // include notification
     focusForeground: blue[200],
     focusOutline: parseColor(blue[600], 0.8),
-    focusHighlightForeground: colors.secondary,
+    focusHighlightForeground: UIColors.secondary,
     focusAndSelectionOutline: blue[800],
-    highlightForeground: colors.secondary,
-    hoverBackground: colors.hover.background,
+    highlightForeground: UIColors.secondary,
+    hoverBackground: UIColors.hover.background,
     inactiveFocusOutline: parseColor(blue[600], 0.7),
     inactiveSelectionBackground: parseColor(blue[700], 0.6),
-    filterMatchBackground: parseColor(colors.secondary, 0.8),
-    filterMatchBorder: colors.secondary,
+    filterMatchBackground: parseColor(UIColors.secondary, 0.8),
+    filterMatchBorder: UIColors.secondary,
   },
   menu: {
     foreground: blue[300],
     selectionBackground: blue[700],
-    border: colors.borderNormal,
+    border: UIColors.borderNormal,
     separatorBackground: gray[700],
     selectionBorder: parseColor(blue[600], 0.8),
   },
@@ -323,26 +323,26 @@ const element: UI = {
     selectionBackground: blue[700],
   },
   tab: {
-    activeBackground: colors.backgroundEditorAlt,
-    activeBorder: colors.backgroundEditorAlt,
-    activeBorderTop: colors.primary,
-    hoverBackground: parseColor(colors.backgroundEditorAlt, 0.7),
-    inactiveBackground: colors.background,
+    activeBackground: UIColors.backgroundEditorAlt,
+    activeBorder: UIColors.backgroundEditorAlt,
+    activeBorderTop: UIColors.primary,
+    hoverBackground: parseColor(UIColors.backgroundEditorAlt, 0.7),
+    inactiveBackground: UIColors.background,
     unfocusedActiveBackground: parseColor(blue[500], 0.2),
   },
   breadcrumb: {
     foreground: blue[400],
-    background: colors.backgroundEditor,
+    background: UIColors.backgroundEditor,
   },
   breadcrumbPicker: {
-    background: colors.backgroundEditor,
+    background: UIColors.backgroundEditor,
   },
   // quick picker colors
   pickerGroup: {
-    foreground: colors.secondary,
+    foreground: UIColors.secondary,
   },
   quickInput: {
-    background: colors.backgroundEditor,
+    background: UIColors.backgroundEditor,
   },
   quickInputList: {
     focusBackground: blue[700],
@@ -350,20 +350,20 @@ const element: UI = {
   commandCenter: {
     foreground: blue[300],
     activeBackground: blue[700],
-    activeBorder: colors.borderActive,
-    border: colors.borderNormal,
+    activeBorder: UIColors.borderActive,
+    border: UIColors.borderNormal,
   },
   keybindingLabel: {
     foreground: blue[300],
     background: parseColor(blue[700], 0.7),
-    border: colors.borderActive,
+    border: UIColors.borderActive,
   },
   notifications: {
-    background: colors.background,
+    background: UIColors.background,
   },
   debugToolBar: {
-    background: colors.backgroundEditor,
-    border: colors.borderNormal,
+    background: UIColors.backgroundEditor,
+    border: UIColors.borderNormal,
   },
 }
 

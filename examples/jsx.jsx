@@ -14,6 +14,7 @@ function $initHighlight(block, cls) {
   return (
     <div>
       <web-component test=''>{block}</web-component>
+      <div>test</div>
     </div>
   )
 }
