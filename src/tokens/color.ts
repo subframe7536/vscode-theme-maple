@@ -11,8 +11,8 @@ export const baseColor = {
   sky: parseColor('hsl(212, 85%, 87%)'),
   blue: parseColor('hsl(210, 100%, 72%)'),
   purple: parseColor('hsl(247, 100%, 82%)'),
-  pink: parseColor('hsl(328, 60%, 75%)'),
-  pinkLight: parseColor('hsl(356, 30%, 86%)'),
+  pink: parseColor('hsl(328, 70%, 78%)'),
+  pinkLight: parseColor('hsl(356, 36%, 86%)'),
 }
 
 function getColors({

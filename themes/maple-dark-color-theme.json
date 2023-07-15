@@ -187,22 +187,22 @@
       "foreground": "#f3d09b",
       "underline": true
     },
-    "property.declaration": "#e6d1d2",
-    "property.readonly": "#e6d1d2",
+    "property.declaration": "#e8ced0",
+    "property.readonly": "#e8ced0",
     "property.defaultLibrary": "#ccea7b",
     "interface": "#f1a57e",
     "interface.defaultLibrary": {
       "foreground": "#f1a57e",
       "bold": true
     },
-    "variable.defaultLibrary": "#e699c2",
+    "variable.defaultLibrary": "#eea0ca",
     "type": "#f1a57e",
     "type.defaultLibrary": "#ccea7b",
     "function": "#70b8ff",
     "function.defaultLibrary": {
       "bold": true
     },
-    "namespace": "#e699c2",
+    "namespace": "#eea0ca",
     "class": {
       "foreground": "#b0dddd",
       "italic": false
@@ -211,7 +211,7 @@
       "bold": true
     },
     "selfParameter": {
-      "foreground": "#e699c2",
+      "foreground": "#eea0ca",
       "italic": true,
       "underline": false
     }
@@ -369,7 +369,7 @@
     {
       "scope": "support",
       "settings": {
-        "foreground": "#e6d1d2"
+        "foreground": "#e8ced0"
       }
     },
     {
@@ -383,7 +383,7 @@
         "variable.other.property"
       ],
       "settings": {
-        "foreground": "#e6d1d2"
+        "foreground": "#e8ced0"
       }
     },
     {
@@ -405,7 +405,7 @@
         "source.css support.type.property-name"
       ],
       "settings": {
-        "foreground": "#e6d1d2"
+        "foreground": "#e8ced0"
       }
     },
     {
@@ -469,7 +469,7 @@
     {
       "scope": "namespace",
       "settings": {
-        "foreground": "#e699c2"
+        "foreground": "#eea0ca"
       }
     },
     {
@@ -836,6 +836,7 @@
         "keyword.control.directive",
         "keyword.control.import",
         "keyword.control.from",
+        "keyword.control.export",
         "keyword.package",
         "keyword.other.package",
         "keyword.import",
@@ -851,13 +852,13 @@
         "keyword.other.using"
       ],
       "settings": {
-        "foreground": "#e699c2"
+        "foreground": "#eea0ca"
       }
     },
     {
       "scope": "keyword.control.ternary.java",
       "settings": {
-        "foreground": "#e699c2",
+        "foreground": "#eea0ca",
         "fontStyle": ""
       }
     },
