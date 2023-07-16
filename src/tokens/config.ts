@@ -197,13 +197,6 @@ export function getTokenColors() {
     },
     {
       scope: [
-        'meta.type.parameters support.type.builtin',
-        'meta.type.annotation support.type.builtin',
-      ],
-      fontStyle: font('bold'),
-    },
-    {
-      scope: [
         'entity.name.type.parameter',
       ],
       foreground: maple('type.parameter'),

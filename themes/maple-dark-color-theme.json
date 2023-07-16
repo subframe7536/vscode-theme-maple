@@ -431,15 +431,6 @@
     },
     {
       "scope": [
-        "meta.type.parameters support.type.builtin",
-        "meta.type.annotation support.type.builtin"
-      ],
-      "settings": {
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": [
         "entity.name.type.parameter"
       ],
       "settings": {

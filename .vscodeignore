@@ -2,7 +2,7 @@
 .gitignore
 .eslint*
 *.vsix
-scripts
+resources/update-keys.ts
 node_modules
 pnpm-lock.yaml
 src
