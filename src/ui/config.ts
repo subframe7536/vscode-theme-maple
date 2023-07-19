@@ -154,7 +154,7 @@ const editor: UI = {
     border: UIColors.borderNormal,
   },
   peekViewEditor: {
-    background: UIColors.background,
+    background: parseColor(UIColors.backgroundEditorAlt, 0.5),
     matchHighlightBackground: parseColor(UIColors.secondary, 0.2),
     matchHighlightBorder: UIColors.secondary,
   },
