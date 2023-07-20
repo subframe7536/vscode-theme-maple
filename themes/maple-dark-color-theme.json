@@ -27,7 +27,7 @@
     "gitDecoration.modifiedResourceForeground": "#f3d09b",
     "minimap.background": "#171718cc",
     "minimap.findMatchHighlight": "#8dbe74cc",
-    "minimap.selectionHighlight": "#8dbe7480",
+    "minimap.selectionHighlight": "#6285a780",
     "minimap.errorHighlight": "#ff858599",
     "titleBar.activeBackground": "#171718",
     "titleBar.activeForeground": "#cbd5e1",

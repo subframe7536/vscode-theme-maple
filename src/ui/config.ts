@@ -218,7 +218,7 @@ const views: UI = {
   minimap: {
     background: parseColor(UIColors.background, 0.8),
     findMatchHighlight: parseColor(UIColors.secondary, 0.8),
-    selectionHighlight: parseColor(UIColors.secondary, 0.5),
+    selectionHighlight: parseColor(UIColors.primary, 0.5),
     errorHighlight: parseColor(UIColors.red, 0.6),
   },
   titleBar: {
