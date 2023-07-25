@@ -603,6 +603,7 @@ export function getTokenColors() {
       'class.defaultLibrary': {
         bold: true,
       },
+      'class.typeHint': maple('type.primitive'),
       selfParameter: {
         foreground: maple('keywordAlt'),
         italic: true,
