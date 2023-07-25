@@ -847,6 +847,12 @@
       }
     },
     {
+      "scope": "keyword.control.import.python",
+      "settings": {
+        "foreground": "#aea3ff"
+      }
+    },
+    {
       "scope": "keyword.control.ternary.java",
       "settings": {
         "foreground": "#eea0ca",

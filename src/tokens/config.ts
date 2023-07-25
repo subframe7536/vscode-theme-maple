@@ -508,6 +508,10 @@ export function getTokenColors() {
       foreground: maple('keywordAlt'),
     },
     {
+      scope: 'keyword.control.import.python',
+      foreground: maple('keyword'),
+    },
+    {
       scope: 'keyword.control.ternary.java',
       foreground: maple('keywordAlt'),
       fontStyle: font(),
