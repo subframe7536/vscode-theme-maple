@@ -152,6 +152,7 @@ export function getTokenColors() {
       scope: [
         'property',
         'meta.property-name',
+        'meta.attribute',
         'meta.object-literal.key',
         'attribute.name',
         'entity.other.attribute-name',
@@ -281,9 +282,11 @@ export function getTokenColors() {
     {
       scope: [
         'constant.numeric',
+        'constant.numeric.hex storage.type.number',
         'number',
       ],
       foreground: maple('number'),
+      fontStyle: font(),
     },
     {
       scope: [
@@ -481,6 +484,12 @@ export function getTokenColors() {
     },
     {
       scope: [
+        'meta.fstring.python constant.character.format.placeholder',
+      ],
+      foreground: maple('python.fstring'),
+    },
+    {
+      scope: [
         'invalid.illegal.unrecognized-tag.html',
       ],
       fontStyle: font(),
@@ -595,12 +604,19 @@ export function getTokenColors() {
       'function.defaultLibrary': {
         bold: true,
       },
+      'function.builtin': {
+        bold: true,
+      },
       namespace: maple('namespace'),
       class: {
         foreground: maple('class'),
         italic: false,
+        bold: false,
       },
       'class.defaultLibrary': {
+        bold: true,
+      },
+      'class.builtin': {
         bold: true,
       },
       'class.typeHint': maple('type.primitive'),

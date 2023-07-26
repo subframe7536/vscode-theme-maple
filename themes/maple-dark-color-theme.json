@@ -202,12 +202,19 @@
     "function.defaultLibrary": {
       "bold": true
     },
+    "function.builtin": {
+      "bold": true
+    },
     "namespace": "#eea0ca",
     "class": {
       "foreground": "#9ee0e0",
-      "italic": false
+      "italic": false,
+      "bold": false
     },
     "class.defaultLibrary": {
+      "bold": true
+    },
+    "class.builtin": {
       "bold": true
     },
     "class.typeHint": "#aea3ff",
@@ -377,6 +384,7 @@
       "scope": [
         "property",
         "meta.property-name",
+        "meta.attribute",
         "meta.object-literal.key",
         "attribute.name",
         "entity.other.attribute-name",
@@ -547,10 +555,12 @@
     {
       "scope": [
         "constant.numeric",
+        "constant.numeric.hex storage.type.number",
         "number"
       ],
       "settings": {
-        "foreground": "#ccea7b"
+        "foreground": "#ccea7b",
+        "fontStyle": ""
       }
     },
     {
@@ -810,6 +820,14 @@
     {
       "scope": [
         "punctuation.definition.template-expression"
+      ],
+      "settings": {
+        "foreground": "#9ee0e0"
+      }
+    },
+    {
+      "scope": [
+        "meta.fstring.python constant.character.format.placeholder"
       ],
       "settings": {
         "foreground": "#9ee0e0"

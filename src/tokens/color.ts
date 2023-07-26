@@ -83,6 +83,9 @@ function getColors({
       import: yellow,
       annotation: blue,
     },
+    python: {
+      fstring: cyan,
+    },
     markdown: {
       title: purple,
       bold: orange,
