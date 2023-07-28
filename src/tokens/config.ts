@@ -134,6 +134,7 @@ export function getTokenColors() {
         'string punctuation.section.embedded source',
         'attribute.value',
         'meta.attribute-selector.scss',
+        'entity.name.import.go',
       ],
       foreground: maple('string'),
     },
@@ -528,11 +529,16 @@ export function getTokenColors() {
     {
       scope: [
         'keyword.control',
+        'keyword.function',
         'storage.type',
         'storage.modifier',
         'variable.language.this',
       ],
       fontStyle: font('italic'),
+    },
+    {
+      scope: 'source.go storage.type',
+      fontStyle: font(),
     },
     {
       scope: [
@@ -592,7 +598,10 @@ export function getTokenColors() {
       'property.declaration': maple('property.declaration'),
       'property.readonly': maple('property.normal'),
       'property.defaultLibrary': maple('property.defaultLib'),
-      interface: maple('interface.normal'),
+      interface: {
+        foreground: maple('interface.normal'),
+        italic: true,
+      },
       'interface.defaultLibrary': {
         foreground: maple('interface.defaultLib'),
         bold: true,

@@ -190,7 +190,10 @@
     "property.declaration": "#e3d5c9",
     "property.readonly": "#e3d5c9",
     "property.defaultLibrary": "#ccea7b",
-    "interface": "#f1a57e",
+    "interface": {
+      "foreground": "#f1a57e",
+      "italic": true
+    },
     "interface.defaultLibrary": {
       "foreground": "#f1a57e",
       "bold": true
@@ -359,7 +362,8 @@
         "string",
         "string punctuation.section.embedded source",
         "attribute.value",
-        "meta.attribute-selector.scss"
+        "meta.attribute-selector.scss",
+        "entity.name.import.go"
       ],
       "settings": {
         "foreground": "#87c591"
@@ -881,12 +885,19 @@
     {
       "scope": [
         "keyword.control",
+        "keyword.function",
         "storage.type",
         "storage.modifier",
         "variable.language.this"
       ],
       "settings": {
         "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "source.go storage.type",
+      "settings": {
+        "fontStyle": ""
       }
     },
     {
