@@ -6,6 +6,8 @@ a colorful theme in dark, with medium level contrast
 
 - font: [Maple Mono](https://github.com/subframe7536/maple-font)
 
+[more example](https://github.com/subframe7536/maple-font#screenshots)
+
 ## credit
 
 - design inspiration: [moegi](https://github.com/moegi-design/vscode-theme)
