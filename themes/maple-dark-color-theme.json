@@ -209,6 +209,7 @@
       "bold": true
     },
     "namespace": "#eea0ca",
+    "struct": "#9ee0e0",
     "class": {
       "foreground": "#9ee0e0",
       "italic": false,
@@ -898,6 +899,12 @@
       "scope": "source.go storage.type",
       "settings": {
         "fontStyle": ""
+      }
+    },
+    {
+      "scope": "keyword.channel.go",
+      "settings": {
+        "fontStyle": "bold"
       }
     },
     {

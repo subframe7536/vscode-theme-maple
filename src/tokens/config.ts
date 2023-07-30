@@ -541,6 +541,10 @@ export function getTokenColors() {
       fontStyle: font(),
     },
     {
+      scope: 'keyword.channel.go',
+      fontStyle: font('bold'),
+    },
+    {
       scope: [
         'storage.type.function.arrow',
       ],
@@ -617,6 +621,7 @@ export function getTokenColors() {
         bold: true,
       },
       namespace: maple('namespace'),
+      struct: maple('class'),
       class: {
         foreground: maple('class'),
         italic: false,
