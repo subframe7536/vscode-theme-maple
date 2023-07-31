@@ -226,7 +226,8 @@
       "foreground": "#eea0ca",
       "italic": true,
       "underline": false
-    }
+    },
+    "enumMember": "#f1a57e"
   },
   "tokenColors": [
     {
@@ -428,7 +429,8 @@
         "identifier",
         "constant.other.table-name",
         "invalid.deprecated.entity.other.attribute-name.html",
-        "support.type.property-name.json"
+        "support.type.property-name.json",
+        "variable.other.normal.shell"
       ],
       "settings": {
         "foreground": "#f3d09b"

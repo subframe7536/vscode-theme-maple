@@ -187,6 +187,7 @@ export function getTokenColors() {
         'constant.other.table-name',
         'invalid.deprecated.entity.other.attribute-name.html',
         'support.type.property-name.json',
+        'variable.other.normal.shell',
       ],
       foreground: maple('variable.local'),
     },
@@ -639,6 +640,7 @@ export function getTokenColors() {
         italic: true,
         underline: false,
       },
+      enumMember: maple('enum'),
     },
     tokenColors: parseToken(token),
   }

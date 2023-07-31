@@ -50,6 +50,7 @@ function getColors({
       defaultLib: pink,
     },
     constant: orange,
+    enum: orange,
     class: cyan,
     interface: {
       normal: orange,
