@@ -1,7 +1,7 @@
-import type { GenerateUIFn } from '../../type'
+import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, parseColor } from '../../util'
 
-export const generateViewColor: GenerateUIFn = ui => ({
+export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
   activityBar: {
     background: ui.background,
     border: ui.borderNormal,
@@ -22,17 +22,17 @@ export const generateViewColor: GenerateUIFn = ui => ({
     border: ui.borderNormal,
   },
   gitDecoration: {
-    addedResourceForeground: ui.green,
-    untrackedResourceForeground: ui.blue,
-    conflictingResourceForeground: ui.blue,
-    deletedResourceForeground: ui.red,
-    modifiedResourceForeground: ui.yellow,
+    addedResourceForeground: base.green,
+    untrackedResourceForeground: base.blue,
+    conflictingResourceForeground: base.blue,
+    deletedResourceForeground: base.red,
+    modifiedResourceForeground: base.yellow,
   },
   minimap: {
     background: parseColor(ui.background, 0.8),
     findMatchHighlight: parseColor(ui.secondary, 0.8),
     selectionHighlight: parseColor(ui.primary, 0.5),
-    errorHighlight: parseColor(ui.red, 0.6),
+    errorHighlight: parseColor(base.red, 0.6),
   },
   titleBar: {
     activeBackground: ui.background,
@@ -53,9 +53,9 @@ export const generateViewColor: GenerateUIFn = ui => ({
     prominentForeground: ui.background,
     remoteBackground: ui.secondary,
     remoteForeground: ui.background,
-    errorBackground: ui.red,
+    errorBackground: base.red,
     errorForeground: ui.background,
-    warningBackground: ui.yellow,
+    warningBackground: base.yellow,
     warningForeground: ui.background,
   },
 })

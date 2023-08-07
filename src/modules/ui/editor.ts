@@ -1,7 +1,7 @@
-import type { GenerateUIFn } from '../../type'
+import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, parseColor } from '../../util'
 
-export const generateEditorColor: GenerateUIFn = ui => ({
+export const generateEditorColor: GenerateUIWithBaseFn = (base, ui) => ({
   editor: {
     foreground: ui.foreground,
     background: ui.backgroundEditor,
@@ -31,18 +31,18 @@ export const generateEditorColor: GenerateUIFn = ui => ({
     rangeHighlightBorder: ui.rangeBorder,
   },
   editorLink: {
-    activeForeground: ui.primary,
+    activeForeground: ui.secondary,
   },
   editorGroupHeader: {
     tabsBackground: ui.background,
     tabsBorder: ui.backgroundEditorAlt,
   },
   editorLineNumber: {
-    foreground: ui.foregroundAlt,
+    foreground: parseColor(ui.secondary, 0.6),
     activeForeground: ui.foreground,
   },
   editorCursor: {
-    foreground: brighten(ui.primary, 8),
+    foreground: ui.cursor,
   },
   editorIndentGuide: {
     activeBackground: parseColor(ui.foregroundAlt, 0.8),
@@ -69,23 +69,23 @@ export const generateEditorColor: GenerateUIFn = ui => ({
     background: ui.backgroundEditorAlt,
   },
   editorError: {
-    foreground: ui.red,
+    foreground: base.red,
   },
   editorWarning: {
-    foreground: ui.yellow,
+    foreground: base.yellow,
   },
   editorInfo: {
-    foreground: ui.blue,
+    foreground: base.blue,
   },
   editorGutter: {
-    addedBackground: parseColor(ui.green, 0.8),
-    deletedBackground: parseColor(ui.red, 0.8),
-    modifiedBackground: parseColor(ui.blue, 0.8),
+    addedBackground: parseColor(base.green, 0.8),
+    deletedBackground: parseColor(base.red, 0.8),
+    modifiedBackground: parseColor(base.blue, 0.8),
   },
   diffEditor: {
-    insertedTextBackground: parseColor(ui.green, 0.4),
-    insertedLineBackground: parseColor(ui.green, 0.2),
-    removedTextBackground: parseColor(ui.red, 0.4),
-    removedLineBackground: parseColor(ui.red, 0.2),
+    insertedTextBackground: parseColor(base.green, 0.4),
+    insertedLineBackground: parseColor(base.green, 0.2),
+    removedTextBackground: parseColor(base.red, 0.4),
+    removedLineBackground: parseColor(base.red, 0.2),
   },
 })

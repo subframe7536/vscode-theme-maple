@@ -33,36 +33,38 @@ const gray = {
 }
 
 const base: BaseColor = {
-  gray: parseColor('hsl(0, 0%, 50%)'),
-  red: parseColor('hsl(0, 100%, 76%)'),
-  orange: parseColor('hsl(20, 80%, 72%)'),
-  yellow: parseColor('hsl(36, 78%, 78%)'),
-  yellowLight: parseColor('hsl(28, 32%, 84%)'),
-  greenLight: parseColor('hsl(76, 72%, 70%)'),
-  green: parseColor('hsl(130, 35%, 65%)'),
-  cyan: parseColor('hsl(180, 52%, 75%)'),
-  sky: parseColor('hsl(212, 85%, 87%)'),
-  blue: parseColor('hsl(210, 100%, 72%)'),
-  purple: parseColor('hsl(247, 100%, 82%)'),
-  pink: parseColor('hsl(328, 70%, 78%)'),
+  gray: parseColor('hsl(0, 0%, 55%)'),
+  red: parseColor('hsl(0, 55%, 55%)'),
+  orange: parseColor('hsl(25, 65%, 55%)'),
+  yellow: parseColor('hsl(40, 60%, 50%)'),
+  yellowLight: parseColor('hsl(45, 30%, 40%)'),
+  greenLight: parseColor('hsl(76, 40%, 50%)'),
+  green: parseColor('hsl(114, 45%, 45%)'),
+  cyan: parseColor('hsl(170, 50%, 45%)'),
+  sky: parseColor('hsl(190, 35%, 60%)'),
+  blue: parseColor('hsl(205, 50%, 50%)'),
+  purple: parseColor('hsl(247, 50%, 65%)'),
+  pink: parseColor('hsl(328, 50%, 65%)'),
 }
-
+const bg = parseColor('hsl(43, 30%, 87%)')
+const primaryColor = parseColor('hsl(120, 12%, 80%)')
+const secondaryColor = parseColor('hsl(100, 24%, 50%)')
 const uiColor: UIColor = {
-  foreground: blue[300],
+  foreground: blue[600],
   foregroundAlt: brighten(gray[600], 5),
-  background: '#171718',
-  backgroundEditor: '#1e1e1f',
-  backgroundEditorAlt: parseColor('hsl(220, 24%, 18%)'),
-  borderActive: blue[500],
-  borderNormal: brighten(gray[800], 2),
-  primary: parseColor('hsl(210, 28%, 52%)'),
-  secondary: parseColor('hsl(100, 36%, 60%)'),
-  cursor: brighten(blue[500], 6),
-  selection: parseColor(blue[600], 0.8),
-  scrollbar: brighten(gray[800], 1),
-  listItem: blue[700],
-  rangeBackground: parseColor(blue[800], 0.4),
-  rangeBorder: blue[700],
+  background: bg,
+  backgroundEditor: brighten(bg, 3),
+  backgroundEditorAlt: brighten(bg, 6),
+  borderActive: brighten(blue[400], 2),
+  borderNormal: brighten(gray[400], 2),
+  primary: primaryColor,
+  secondary: secondaryColor,
+  cursor: brighten(blue[500], 4),
+  selection: primaryColor,
+  scrollbar: gray[300],
+  listItem: primaryColor,
+  rangeBackground: parseColor(primaryColor, 0.4),
+  rangeBorder: blue[400],
 }
 
 export const tokenColor: TokenColor = {
@@ -140,7 +142,7 @@ export const tokenColor: TokenColor = {
 }
 
 const colors: Colors = {
-  isDark: true,
+  isDark: false,
   baseColor: base,
   tokenColor,
   uiColor,

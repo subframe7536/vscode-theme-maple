@@ -1,11 +1,11 @@
-import type { GenerateTerminalFn } from '../../type'
+import type { GenerateUIWithBaseFn } from '../../type'
 
 const black = '#181818'
 const white = '#f4f4f5'
-export const generateTerminalColor: GenerateTerminalFn = (baseColor, ui) => ({
+export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui) => ({
   terminalCursor: {
     background: ui.background,
-    foreground: ui.foreground,
+    foreground: ui.cursor,
   },
   terminal: {
     background: ui.background,

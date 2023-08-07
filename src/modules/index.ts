@@ -11,9 +11,9 @@ export function buildTheme(base: BaseColor, token: TokenColor, ui: UIColor) {
   return {
     colors: buildUI({
       ...generateBaseColor(ui),
-      ...generateEditorColor(ui),
+      ...generateEditorColor(base, ui),
       ...generateElementColor(ui),
-      ...generateViewColor(ui),
+      ...generateViewColor(base, ui),
       ...generateTerminalColor(base, ui),
     }),
     ...generateTokenColor(token, ui.foreground),

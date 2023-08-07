@@ -101,10 +101,7 @@ export type UIColor = {
   borderNormal: string
   primary: string
   secondary: string
-  red: string
-  yellow: string
-  green: string
-  blue: string
+  cursor: string
   selection: string
   scrollbar: string
   listItem: string
@@ -113,4 +110,4 @@ export type UIColor = {
 }
 
 export type GenerateUIFn = (color: UIColor) => UI
-export type GenerateTerminalFn = (base: BaseColor, color: UIColor) => UI
+export type GenerateUIWithBaseFn = (base: BaseColor, color: UIColor) => UI

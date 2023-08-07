@@ -6,8 +6,8 @@ export const generateElementColor: GenerateUIFn = ui => ({
     background: ui.background,
   },
   textLink: {
-    foreground: brighten(ui.primary, 12),
-    activeForeground: brighten(ui.primary, 20),
+    foreground: ui.secondary,
+    activeForeground: brighten(ui.secondary, 8),
   },
   textBlockQuote: {
     border: ui.borderNormal,
@@ -37,9 +37,9 @@ export const generateElementColor: GenerateUIFn = ui => ({
     listBackground: ui.backgroundEditor,
   },
   scrollbarSlider: {
-    background: ui.scrollbar,
-    hoverBackground: brighten(ui.scrollbar, 5),
-    activeBackground: brighten(ui.scrollbar, 10),
+    background: parseColor(ui.scrollbar, 0.8),
+    hoverBackground: parseColor(brighten(ui.scrollbar, 5), 0.8),
+    activeBackground: parseColor(brighten(ui.scrollbar, 10), 0.8),
   },
   badge: {
     background: ui.secondary,
@@ -51,7 +51,8 @@ export const generateElementColor: GenerateUIFn = ui => ({
   list: {
     activeSelectionBackground: ui.listItem,
     dropBackground: ui.backgroundEditorAlt,
-    focusBackground: parseColor(ui.listItem, 0.7), // include notification
+    activeSelectionForeground: ui.foreground,
+    focusBackground: parseColor(ui.listItem, 0.5), // include notification
     focusForeground: ui.foreground,
     focusOutline: parseColor(ui.borderActive, 0.8),
     focusHighlightForeground: ui.secondary,
@@ -65,6 +66,7 @@ export const generateElementColor: GenerateUIFn = ui => ({
   },
   menu: {
     foreground: ui.foreground,
+    background: ui.backgroundEditorAlt,
     selectionBackground: ui.listItem,
     border: brighten(ui.borderNormal, 6),
     separatorBackground: brighten(ui.borderNormal, 4),
@@ -113,7 +115,14 @@ export const generateElementColor: GenerateUIFn = ui => ({
     background: ui.background,
   },
   debugToolBar: {
-    background: ui.backgroundEditor,
+    background: ui.backgroundEditorAlt,
     border: ui.borderNormal,
+  },
+  editorHoverWidget: {
+    background: ui.backgroundEditorAlt,
+  },
+  editorWidget: {
+    background: ui.backgroundEditorAlt,
+    resizeBorder: ui.primary,
   },
 })

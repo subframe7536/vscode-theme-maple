@@ -35,6 +35,11 @@
         "label": "Maple Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/maple-dark-color-theme.json"
+      },
+      {
+        "label": "Maple Light",
+        "uiTheme": "vs",
+        "path": "./themes/maple-light-color-theme.json"
       }
     ]
   },
