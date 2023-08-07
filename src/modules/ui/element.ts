@@ -1,5 +1,5 @@
 import type { GenerateUIFn } from '../../type'
-import { brighten, parseColor } from '../../util'
+import { brighten, getTextColor, parseColor } from '../../util'
 
 export const generateElementColor: GenerateUIFn = ui => ({
   textCodeBlock: {
@@ -66,7 +66,7 @@ export const generateElementColor: GenerateUIFn = ui => ({
   },
   menu: {
     foreground: ui.foreground,
-    background: ui.backgroundEditorAlt,
+    background: ui.background,
     selectionBackground: ui.listItem,
     border: brighten(ui.borderNormal, 6),
     separatorBackground: brighten(ui.borderNormal, 4),
@@ -107,7 +107,7 @@ export const generateElementColor: GenerateUIFn = ui => ({
     border: ui.borderNormal,
   },
   keybindingLabel: {
-    foreground: ui.foregroundAlt,
+    foreground: ui.foreground,
     background: parseColor(ui.listItem, 0.7),
     border: ui.borderActive,
   },
@@ -124,5 +124,9 @@ export const generateElementColor: GenerateUIFn = ui => ({
   editorWidget: {
     background: ui.backgroundEditorAlt,
     resizeBorder: ui.primary,
+  },
+  banner: {
+    foreground: getTextColor(ui.primary),
+    background: ui.primary,
   },
 })

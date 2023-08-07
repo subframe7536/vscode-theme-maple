@@ -31,8 +31,8 @@
     "editorLink.activeForeground": "#759e61",
     "editorGroupHeader.tabsBackground": "#e8e2d4",
     "editorGroupHeader.tabsBorder": "#f7f1e3",
-    "editorLineNumber.foreground": "#759e6199",
-    "editorLineNumber.activeForeground": "#475569",
+    "editorLineNumber.foreground": "#1d1d1d66",
+    "editorLineNumber.activeForeground": "#1d1d1d",
     "editorCursor.foreground": "#6e7e95",
     "editorIndentGuide.activeBackground": "#5f5f68cc",
     "editorIndentGuide.background": "#5f5f68e6",
@@ -95,7 +95,7 @@
     "list.filterMatchBackground": "#759e61cc",
     "list.filterMatchBorder": "#759e61",
     "menu.foreground": "#475569",
-    "menu.background": "#f7f1e3",
+    "menu.background": "#e8e2d4",
     "menu.selectionBackground": "#c6d2c6",
     "menu.border": "#b5b5be",
     "menu.separatorBackground": "#b0b0b9",
@@ -117,7 +117,7 @@
     "commandCenter.activeBackground": "#c6d2c6",
     "commandCenter.activeBorder": "#99a8bd",
     "commandCenter.border": "#a6a6af",
-    "keybindingLabel.foreground": "#5f5f68",
+    "keybindingLabel.foreground": "#475569",
     "keybindingLabel.background": "#c6d2c6b3",
     "keybindingLabel.border": "#99a8bd",
     "notifications.background": "#e8e2d4",
@@ -126,6 +126,8 @@
     "editorHoverWidget.background": "#f7f1e3",
     "editorWidget.background": "#f7f1e3",
     "editorWidget.resizeBorder": "#c6d2c6",
+    "banner.foreground": "#1d1d1d",
+    "banner.background": "#c6d2c6",
     "activityBar.background": "#e8e2d4",
     "activityBar.border": "#a6a6af",
     "activityBar.foreground": "#475569",
@@ -191,8 +193,8 @@
       "foreground": "#cc9933",
       "underline": true
     },
-    "property.declaration": "#857547",
-    "property.readonly": "#857547",
+    "property.declaration": "#aa9b3c",
+    "property.readonly": "#aa9b3c",
     "property.defaultLibrary": "#97b34d",
     "interface": {
       "foreground": "#d78042",
@@ -387,7 +389,7 @@
     {
       "scope": "support",
       "settings": {
-        "foreground": "#857547"
+        "foreground": "#aa9b3c"
       }
     },
     {
@@ -402,7 +404,7 @@
         "variable.other.property"
       ],
       "settings": {
-        "foreground": "#857547"
+        "foreground": "#aa9b3c"
       }
     },
     {
@@ -424,7 +426,7 @@
         "source.css support.type.property-name"
       ],
       "settings": {
-        "foreground": "#857547"
+        "foreground": "#aa9b3c"
       }
     },
     {

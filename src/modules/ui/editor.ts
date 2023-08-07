@@ -1,5 +1,5 @@
 import type { GenerateUIWithBaseFn } from '../../type'
-import { brighten, parseColor } from '../../util'
+import { brighten, getTextColor, parseColor } from '../../util'
 
 export const generateEditorColor: GenerateUIWithBaseFn = (base, ui) => ({
   editor: {
@@ -38,8 +38,8 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui) => ({
     tabsBorder: ui.backgroundEditorAlt,
   },
   editorLineNumber: {
-    foreground: parseColor(ui.secondary, 0.6),
-    activeForeground: ui.foreground,
+    foreground: parseColor(getTextColor(ui.background), 0.4),
+    activeForeground: getTextColor(ui.background),
   },
   editorCursor: {
     foreground: ui.cursor,
