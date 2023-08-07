@@ -35,20 +35,21 @@ const gray = {
 const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 55%)'),
   red: parseColor('hsl(0, 55%, 55%)'),
-  orange: parseColor('hsl(25, 65%, 55%)'),
-  yellow: parseColor('hsl(40, 60%, 50%)'),
-  yellowLight: parseColor('hsl(52, 48%, 45%)'),
-  greenLight: parseColor('hsl(76, 40%, 50%)'),
-  green: parseColor('hsl(114, 45%, 45%)'),
-  cyan: parseColor('hsl(170, 50%, 45%)'),
-  sky: parseColor('hsl(190, 35%, 60%)'),
-  blue: parseColor('hsl(205, 50%, 50%)'),
-  purple: parseColor('hsl(247, 50%, 65%)'),
-  pink: parseColor('hsl(328, 50%, 65%)'),
+  orange: parseColor('hsl(25, 70%, 55%)'),
+  yellow: parseColor('hsl(40, 70%, 50%)'),
+  yellowLight: parseColor('hsl(52, 80%, 35%)'),
+  greenLight: parseColor('hsl(80, 40%, 50%)'),
+  green: parseColor('hsl(114, 50%, 45%)'),
+  cyan: parseColor('hsl(170, 55%, 50%)'),
+  sky: parseColor('hsl(187, 40%, 60%)'),
+  blue: parseColor('hsl(205, 70%, 60%)'),
+  purple: parseColor('hsl(247, 52%, 60%)'),
+  pink: parseColor('hsl(328, 50%, 60%)'),
 }
-const bg = parseColor('hsl(43, 30%, 87%)')
+
+const bg = parseColor('hsl(43, 12%, 94%)')
 const primaryColor = parseColor('hsl(120, 12%, 80%)')
-const secondaryColor = parseColor('hsl(100, 24%, 50%)')
+const secondaryColor = parseColor('hsl(100, 28%, 60%)')
 const uiColor: UIColor = {
   foreground: blue[600],
   foregroundAlt: brighten(gray[600], 5),

@@ -167,7 +167,7 @@
     "statusBarItem.warningBackground": "#f3d09b",
     "statusBarItem.warningForeground": "#171718",
     "terminalCursor.background": "#171718",
-    "terminalCursor.foreground": "#73839a",
+    "terminalCursor.foreground": "#cbd5e1",
     "terminal.background": "#171718",
     "terminal.foreground": "#cbd5e1",
     "terminal.ansiBrightBlack": "#181818",
