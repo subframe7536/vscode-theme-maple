@@ -1,4 +1,5 @@
 import tinycolor from 'tinycolor2'
+import type { UI } from './type'
 
 /**
  * unify color string to hex string
@@ -20,4 +21,23 @@ export function parseColor(colorString: string, alpha?: number) {
  */
 export function brighten(colorString: string, amount: number) {
   return tinycolor(colorString).brighten(amount).toHexString()
+}
+
+export function buildUI(themeDev: UI) {
+  const theme = {}
+
+  for (const key in themeDev) {
+    const value = themeDev[key]
+
+    if (typeof value === 'object') {
+      for (const i in value) {
+        const e = value[i]
+        theme[`${key}.${i}`] = e
+      }
+    } else {
+      theme[key] = value
+    }
+  }
+
+  return theme
 }

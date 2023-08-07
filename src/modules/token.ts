@@ -1,8 +1,7 @@
 /* eslint-disable quote-props */
 import { type Path, pathGet } from 'object-standard-path'
 import { parseColor } from '../util'
-import { UIColors } from '../ui/config'
-import { colors } from './color'
+import type { TokenColor } from '../type'
 
 const fontStyles = ['italic', 'bold', 'underline', 'strikethrough'] as const
 
@@ -12,11 +11,9 @@ type Token = {
   foreground?: string
   fontStyle?: string
 }[]
-function parseToken(token: Token) {
-  return token.map(({ scope, fontStyle, foreground, name }) => ({ name, scope, settings: { foreground, fontStyle } }))
-}
-export function getTokenColors() {
-  const maple = (key: Path<typeof colors>, alpha?: number) => parseColor(pathGet(colors, key) as string, alpha)
+
+export function generateTokenColor(tokens: TokenColor, plainColor: string) {
+  const maple = (key: Path<typeof tokens>, alpha?: number) => parseColor(pathGet(tokens, key) as string, alpha)
   const font = (...styles: (typeof fontStyles[number])[] | []) => styles.slice(0, 4).filter(Boolean).sort((a, b) => fontStyles.indexOf(a) - fontStyles.indexOf(b)).join(' ')
 
   const token: Token = [
@@ -590,7 +587,7 @@ export function getTokenColors() {
       scope: [
         'meta.jsx.children',
       ],
-      foreground: UIColors.foreground,
+      foreground: plainColor,
     },
   ]
   return {
@@ -642,6 +639,8 @@ export function getTokenColors() {
       },
       enumMember: maple('enum'),
     },
-    tokenColors: parseToken(token),
+    tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
+      name, scope, settings: { foreground, fontStyle },
+    })),
   }
 }

@@ -1,15 +1,28 @@
 import { mkdir, writeFile } from 'node:fs/promises'
-import ui from './ui'
-import tokens from './tokens'
+import { buildTheme } from './modules'
+import type { BaseColor, TokenColor, UIColor } from './type'
+import { colors } from './colors'
+
+const author = 'subframe7536'
 
 await mkdir('./themes', { recursive: true })
-await writeFile(
-  './themes/maple-dark-color-theme.json',
+export interface GenerateOption {
+  name: string
+  isDark?: boolean
+  baseColor: BaseColor
+  tokenColor: TokenColor
+  uiColor: UIColor
+}
+async function generateTheme({ name, isDark = true, baseColor, tokenColor, uiColor }: GenerateOption) {
+  await writeFile(
+    `./themes/${name.replace(/\s/g, '-').toLowerCase()}-color-theme.json`,
   `${JSON.stringify({
-    name: 'Maple Dark',
-    author: 'subframe7536',
-    type: 'dark',
-    ...ui,
-    ...tokens,
-  }, null, 2)}\n`,
-)
+    name,
+    author,
+    base: isDark ? 'vs-dark' : 'vs',
+    ...buildTheme(baseColor, tokenColor, uiColor),
+  }, null, 2)}\n`)
+}
+
+const tasks = Object.entries(colors).map(([name, value]) => generateTheme({ name, ...value }))
+Promise.all(tasks).catch(console.error)

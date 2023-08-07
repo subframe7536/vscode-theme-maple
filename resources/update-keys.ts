@@ -48,11 +48,11 @@ async function parseKeys() {
   keys.forEach((s) => {
     pathSet(ret, s as any, 'string')
   })
-  return JSON.stringify(ret, null, 2).replace(/"/g, '')
+  return JSON.stringify(ret, null, 2).replace(/"/g, '').replace(/:/g, '?:')
 }
 
 const types = `// auto generate by \`pnpm run update:key\`
-export type UIDev = ${await parseKeys()}
+export type UI = ${await parseKeys()}
 `
 
-writeFile('./src/ui/type.d.ts', types, 'utf8')
+writeFile('./src/type.d.ts', types, 'utf8')
