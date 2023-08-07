@@ -5,7 +5,7 @@ const white = '#f4f4f5'
 export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui) => ({
   terminalCursor: {
     background: ui.background,
-    foreground: ui.cursor,
+    foreground: ui.foreground,
   },
   terminal: {
     background: ui.background,
