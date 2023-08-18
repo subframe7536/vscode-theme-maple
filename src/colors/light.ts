@@ -35,19 +35,19 @@ const gray = {
 const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 55%)'),
   red: parseColor('hsl(0, 55%, 55%)'),
-  orange: parseColor('hsl(25, 70%, 55%)'),
-  yellow: parseColor('hsl(40, 70%, 50%)'),
-  yellowLight: parseColor('hsl(52, 80%, 35%)'),
-  greenLight: parseColor('hsl(80, 40%, 50%)'),
-  green: parseColor('hsl(114, 50%, 45%)'),
-  cyan: parseColor('hsl(170, 55%, 50%)'),
-  sky: parseColor('hsl(187, 40%, 60%)'),
-  blue: parseColor('hsl(205, 70%, 60%)'),
-  purple: parseColor('hsl(247, 52%, 60%)'),
-  pink: parseColor('hsl(328, 50%, 60%)'),
+  orange: parseColor('hsl(25, 60%, 55%)'),
+  yellow: parseColor('hsl(40, 65%, 45%)'),
+  yellowLight: parseColor('hsl(70, 30%, 35%)'),
+  greenLight: parseColor('hsl(80, 65%, 40%)'),
+  green: parseColor('hsl(114, 50%, 50%)'),
+  cyan: parseColor('hsl(170, 55%, 45%)'),
+  sky: parseColor('hsl(190, 65%, 50%)'),
+  blue: parseColor('hsl(205, 65%, 55%)'),
+  purple: parseColor('hsl(247, 45%, 70%)'),
+  pink: parseColor('hsl(328, 55%, 65%)'),
 }
 
-const bg = parseColor('hsl(43, 12%, 94%)')
+const bg = parseColor('hsl(43, 50%, 94%)')
 const primaryColor = parseColor('hsl(120, 12%, 80%)')
 const secondaryColor = parseColor('hsl(100, 28%, 60%)')
 const uiColor: UIColor = {
@@ -63,7 +63,7 @@ const uiColor: UIColor = {
   cursor: brighten(blue[500], 4),
   selection: primaryColor,
   scrollbar: gray[300],
-  listItem: primaryColor,
+  listItem: brighten(primaryColor, 3),
   rangeBackground: parseColor(primaryColor, 0.4),
   rangeBorder: blue[400],
 }

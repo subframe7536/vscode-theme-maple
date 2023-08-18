@@ -61,7 +61,7 @@ export const generateElementColor: GenerateUIFn = ui => ({
     hoverBackground: parseColor(ui.listItem, 0.5),
     inactiveFocusOutline: ui.borderNormal,
     inactiveSelectionBackground: parseColor(ui.listItem, 0.6),
-    filterMatchBackground: parseColor(ui.secondary, 0.8),
+    filterMatchBackground: parseColor(ui.secondary, 0.7),
     filterMatchBorder: ui.secondary,
   },
   menu: {

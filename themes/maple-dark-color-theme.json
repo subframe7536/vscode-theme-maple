@@ -92,7 +92,7 @@
     "list.hoverBackground": "#33415580",
     "list.inactiveFocusOutline": "#2c2c2f",
     "list.inactiveSelectionBackground": "#33415599",
-    "list.filterMatchBackground": "#8dbe74cc",
+    "list.filterMatchBackground": "#8dbe74b3",
     "list.filterMatchBorder": "#8dbe74",
     "menu.foreground": "#cbd5e1",
     "menu.background": "#171718",
