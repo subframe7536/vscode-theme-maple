@@ -98,7 +98,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       scope: [
         'keyword',
         'storage.type.java',
-        'punctuation.definition.decorator',
         'entity.name.package',
         'entity.name.import',
         'keyword.operator.expression.infer',
@@ -184,6 +183,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'constant.other.table-name',
         'invalid.deprecated.entity.other.attribute-name.html',
         'support.type.property-name.json',
+        'support.type.property-name.toml',
+        'support.type.property-name.array.toml',
+        'keyword.other.definition.ini',
         'variable.other.normal.shell',
       ],
       foreground: maple('variable.local'),
@@ -463,9 +465,15 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.name.type.class',
         'entity.name.type.module',
         'meta.parameter.initialization',
-        'entity.name.section.group-title',
       ],
       foreground: maple('class'),
+    },
+    {
+      scope: [
+        'entity.name.section.group-title',
+        'support.type.property-name.table.toml',
+      ],
+      foreground: maple('keyword'),
     },
     {
       scope: [
@@ -638,6 +646,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         underline: false,
       },
       enumMember: maple('enum'),
+      // rust cfg
+      builtinAttribute: maple('parameter'),
+      tomlTableKey: maple('parameter'),
     },
     tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
       name, scope, settings: { foreground, fontStyle },

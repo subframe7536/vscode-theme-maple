@@ -1,5 +1,5 @@
 import type { GenerateUIWithBaseFn } from '../../type'
-import { brighten, parseColor } from '../../util'
+import { parseColor } from '../../util'
 
 export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
   activityBar: {
@@ -40,13 +40,15 @@ export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
     border: ui.borderNormal,
   },
   statusBar: {
-    background: brighten(ui.background, 6),
-    foreground: parseColor(ui.foreground, 0.8),
+    background: ui.background,
+    foreground: ui.foreground,
+    border: ui.borderNormal,
     debuggingForeground: ui.background,
     debuggingBackground: ui.secondary,
     debuggingBorder: ui.borderNormal,
     noFolderForeground: parseColor(ui.foreground, 0.3),
     noFolderBackground: ui.background,
+    noFolderBorder: parseColor(ui.borderNormal, 0.3),
   },
   statusBarItem: {
     prominentBackground: ui.secondary,

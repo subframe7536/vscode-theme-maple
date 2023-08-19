@@ -59,7 +59,7 @@ const uiColor: UIColor = {
   secondary: parseColor('hsl(100, 36%, 60%)'),
   cursor: brighten(blue[500], 6),
   selection: parseColor(blue[600], 0.8),
-  scrollbar: brighten(gray[800], 1),
+  scrollbar: brighten(blue[700], 4),
   listItem: blue[700],
   rangeBackground: parseColor(blue[800], 0.4),
   rangeBorder: blue[700],

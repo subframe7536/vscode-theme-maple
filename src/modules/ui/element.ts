@@ -17,8 +17,10 @@ export const generateElementColor: GenerateUIFn = ui => ({
   },
   button: {
     background: parseColor(ui.primary, 0.8),
-    foreground: ui.foreground,
+    foreground: getTextColor(ui.background),
     hoverBackground: ui.primary,
+    secondaryBackground: parseColor(ui.primary),
+    secondaryForeground: getTextColor(ui.background),
   },
   input: {
     border: ui.borderNormal,
@@ -37,9 +39,9 @@ export const generateElementColor: GenerateUIFn = ui => ({
     listBackground: ui.backgroundEditor,
   },
   scrollbarSlider: {
-    background: parseColor(ui.scrollbar, 0.8),
-    hoverBackground: parseColor(brighten(ui.scrollbar, 5), 0.8),
-    activeBackground: parseColor(brighten(ui.scrollbar, 10), 0.8),
+    background: parseColor(ui.scrollbar, 0.2),
+    hoverBackground: parseColor(ui.scrollbar, 0.3),
+    activeBackground: parseColor(ui.scrollbar, 0.5),
   },
   badge: {
     background: ui.secondary,

@@ -62,8 +62,10 @@
     "textBlockQuote.border": "#2c2c2f",
     "toolbar.hoverBackground": "#171718",
     "button.background": "#6285a7cc",
-    "button.foreground": "#cbd5e1",
+    "button.foreground": "#fafafa",
     "button.hoverBackground": "#6285a7",
+    "button.secondaryBackground": "#6285a7",
+    "button.secondaryForeground": "#fafafa",
     "input.border": "#2c2c2f",
     "input.background": "#1e1e1f",
     "input.placeholderForeground": "#5f5f68",
@@ -74,9 +76,9 @@
     "dropdown.foreground": "#cbd5e1",
     "dropdown.border": "#2c2c2f",
     "dropdown.listBackground": "#1e1e1f",
-    "scrollbarSlider.background": "#2a2a2dcc",
-    "scrollbarSlider.hoverBackground": "#37373acc",
-    "scrollbarSlider.activeBackground": "#434346cc",
+    "scrollbarSlider.background": "#3d4b5f33",
+    "scrollbarSlider.hoverBackground": "#3d4b5f4d",
+    "scrollbarSlider.activeBackground": "#3d4b5f80",
     "badge.background": "#8dbe74",
     "badge.foreground": "#171718",
     "progressBar.background": "#6285a7",
@@ -151,13 +153,15 @@
     "titleBar.activeBackground": "#171718",
     "titleBar.activeForeground": "#cbd5e1",
     "titleBar.border": "#2c2c2f",
-    "statusBar.background": "#262627",
-    "statusBar.foreground": "#cbd5e1cc",
+    "statusBar.background": "#171718",
+    "statusBar.foreground": "#cbd5e1",
+    "statusBar.border": "#2c2c2f",
     "statusBar.debuggingForeground": "#171718",
     "statusBar.debuggingBackground": "#8dbe74",
     "statusBar.debuggingBorder": "#2c2c2f",
     "statusBar.noFolderForeground": "#cbd5e14d",
     "statusBar.noFolderBackground": "#171718",
+    "statusBar.noFolderBorder": "#2c2c2f4d",
     "statusBarItem.prominentBackground": "#8dbe74",
     "statusBarItem.prominentForeground": "#171718",
     "statusBarItem.remoteBackground": "#8dbe74",
@@ -233,7 +237,9 @@
       "italic": true,
       "underline": false
     },
-    "enumMember": "#f1a57e"
+    "enumMember": "#f1a57e",
+    "builtinAttribute": "#f3d09b",
+    "tomlTableKey": "#f3d09b"
   },
   "tokenColors": [
     {
@@ -332,7 +338,6 @@
       "scope": [
         "keyword",
         "storage.type.java",
-        "punctuation.definition.decorator",
         "entity.name.package",
         "entity.name.import",
         "keyword.operator.expression.infer",
@@ -436,6 +441,9 @@
         "constant.other.table-name",
         "invalid.deprecated.entity.other.attribute-name.html",
         "support.type.property-name.json",
+        "support.type.property-name.toml",
+        "support.type.property-name.array.toml",
+        "keyword.other.definition.ini",
         "variable.other.normal.shell"
       ],
       "settings": {
@@ -813,11 +821,19 @@
         "entity.other.inherited-class",
         "entity.name.type.class",
         "entity.name.type.module",
-        "meta.parameter.initialization",
-        "entity.name.section.group-title"
+        "meta.parameter.initialization"
       ],
       "settings": {
         "foreground": "#9ee0e0"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.section.group-title",
+        "support.type.property-name.table.toml"
+      ],
+      "settings": {
+        "foreground": "#aea3ff"
       }
     },
     {
