@@ -16,10 +16,10 @@ export const generateElementColor: GenerateUIFn = ui => ({
     hoverBackground: ui.background,
   },
   button: {
-    background: parseColor(ui.primary, 0.8),
+    background: parseColor(ui.primary),
     foreground: getTextColor(ui.background),
-    hoverBackground: ui.primary,
-    secondaryBackground: parseColor(ui.primary),
+    hoverBackground: parseColor(ui.primary, 0.85),
+    secondaryBackground: parseColor(ui.primary, 0.7),
     secondaryForeground: getTextColor(ui.background),
   },
   input: {
