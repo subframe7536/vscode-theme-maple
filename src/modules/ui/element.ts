@@ -122,6 +122,7 @@ export const generateElementColor: GenerateUIFn = ui => ({
   },
   editorHoverWidget: {
     background: ui.backgroundEditorAlt,
+    statusBarBackground: brighten(ui.backgroundEditor, 2),
   },
   editorWidget: {
     background: ui.backgroundEditorAlt,

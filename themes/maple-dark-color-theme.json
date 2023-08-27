@@ -126,6 +126,7 @@
     "debugToolBar.background": "#232a39",
     "debugToolBar.border": "#2c2c2f",
     "editorHoverWidget.background": "#232a39",
+    "editorHoverWidget.statusBarBackground": "#232324",
     "editorWidget.background": "#232a39",
     "editorWidget.resizeBorder": "#6285a7",
     "banner.foreground": "#1d1d1d",
