@@ -57,6 +57,7 @@
     "@types/node": "^20.7.0",
     "@types/tinycolor2": "^1.4.4",
     "@vscode/vsce": "^2.21.0",
+    "bumpp": "^9.2.0",
     "eslint": "^8.50.0",
     "esno": "^0.17.0",
     "nodemon": "^3.0.1",
