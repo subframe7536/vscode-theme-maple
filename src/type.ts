@@ -21,8 +21,10 @@ export type TokenColor = {
   htmlTag: string
   comment: string
   string: string
-  keyword: string
-  keywordAlt: string
+  keyword: {
+    normal: string
+    alt: string
+  }
   number: string
   boolean: string
   operator: string

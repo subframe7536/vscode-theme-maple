@@ -69,8 +69,10 @@ export const tokenColor: TokenColor = {
   htmlTag: base.red,
   comment: base.gray,
   string: base.green,
-  keyword: base.purple,
-  keywordAlt: base.pink,
+  keyword: {
+    normal: base.purple,
+    alt: base.pink,
+  },
   number: base.greenLight,
   boolean: base.purple,
   operator: base.sky,

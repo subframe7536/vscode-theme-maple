@@ -45,8 +45,8 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui) => ({
     foreground: ui.cursor,
   },
   editorIndentGuide: {
-    activeBackground: parseColor(ui.foregroundAlt, 0.8),
-    background: parseColor(ui.foregroundAlt, 0.9),
+    activeBackground: parseColor(ui.foreground, 0.8),
+    background: parseColor(ui.foreground, 0.25),
   },
   editorInlayHint: {
     foreground: parseColor('hsl(33, 60%, 90%)'),

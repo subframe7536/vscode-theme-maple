@@ -85,7 +85,7 @@ import https from "https";
  * @param {string} url test
  * @returns test
  */
-export function get(url: string): Promise<string> {
+export function get<T extends string>(url: T): Promise<string> {
   return new Promise((resolve, reject) => {
     https.get(url, (res) => {
       let body = ''

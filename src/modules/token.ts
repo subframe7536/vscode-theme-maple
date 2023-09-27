@@ -105,7 +105,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'keyword.control.satisfies',
         'keyword.control.as.ts',
       ],
-      foreground: maple('keyword'),
+      foreground: maple('keyword.normal'),
     },
     {
       scope: [
@@ -216,7 +216,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'meta.type keyword.operator.expression.typeof',
         'meta.type keyword.operator.expression.keyof',
       ],
-      foreground: maple('keyword'),
+      foreground: maple('keyword.normal'),
       fontStyle: font('italic'),
     },
     {
@@ -329,7 +329,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: 'entity.name.section',
-      foreground: maple('keyword'),
+      foreground: maple('keyword.normal'),
     },
     {
       scope: 'punctuation.definition.list.begin.markdown',
@@ -473,7 +473,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.name.section.group-title',
         'support.type.property-name.table.toml',
       ],
-      foreground: maple('keyword'),
+      foreground: maple('keyword.normal'),
     },
     {
       scope: [
@@ -521,15 +521,15 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'source.css keyword.other.important',
         'keyword.other.using',
       ],
-      foreground: maple('keywordAlt'),
+      foreground: maple('keyword.alt'),
     },
     {
       scope: 'keyword.control.import.python',
-      foreground: maple('keyword'),
+      foreground: maple('keyword.normal'),
     },
     {
       scope: 'keyword.control.ternary.java',
-      foreground: maple('keywordAlt'),
+      foreground: maple('keyword.alt'),
       fontStyle: font(),
     },
     {
@@ -641,7 +641,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       },
       'class.typeHint': maple('type.primitive'),
       selfParameter: {
-        foreground: maple('keywordAlt'),
+        foreground: maple('keyword.alt'),
         italic: true,
         underline: false,
       },
