@@ -832,24 +832,32 @@ export type UI = {
     foreground?: string,
     noFolderBackground?: string,
     noFolderBorder?: string,
-    noFolderForeground?: string,
-    offlineBackground?: string,
-    offlineForeground?: string
+    noFolderForeground?: string
   },
   statusBarItem?: {
     activeBackground?: string,
     compactHoverBackground?: string,
     errorBackground?: string,
     errorForeground?: string,
+    errorHoverBackground?: string,
+    errorHoverForeground?: string,
     focusBorder?: string,
     hoverBackground?: string,
+    offlineBackground?: string,
+    offlineForeground?: string,
+    offlineHoverBackground?: string,
+    offlineHoverForeground?: string,
     prominentBackground?: string,
     prominentForeground?: string,
     prominentHoverBackground?: string,
     remoteBackground?: string,
     remoteForeground?: string,
+    remoteHoverBackground?: string,
+    remoteHoverForeground?: string,
     warningBackground?: string,
-    warningForeground?: string
+    warningForeground?: string,
+    warningHoverBackground?: string,
+    warningHoverForeground?: string
   },
   symbolIcon?: {
     arrayForeground?: string,
