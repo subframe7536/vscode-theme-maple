@@ -1,7 +1,9 @@
 
 // Example -----------------------------
 
-import a,{BigIntStats, type Dir} from 'node:fs';
+import { readFileSync } from 'node:fs';
+
+readFileSync('test.txt', { encoding: 'utf-8' })
 
 @test()
 class Greeter {
