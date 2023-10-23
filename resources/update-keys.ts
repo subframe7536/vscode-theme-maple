@@ -48,7 +48,7 @@ async function parseKeys() {
   keys.forEach((s) => {
     pathSet(ret, s as any, 'string')
   })
-  return JSON.stringify(ret, null, 2).replace(/"/g, '').replace(/:/g, '?:')
+  return JSON.stringify(ret, null, 2).replace(/[",]/g, '').replace(/:/g, '?:')
 }
 
 const types = `// auto generate by \`pnpm run update:key\`

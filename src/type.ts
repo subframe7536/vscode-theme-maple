@@ -112,4 +112,8 @@ export type UIColor = {
 }
 
 export type GenerateUIFn = (color: UIColor) => UI
-export type GenerateUIWithBaseFn = (base: BaseColor, color: UIColor) => UI
+export type GenerateUIWithBaseFn = (
+  base: BaseColor,
+  color: UIColor,
+  isDark: boolean
+) => UI

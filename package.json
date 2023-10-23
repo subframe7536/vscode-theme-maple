@@ -2,10 +2,10 @@
   "publisher": "subframe7536",
   "name": "theme-maple",
   "displayName": "Maple Theme",
+  "type": "module",
   "version": "0.2.7",
   "description": "Maple theme for VS Code",
   "license": "MIT",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/subframe7536/vscode-theme-maple"
@@ -53,12 +53,12 @@
     "release": "bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^0.2.9",
-    "@types/node": "^20.7.0",
-    "@types/tinycolor2": "^1.4.4",
-    "@vscode/vsce": "^2.21.0",
+    "@subframe7536/eslint-config": "^0.3.7",
+    "@types/node": "^20.8.7",
+    "@types/tinycolor2": "^1.4.5",
+    "@vscode/vsce": "^2.21.1",
     "bumpp": "^9.2.0",
-    "eslint": "^8.50.0",
+    "eslint": "^8.52.0",
     "esno": "^0.17.0",
     "nodemon": "^3.0.1",
     "object-standard-path": "^0.3.0",

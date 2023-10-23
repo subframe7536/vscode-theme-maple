@@ -7,14 +7,19 @@ import { generateElementColor } from './ui/element'
 import { generateTerminalColor } from './ui/terminal'
 import { generateViewColor } from './ui/view'
 
-export function buildTheme(base: BaseColor, token: TokenColor, ui: UIColor) {
+export function buildTheme(
+  base: BaseColor,
+  token: TokenColor,
+  ui: UIColor,
+  isDark: boolean,
+) {
   return {
     colors: buildUI({
       ...generateBaseColor(ui),
-      ...generateEditorColor(base, ui),
+      ...generateEditorColor(base, ui, isDark),
       ...generateElementColor(ui),
-      ...generateViewColor(base, ui),
-      ...generateTerminalColor(base, ui),
+      ...generateViewColor(base, ui, isDark),
+      ...generateTerminalColor(base, ui, isDark),
     }),
     ...generateTokenColor(token, ui.foreground),
   }

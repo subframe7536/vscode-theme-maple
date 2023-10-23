@@ -1,4 +1,3 @@
-/* eslint-disable quote-props */
 import { type Path, pathGet } from 'object-standard-path'
 import { parseColor } from '../util'
 import type { TokenColor } from '../type'
@@ -13,8 +12,16 @@ type Token = {
 }[]
 
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
-  const maple = (key: Path<typeof tokens>, alpha?: number) => parseColor(pathGet(tokens, key) as string, alpha)
-  const font = (...styles: (typeof fontStyles[number])[] | []) => styles.slice(0, 4).filter(Boolean).sort((a, b) => fontStyles.indexOf(a) - fontStyles.indexOf(b)).join(' ')
+  const maple = (key: Path<typeof tokens>, alpha?: number) => parseColor(
+    pathGet(tokens, key) as string,
+    alpha,
+  )
+  const font = (
+    ...styles: (typeof fontStyles[number])[] | []
+  ) => styles.slice(0, 4)
+    .filter(Boolean)
+    .sort((a, b) => fontStyles.indexOf(a) - fontStyles.indexOf(b))
+    .join(' ')
 
   const token: Token = [
     {
@@ -601,14 +608,14 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
   return {
     semanticHighlighting: true,
     semanticTokenColors: {
-      parameter: {
+      'parameter': {
         foreground: maple('parameter'),
         underline: true,
       },
       'property.declaration': maple('property.declaration'),
       'property.readonly': maple('property.normal'),
       'property.defaultLibrary': maple('property.defaultLib'),
-      interface: {
+      'interface': {
         foreground: maple('interface.normal'),
         italic: true,
       },
@@ -617,18 +624,18 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         bold: true,
       },
       'variable.defaultLibrary': maple('variable.defaultLib'),
-      type: maple('type.normal'),
+      'type': maple('type.normal'),
       'type.defaultLibrary': maple('type.defaultLib'),
-      function: maple('function'),
+      'function': maple('function'),
       'function.defaultLibrary': {
         bold: true,
       },
       'function.builtin': {
         bold: true,
       },
-      namespace: maple('namespace'),
-      struct: maple('class'),
-      class: {
+      'namespace': maple('namespace'),
+      'struct': maple('class'),
+      'class': {
         foreground: maple('class'),
         italic: false,
         bold: false,
@@ -640,18 +647,20 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         bold: true,
       },
       'class.typeHint': maple('type.primitive'),
-      selfParameter: {
+      'selfParameter': {
         foreground: maple('keyword.alt'),
         italic: true,
         underline: false,
       },
-      enumMember: maple('enum'),
+      'enumMember': maple('enum'),
       // rust cfg
-      builtinAttribute: maple('parameter'),
-      tomlTableKey: maple('parameter'),
+      'builtinAttribute': maple('parameter'),
+      'tomlTableKey': maple('parameter'),
     },
     tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
-      name, scope, settings: { foreground, fontStyle },
+      name,
+      scope,
+      settings: { foreground, fontStyle },
     })),
   }
 }

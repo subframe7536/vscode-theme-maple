@@ -23,6 +23,15 @@ export function brighten(colorString: string, amount: number) {
   return tinycolor(colorString).brighten(amount).toHexString()
 }
 
+/**
+ * brighten the color string
+ * @param colorString color string
+ * @param amount brighten amount (0-100)
+ */
+export function darken(colorString: string, amount: number) {
+  return tinycolor(colorString).darken(amount).toHexString()
+}
+
 export function getTextColor(bgColorString: string) {
   const parsedColor = tinycolor(bgColorString)
   return parsedColor.getBrightness() < 60 ? '#fafafa' : '#1d1d1d'

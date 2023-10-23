@@ -1,6 +1,0 @@
-{
-  "extends": "@subframe7536",
-  "ignorePatterns": [
-    "examples"
-  ]
-}
