@@ -76,9 +76,9 @@
     "dropdown.foreground": "#cbd5e1",
     "dropdown.border": "#2c2c2f",
     "dropdown.listBackground": "#1e1e1f",
-    "scrollbarSlider.background": "#3d4b5f33",
-    "scrollbarSlider.hoverBackground": "#3d4b5f4d",
-    "scrollbarSlider.activeBackground": "#3d4b5f80",
+    "scrollbarSlider.background": "#3d4b5f99",
+    "scrollbarSlider.hoverBackground": "#3d4b5fb3",
+    "scrollbarSlider.activeBackground": "#3d4b5fcc",
     "badge.background": "#8dbe74",
     "badge.foreground": "#171718",
     "progressBar.background": "#6285a7",
@@ -179,7 +179,7 @@
     "terminal.ansiBrightBlue": "#85c2ff",
     "terminal.ansiBrightCyan": "#9ee0e0",
     "terminal.ansiBrightGreen": "#9ad6a4",
-    "terminal.ansiBrightMagenta": "#bab1fb",
+    "terminal.ansiBrightMagenta": "#c5bef9",
     "terminal.ansiBrightRed": "#f49a9a",
     "terminal.ansiBrightWhite": "#f4f4f5",
     "terminal.ansiBrightYellow": "#f4d09a",
@@ -187,7 +187,7 @@
     "terminal.ansiBlue": "#85c2ff",
     "terminal.ansiCyan": "#9ee0e0",
     "terminal.ansiGreen": "#9ad6a4",
-    "terminal.ansiMagenta": "#bab1fb",
+    "terminal.ansiMagenta": "#c5bef9",
     "terminal.ansiRed": "#f49a9a",
     "terminal.ansiWhite": "#f4f4f5",
     "terminal.ansiYellow": "#f4d09a"
@@ -202,15 +202,15 @@
     "property.readonly": "#e3d5c9",
     "property.defaultLibrary": "#dcf49a",
     "interface": {
-      "foreground": "#f0c7b2",
+      "foreground": "#f4b89a",
       "italic": true
     },
     "interface.defaultLibrary": {
-      "foreground": "#f0c7b2",
+      "foreground": "#f4b89a",
       "bold": true
     },
     "variable.defaultLibrary": "#f1bcd8",
-    "type": "#f0c7b2",
+    "type": "#f4b89a",
     "type.defaultLibrary": "#dcf49a",
     "function": "#85c2ff",
     "function.defaultLibrary": {
@@ -232,13 +232,13 @@
     "class.builtin": {
       "bold": true
     },
-    "class.typeHint": "#bab1fb",
+    "class.typeHint": "#c5bef9",
     "selfParameter": {
       "foreground": "#f1bcd8",
       "italic": true,
       "underline": false
     },
-    "enumMember": "#f0c7b2",
+    "enumMember": "#f4b89a",
     "builtinAttribute": "#f4d09a",
     "tomlTableKey": "#f4d09a"
   },
@@ -303,7 +303,7 @@
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#f0c7b2"
+        "foreground": "#f4b89a"
       }
     },
     {
@@ -347,7 +347,7 @@
         "keyword.control.as.ts"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -368,7 +368,7 @@
         "constant.language.null"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -457,7 +457,7 @@
         "entity.name.type.instance.jsdoc"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -475,7 +475,7 @@
         "entity.name.type.ts"
       ],
       "settings": {
-        "foreground": "#f0c7b2"
+        "foreground": "#f4b89a"
       }
     },
     {
@@ -484,7 +484,7 @@
         "meta.type keyword.operator.expression.keyof"
       ],
       "settings": {
-        "foreground": "#bab1fb",
+        "foreground": "#c5bef9",
         "fontStyle": "italic"
       }
     },
@@ -571,7 +571,7 @@
         "support.constant"
       ],
       "settings": {
-        "foreground": "#f0c7b2"
+        "foreground": "#f4b89a"
       }
     },
     {
@@ -616,7 +616,7 @@
         "source.css support.function"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -625,7 +625,7 @@
         "constant.language"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -637,7 +637,7 @@
     {
       "scope": "entity.name.section",
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -652,7 +652,7 @@
         "markup.heading entity.name"
       ],
       "settings": {
-        "foreground": "#bab1fb",
+        "foreground": "#c5bef9",
         "fontStyle": "bold"
       }
     },
@@ -665,14 +665,14 @@
     {
       "scope": "markup.italic",
       "settings": {
-        "foreground": "#f0c7b2",
+        "foreground": "#f4b89a",
         "fontStyle": "italic"
       }
     },
     {
       "scope": "markup.bold",
       "settings": {
-        "foreground": "#f0c7b2",
+        "foreground": "#f4b89a",
         "fontStyle": "bold"
       }
     },
@@ -725,7 +725,7 @@
     {
       "scope": "meta.diff.range",
       "settings": {
-        "foreground": "#bab1fb",
+        "foreground": "#c5bef9",
         "fontStyle": "bold"
       }
     },
@@ -834,7 +834,7 @@
         "support.type.property-name.table.toml"
       ],
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -898,7 +898,7 @@
     {
       "scope": "keyword.control.import.python",
       "settings": {
-        "foreground": "#bab1fb"
+        "foreground": "#c5bef9"
       }
     },
     {
@@ -972,7 +972,7 @@
         "entity.name.type.class.java"
       ],
       "settings": {
-        "foreground": "#f0c7b2",
+        "foreground": "#f4b89a",
         "fontStyle": "bold"
       }
     },

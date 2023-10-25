@@ -15,9 +15,9 @@ export function buildTheme(
 ) {
   return {
     colors: buildUI({
-      ...generateBaseColor(ui),
+      ...generateBaseColor(ui, isDark),
       ...generateEditorColor(base, ui, isDark),
-      ...generateElementColor(ui),
+      ...generateElementColor(ui, isDark),
       ...generateViewColor(base, ui, isDark),
       ...generateTerminalColor(base, ui, isDark),
     }),

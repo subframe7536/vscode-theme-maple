@@ -111,9 +111,5 @@ export type UIColor = {
   rangeBorder: string
 }
 
-export type GenerateUIFn = (color: UIColor) => UI
-export type GenerateUIWithBaseFn = (
-  base: BaseColor,
-  color: UIColor,
-  isDark: boolean
-) => UI
+export type GenerateUIFn = (color: UIColor, isDark: boolean) => UI
+export type GenerateUIWithBaseFn = (base: BaseColor, color: UIColor, isDark: boolean) => UI

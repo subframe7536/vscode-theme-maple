@@ -1,7 +1,7 @@
 import type { GenerateUIFn } from '../../type'
 import { brighten, getTextColor, parseColor } from '../../util'
 
-export const generateElementColor: GenerateUIFn = ui => ({
+export const generateElementColor: GenerateUIFn = (ui, isDark) => ({
   textCodeBlock: {
     background: ui.background,
   },
@@ -39,9 +39,9 @@ export const generateElementColor: GenerateUIFn = ui => ({
     listBackground: ui.backgroundEditor,
   },
   scrollbarSlider: {
-    background: parseColor(ui.scrollbar, 0.2),
-    hoverBackground: parseColor(ui.scrollbar, 0.3),
-    activeBackground: parseColor(ui.scrollbar, 0.5),
+    background: parseColor(ui.scrollbar, isDark ? 0.6 : 0.3),
+    hoverBackground: parseColor(ui.scrollbar, isDark ? 0.7 : 0.5),
+    activeBackground: parseColor(ui.scrollbar, isDark ? 0.8 : 0.6),
   },
   badge: {
     background: ui.secondary,
