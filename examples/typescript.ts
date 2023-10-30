@@ -22,9 +22,9 @@ myGreeter.greeting = "howdy";
 myGreeter.showGreeting();
 
 class SpecialGreeter extends Greeter {
-    constructor() {
-        super(`Very special\n greetings${myGreeter}`);
-    }
+  constructor() {
+    super(`Very special\n greetings${myGreeter}`);
+  }
 }
 
 const regex = /^hell\/o/;
@@ -34,18 +34,18 @@ const regex = /^hell\/o/;
 // https://github.com/xhongc/music-tag-web
 
 declare namespace GreetingLib {
-    interface LogOptions {
-        verbose?: boolean;
-    }
-    interface AlertOptions {
-        modal: boolean;
-        title?: string;
-        color?: string;
-    }
+  interface LogOptions {
+    verbose?: boolean;
+  }
+  interface AlertOptions {
+    modal: boolean;
+    title?: string;
+    color?: string;
+  }
 }
 
 function test1(asd: number, bcd: number) {
-    console.log(asd, bcd);
+  console.log(asd, bcd);
 }
 
 export const test1a = {
@@ -54,15 +54,15 @@ export const test1a = {
 }
 
 function test1(asd: number, bcd: number) {
-    console.log(asd, bcd);
+  console.log(asd, bcd);
 }
 
 const testnum = {
-  a:1
+  a: 1
 } as const
 
-function isTest(n: unknown|null): n is typeof testnum {
-    return testnum.a === 1;
+function isTest(n: unknown | null): n is typeof testnum {
+  return testnum.a === 1;
 }
 
 type test = {
@@ -71,8 +71,8 @@ type test = {
 
 export type ConvertObject<T extends string[], P = {}> = T extends [infer F, ...infer R]
   ? F extends `${infer A}.${infer B}`
-    ? ConvertObject<Extract<R, string[]>, P & Partial<{ [K in A]: Partial<{ [P in B]: string }> }>>
-    : ConvertObject<Extract<R, string[]>, P & Partial<{ [K in Extract<F, string>]: string }>>
+  ? ConvertObject<Extract<R, string[]>, P & Partial<{ [K in A]: Partial<{ [P in B]: string }> }>>
+  : ConvertObject<Extract<R, string[]>, P & Partial<{ [K in Extract<F, string>]: string }>>
   : P
 
 export const test1 = {

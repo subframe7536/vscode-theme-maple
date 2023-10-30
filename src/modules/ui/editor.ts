@@ -1,31 +1,38 @@
 import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, getTextColor, parseColor } from '../../util'
 
-export const generateEditorColor: GenerateUIWithBaseFn = (base, ui) => ({
+export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => ({
   editor: {
     foreground: ui.foreground,
     background: ui.backgroundEditor,
 
     // selection
-    selectionBackground: ui.selection,
-    inactiveSelectionBackground: parseColor(ui.selection, 0.7),
+    selectionBackground: parseColor(ui.selection, isDark ? 1 : 0.9),
+    inactiveSelectionBackground: parseColor(ui.selection, isDark ? 0.7 : 0.5),
     selectionHighlightBackground: parseColor(ui.selection, 0.4),
     selectionHighlightBorder: ui.borderNormal,
+    snippetTabstopHighlightBackground: parseColor(ui.selection, 0.6),
+    snippetTabstopHighlightBorder: ui.borderNormal,
+
     // word auto highlight on cursor
     wordHighlightBackground: parseColor(ui.selection, 0.5),
     wordHighlightStrongBackground: parseColor(ui.selection, 0.5),
     wordHighlightTextBackground: parseColor(ui.selection, 0.5),
+
     // document search
     findMatchBackground: parseColor(ui.secondary, 0.3),
     findMatchBorder: ui.borderActive,
     findMatchHighlightBackground: parseColor(ui.secondary, 0.2),
     findRangeHighlightBackground: ui.rangeBackground,
     findRangeHighlightBorder: ui.rangeBorder,
+
     // hover panel matched text
     hoverHighlightBackground: parseColor(ui.selection, 0.3),
+
     // current line
     lineHighlightBackground: parseColor(ui.selection, 0.25),
     lineHighlightBorder: parseColor(ui.selection, 0.3),
+
     // range highlight
     rangeHighlightBackground: ui.rangeBackground,
     rangeHighlightBorder: ui.rangeBorder,
