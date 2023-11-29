@@ -1,12 +1,11 @@
 ## Maple Dark Theme for VSCode
 
-a colorful theme in dark, with medium level contrast
+a colorful VSCode theme, light / dark, medium brightness, low saturation
 
-![](resources/preview.png)
+![](resources/dark.png)
+![](resources/light.png)
 
 - font: [Maple Mono](https://github.com/subframe7536/maple-font)
-
-[more example](https://github.com/subframe7536/maple-font#screenshots)
 
 ## credit
 

@@ -53,17 +53,17 @@
     "release": "bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^0.3.7",
-    "@types/node": "^20.8.7",
-    "@types/tinycolor2": "^1.4.5",
-    "@vscode/vsce": "^2.21.1",
+    "@subframe7536/eslint-config": "^0.5.1",
+    "@types/node": "^20.9.4",
+    "@types/tinycolor2": "^1.4.6",
+    "@vscode/vsce": "^2.22.0",
     "bumpp": "^9.2.0",
-    "eslint": "^8.52.0",
-    "esno": "^0.17.0",
+    "eslint": "^8.54.0",
+    "esno": "^4.0.0",
     "nodemon": "^3.0.1",
     "object-standard-path": "^0.3.0",
     "tinycolor2": "^1.6.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "preview": true
 }
