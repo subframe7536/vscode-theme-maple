@@ -40,11 +40,11 @@ const base: BaseColor = {
   yellowLight: parseColor('hsl(58, 30%, 45%)'),
   greenLight: parseColor('hsl(78, 90%, 36%)'),
   green: parseColor('hsl(110, 36%, 50%)'),
-  cyan: parseColor('hsl(150, 48%, 50%)'),
-  sky: parseColor('hsl(170, 40%, 60%)'),
-  blue: parseColor('hsl(196, 70%, 50%)'),
-  purple: parseColor('hsl(247, 24%, 52%)'),
-  pink: parseColor('hsl(340, 36%, 52%)'),
+  cyan: parseColor('hsl(154, 40%, 50%)'),
+  sky: parseColor('hsl(176, 30%, 60%)'),
+  blue: parseColor('hsl(196, 60%, 50%)'),
+  purple: parseColor('hsl(247, 20%, 52%)'),
+  pink: parseColor('hsl(340, 32%, 52%)'),
 }
 
 const bg = parseColor('hsl(32, 56.5%, 95.5%)')

@@ -46,9 +46,9 @@ export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
     debuggingForeground: ui.background,
     debuggingBackground: ui.secondary,
     debuggingBorder: ui.borderNormal,
-    noFolderForeground: parseColor(ui.foreground, 0.3),
+    noFolderForeground: ui.foreground,
     noFolderBackground: ui.background,
-    noFolderBorder: parseColor(ui.borderNormal, 0.3),
+    noFolderBorder: parseColor(ui.borderNormal, 0.8),
   },
   statusBarItem: {
     prominentBackground: ui.secondary,

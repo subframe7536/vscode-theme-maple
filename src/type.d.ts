@@ -56,6 +56,8 @@ export type UI = {
     yellow?: string
   }
   chat?: {
+    avatarBackground?: string
+    avatarForeground?: string
     requestBorder?: string
     slashCommandBackground?: string
     slashCommandForeground?: string
@@ -1020,6 +1022,7 @@ export type UI = {
     foreground?: string
   }
   textPreformat?: {
+    background?: string
     foreground?: string
   }
   textSeparator?: {
