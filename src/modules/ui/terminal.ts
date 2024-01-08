@@ -1,4 +1,5 @@
 import type { GenerateUIWithBaseFn, UI } from '../../type'
+import { brighten } from '../../util'
 
 const black = '#181818'
 const white = '#f4f4f5'
@@ -7,14 +8,14 @@ export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui, isDar
     ? {
         background: ui.backgroundEditor,
         foreground: ui.foreground,
-        ansiBrightBlack: black,
-        ansiBrightBlue: baseColor.blue,
-        ansiBrightCyan: baseColor.cyan,
-        ansiBrightGreen: baseColor.green,
-        ansiBrightMagenta: baseColor.purple,
-        ansiBrightRed: baseColor.red,
-        ansiBrightWhite: white,
-        ansiBrightYellow: baseColor.yellow,
+        ansiBrightBlack: brighten(black, 30),
+        ansiBrightBlue: brighten(baseColor.blue, 20),
+        ansiBrightCyan: brighten(baseColor.cyan, 20),
+        ansiBrightGreen: brighten(baseColor.green, 20),
+        ansiBrightMagenta: brighten(baseColor.purple, 20),
+        ansiBrightRed: brighten(baseColor.red, 20),
+        ansiBrightWhite: '#fff',
+        ansiBrightYellow: brighten(baseColor.yellow, 20),
         ansiBlack: black,
         ansiBlue: baseColor.blue,
         ansiCyan: baseColor.cyan,
