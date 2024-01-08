@@ -300,6 +300,7 @@
     {
       "scope": [
         "constant",
+        "support.constant",
         "entity.name.constant",
         "variable.language",
         "meta.definition.variable"
@@ -566,14 +567,6 @@
       ],
       "settings": {
         "foreground": "#33a3cc"
-      }
-    },
-    {
-      "scope": [
-        "support.constant"
-      ],
-      "settings": {
-        "foreground": "#d67a29"
       }
     },
     {

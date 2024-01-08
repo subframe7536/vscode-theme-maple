@@ -1,4 +1,4 @@
-import { type Path, pathGet } from 'object-standard-path'
+import { type Path, pathGet } from 'object-path-access'
 import { parseColor } from '../util'
 import type { TokenColor } from '../type'
 
@@ -72,6 +72,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'constant',
+        'support.constant',
         'entity.name.constant',
         'variable.language',
         'meta.definition.variable',
@@ -280,12 +281,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'constant.other.placeholder',
       ],
       foreground: maple('escape'),
-    },
-    {
-      scope: [
-        'support.constant',
-      ],
-      foreground: maple('constant'),
     },
     {
       scope: [

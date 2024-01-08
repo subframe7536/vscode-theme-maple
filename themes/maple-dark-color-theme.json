@@ -177,14 +177,14 @@
     "terminalCursor.foreground": "#cbd5e1",
     "terminal.background": "#1e1e1f",
     "terminal.foreground": "#cbd5e1",
-    "terminal.ansiBrightBlack": "#181818",
-    "terminal.ansiBrightBlue": "#85c2ff",
-    "terminal.ansiBrightCyan": "#9ee0e0",
-    "terminal.ansiBrightGreen": "#9ad6a4",
-    "terminal.ansiBrightMagenta": "#c5bef9",
-    "terminal.ansiBrightRed": "#f49a9a",
-    "terminal.ansiBrightWhite": "#f4f4f5",
-    "terminal.ansiBrightYellow": "#f4d09a",
+    "terminal.ansiBrightBlack": "#646464",
+    "terminal.ansiBrightBlue": "#b8f5ff",
+    "terminal.ansiBrightCyan": "#d1ffff",
+    "terminal.ansiBrightGreen": "#cdffd7",
+    "terminal.ansiBrightMagenta": "#f8f1ff",
+    "terminal.ansiBrightRed": "#ffcdcd",
+    "terminal.ansiBrightWhite": "#fff",
+    "terminal.ansiBrightYellow": "#ffffcd",
     "terminal.ansiBlack": "#181818",
     "terminal.ansiBlue": "#85c2ff",
     "terminal.ansiCyan": "#9ee0e0",
@@ -300,6 +300,7 @@
     {
       "scope": [
         "constant",
+        "support.constant",
         "entity.name.constant",
         "variable.language",
         "meta.definition.variable"
@@ -566,14 +567,6 @@
       ],
       "settings": {
         "foreground": "#85c2ff"
-      }
-    },
-    {
-      "scope": [
-        "support.constant"
-      ],
-      "settings": {
-        "foreground": "#f4b89a"
       }
     },
     {
