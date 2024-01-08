@@ -3,7 +3,7 @@
   "name": "theme-maple",
   "displayName": "Maple Theme",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Maple theme for VS Code",
   "license": "MIT",
   "repository": {
@@ -46,11 +46,10 @@
   "scripts": {
     "build": "esno src/index.ts",
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
-    "vscode:prepublish": "pnpm run build",
     "update:key": "esno resources/update-keys.ts",
     "lint": "eslint . --cache --fix",
     "preview": "vsce package --no-dependencies",
-    "release": "bumpp --all && vsce publish --no-dependencies"
+    "release": "pnpm run build && bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@subframe7536/eslint-config": "^0.5.9",
