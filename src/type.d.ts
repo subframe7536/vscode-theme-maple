@@ -154,6 +154,7 @@ export type UI = {
     unchangedCodeBackground?: string
     unchangedRegionBackground?: string
     unchangedRegionForeground?: string
+    unchangedRegionShadow?: string
   }
   diffEditorGutter?: {
     insertedLineBackground?: string
@@ -243,6 +244,7 @@ export type UI = {
   editorCommentsWidget?: {
     rangeActiveBackground?: string
     rangeBackground?: string
+    replyInputBackground?: string
     resolvedBorder?: string
     unresolvedBorder?: string
   }
@@ -326,6 +328,9 @@ export type UI = {
     typeForeground?: string
   }
   editorLightBulb?: {
+    foreground?: string
+  }
+  editorLightBulbAi?: {
     foreground?: string
   }
   editorLightBulbAutoFix?: {
@@ -626,6 +631,9 @@ export type UI = {
     background?: string
     hoverBackground?: string
   }
+  multiDiffEditor?: {
+    headerBackground?: string
+  }
   notebook?: {
     cellBorderColor?: string
     cellEditorBackground?: string
@@ -779,6 +787,12 @@ export type UI = {
   }
   sash?: {
     hoverBorder?: string
+  }
+  scm?: {
+    historyItemAdditionsForeground?: string
+    historyItemDeletionsForeground?: string
+    historyItemSelectedStatisticsBorder?: string
+    historyItemStatisticsBorder?: string
   }
   scrollbar?: {
     shadow?: string
@@ -988,6 +1002,12 @@ export type UI = {
   terminalOverviewRuler?: {
     cursorForeground?: string
     findMatchForeground?: string
+  }
+  terminalStickyScroll?: {
+    background?: string
+  }
+  terminalStickyScrollHover?: {
+    background?: string
   }
   testing?: {
     iconErrored?: string
