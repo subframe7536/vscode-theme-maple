@@ -179,7 +179,7 @@
     "terminal.foreground": "#cbd5e1",
     "terminal.ansiBrightBlack": "#646464",
     "terminal.ansiBrightBlue": "#9edbff",
-    "terminal.ansiBrightCyan": "#b7f9f9",
+    "terminal.ansiBrightCyan": "#c1ffff",
     "terminal.ansiBrightGreen": "#b3efbd",
     "terminal.ansiBrightMagenta": "#ded7ff",
     "terminal.ansiBrightRed": "#ffb3b3",
@@ -187,7 +187,7 @@
     "terminal.ansiBrightYellow": "#ffe9b3",
     "terminal.ansiBlack": "#181818",
     "terminal.ansiBlue": "#85c2ff",
-    "terminal.ansiCyan": "#9ee0e0",
+    "terminal.ansiCyan": "#a8f0f0",
     "terminal.ansiGreen": "#9ad6a4",
     "terminal.ansiMagenta": "#c5bef9",
     "terminal.ansiRed": "#f49a9a",
@@ -222,9 +222,9 @@
       "bold": true
     },
     "namespace": "#f1bcd8",
-    "struct": "#9ee0e0",
+    "struct": "#a8f0f0",
     "class": {
-      "foreground": "#9ee0e0",
+      "foreground": "#a8f0f0",
       "italic": false,
       "bold": false
     },
@@ -595,7 +595,7 @@
         "source.css variable"
       ],
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
@@ -654,7 +654,7 @@
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
@@ -820,7 +820,7 @@
         "meta.parameter.initialization"
       ],
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
@@ -839,7 +839,7 @@
         "support.class.component.tsx"
       ],
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
@@ -847,7 +847,7 @@
         "punctuation.definition.template-expression"
       ],
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
@@ -855,7 +855,7 @@
         "meta.fstring.python constant.character.format.placeholder"
       ],
       "settings": {
-        "foreground": "#9ee0e0"
+        "foreground": "#a8f0f0"
       }
     },
     {
