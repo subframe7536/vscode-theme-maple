@@ -1,5 +1,3 @@
-/* 1. Example -------------------------------- */
-
 @import 'mixins';
 
 $foreground-color: #333;
@@ -11,6 +9,7 @@ html {
   line-height: 1.5;
   color: $foreground-color;
   background-color: $background-color;
+  --z-popover: 999;
 }
 
 a {
@@ -66,40 +65,33 @@ a {
   $variable: 10px;
   $another-variable: $variable;
 
-  width: $variable + $another-variable;
-  width: $variable * 2;
-  width: var(--test);
+  // width: $variable + $another-variable;
+  // width: $variable * 2;
+  // width: var(--test);
 }
 
 .functions {
-  color: hue(orange);
-  color: lighten(@color, 10%);
-  color: mix(@color, #000, 25%);
+  color: mix(a, #000, 25%);
   width: max(5, 10);
-  width: unit(5, px);
 }
 
 .nested {
-  .class {}
+  .class { test: a }
 
-  &::before {}
+  &::before { test: a}
 
-  &+& {}
+  &+& { test: a}
 
-  .class & {}
+  .class & { test: a}
 
   @media screen {}
 }
 
 @mixin size($var) {}
 
-;
-
 .use-mixin {
   @include size(10px);
 }
-
-.class {}
 
 .extended {
   @extend .class;

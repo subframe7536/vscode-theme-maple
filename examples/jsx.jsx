@@ -1,20 +1,13 @@
 function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-        ` class="${cls}"`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
+  for (let i = 0; i < cls.length; i++) {
     if (checkCondition(classes[i]) === undefined)
       console.log('undefined');
   }
 
   return (
     <div>
-      <web-component test=''>{block}</web-component>
-      <div>test</div>
+      <a-component test="a">{block}</a-component>
+      <div><span>test</span></div>
     </div>
   )
 }
