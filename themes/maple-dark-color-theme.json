@@ -211,7 +211,7 @@
       "foreground": "#f4b89a",
       "bold": true
     },
-    "variable.defaultLibrary": "#f1bcd8",
+    "variable.defaultLibrary": "#ebc2d8",
     "type": "#f4b89a",
     "type.defaultLibrary": "#dcf49a",
     "function": "#85c2ff",
@@ -221,7 +221,7 @@
     "function.builtin": {
       "bold": true
     },
-    "namespace": "#f1bcd8",
+    "namespace": "#ebc2d8",
     "struct": "#a8f0f0",
     "class": {
       "foreground": "#a8f0f0",
@@ -236,7 +236,7 @@
     },
     "class.typeHint": "#c5bef9",
     "selfParameter": {
-      "foreground": "#f1bcd8",
+      "foreground": "#ebc2d8",
       "italic": true,
       "underline": false
     },
@@ -494,7 +494,7 @@
     {
       "scope": "namespace",
       "settings": {
-        "foreground": "#f1bcd8"
+        "foreground": "#ebc2d8"
       }
     },
     {
@@ -887,7 +887,7 @@
         "keyword.other.using"
       ],
       "settings": {
-        "foreground": "#f1bcd8"
+        "foreground": "#ebc2d8"
       }
     },
     {
@@ -899,7 +899,7 @@
     {
       "scope": "keyword.control.ternary.java",
       "settings": {
-        "foreground": "#f1bcd8",
+        "foreground": "#ebc2d8",
         "fontStyle": ""
       }
     },
