@@ -235,6 +235,9 @@
       "bold": true
     },
     "class.typeHint": "#c5bef9",
+    "method.static": {
+      "italic": true
+    },
     "selfParameter": {
       "foreground": "#ebc2d8",
       "italic": true,

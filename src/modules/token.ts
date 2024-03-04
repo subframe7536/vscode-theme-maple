@@ -11,6 +11,14 @@ type Token = {
   fontStyle?: string
 }[]
 
+type SemanticTokenColors = Record<string, string | {
+  foreground?: string,
+  italic?: boolean,
+  bold?: boolean,
+  strikethrough?: boolean,
+  underline?: boolean,
+}>
+
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
   const maple = (key: Path<typeof tokens>, alpha?: number) => parseColor(
     pathGet(tokens, key) as string,
@@ -642,6 +650,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         bold: true,
       },
       'class.typeHint': maple('type.primitive'),
+      'method.static': {
+        italic: true,
+      },
       'selfParameter': {
         foreground: maple('keyword.alt'),
         italic: true,
@@ -651,7 +662,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       // rust cfg
       'builtinAttribute': maple('parameter'),
       'tomlTableKey': maple('parameter'),
-    },
+    } satisfies SemanticTokenColors,
     tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
       name,
       scope,
