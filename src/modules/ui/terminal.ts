@@ -14,7 +14,7 @@ export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui, isDar
         ansiBrightGreen: brighten(baseColor.green, 10),
         ansiBrightMagenta: brighten(baseColor.purple, 10),
         ansiBrightRed: brighten(baseColor.red, 10),
-        ansiBrightWhite: '#fff',
+        ansiBrightWhite: '#ffffff',
         ansiBrightYellow: brighten(baseColor.yellow, 10),
         ansiBlack: black,
         ansiBlue: baseColor.blue,
@@ -28,7 +28,7 @@ export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui, isDar
     : {
         foreground: '#393a34',
         selectionBackground: '#22222215',
-        ansiBrightBlack: '#aaaaaa',
+        ansiBrightBlack: '#333333',
         ansiBrightBlue: '#296aa3',
         ansiBrightCyan: '#10807c',
         ansiBrightGreen: '#1e754f',
@@ -42,7 +42,7 @@ export const generateTerminalColor: GenerateUIWithBaseFn = (baseColor, ui, isDar
         ansiGreen: '#1e754f',
         ansiMagenta: '#a13865',
         ansiRed: '#ab5959',
-        ansiWhite: '#dbd7caee',
+        ansiWhite: '#dbd8cd',
         ansiYellow: '#bda437',
       }
   return {

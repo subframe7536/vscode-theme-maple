@@ -1,7 +1,7 @@
 import type { GenerateUIFn } from '../../type'
-import { brighten, getTextColor, parseColor } from '../../util'
+import { brighten, darken, getTextColor, parseColor } from '../../util'
 
-export const generateElementColor: GenerateUIFn = (ui, isDark) => ({
+export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) => ({
   textCodeBlock: {
     background: ui.background,
   },
@@ -16,10 +16,10 @@ export const generateElementColor: GenerateUIFn = (ui, isDark) => ({
     hoverBackground: ui.background,
   },
   button: {
-    background: parseColor(ui.primary),
+    background: ui.primary,
     foreground: getTextColor(ui.background),
-    hoverBackground: parseColor(ui.primary, 0.85),
-    secondaryBackground: parseColor(ui.primary, 0.7),
+    hoverBackground: altParseColor(ui.primary, 8.5),
+    secondaryBackground: altParseColor(ui.primary, 7),
     secondaryForeground: getTextColor(ui.background),
   },
   input: {
@@ -54,15 +54,15 @@ export const generateElementColor: GenerateUIFn = (ui, isDark) => ({
     activeSelectionBackground: ui.listItem,
     dropBackground: ui.backgroundEditorAlt,
     activeSelectionForeground: ui.foreground,
-    focusBackground: parseColor(ui.listItem, 0.5), // include notification
+    focusBackground: altParseColor(ui.listItem, 5), // include notification
     focusForeground: ui.foreground,
     focusOutline: parseColor(ui.borderActive, 0.8),
     focusHighlightForeground: ui.secondary,
     focusAndSelectionOutline: ui.borderActive,
     highlightForeground: ui.secondary,
-    hoverBackground: parseColor(ui.listItem, 0.5),
+    hoverBackground: altParseColor(ui.listItem, 10),
     inactiveFocusOutline: ui.borderNormal,
-    inactiveSelectionBackground: parseColor(ui.listItem, 0.6),
+    inactiveSelectionBackground: altParseColor(ui.listItem, 8),
     filterMatchBackground: parseColor(ui.secondary, 0.7),
     filterMatchBorder: ui.secondary,
   },

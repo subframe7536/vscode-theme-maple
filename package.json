@@ -52,14 +52,14 @@
     "release": "pnpm run build && bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^0.5.9",
-    "@types/node": "^20.10.7",
+    "@subframe7536/eslint-config": "^0.5.10",
+    "@types/node": "^20.11.24",
     "@types/tinycolor2": "^1.4.6",
-    "@vscode/vsce": "^2.22.0",
-    "bumpp": "^9.2.1",
-    "eslint": "^8.56.0",
-    "esno": "^4.0.0",
-    "nodemon": "^3.0.2",
+    "@vscode/vsce": "^2.24.0",
+    "bumpp": "^9.3.1",
+    "eslint": "^8.57.0",
+    "esno": "^4.7.0",
+    "nodemon": "^3.1.0",
     "object-path-access": "^3.0.0",
     "tinycolor2": "^1.6.0",
     "typescript": "^5.3.3"

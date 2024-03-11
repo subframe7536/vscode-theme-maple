@@ -45,7 +45,7 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
     tabsBorder: ui.backgroundEditorAlt,
   },
   editorLineNumber: {
-    foreground: parseColor(getTextColor(ui.background), 0.4),
+    foreground: parseColor(base.gray, 0.7),
     activeForeground: getTextColor(ui.background),
   },
   editorCursor: {

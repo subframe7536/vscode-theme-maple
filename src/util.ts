@@ -2,7 +2,7 @@ import tinycolor from 'tinycolor2'
 import type { UI } from './type'
 
 /**
- * unify color string to hex string
+ * unify color string to hex string with alpha
  * @param colorString color string
  * @param alpha color alpha value (0-1)
  */

@@ -111,5 +111,14 @@ export type UIColor = {
   rangeBorder: string
 }
 
-export type GenerateUIFn = (color: UIColor, isDark: boolean) => UI
+/**
+ * @param color base color
+ * @param isDark whether it's dark
+ * @param altParseColor make color darken when it's dark, brighten when it's light
+ */
+export type GenerateUIFn = (
+  color: UIColor,
+  isDark: boolean,
+  altParseColor: (color: string, alpha?: number | [dark: number, light: number]) => string
+) => UI
 export type GenerateUIWithBaseFn = (base: BaseColor, color: UIColor, isDark: boolean) => UI
