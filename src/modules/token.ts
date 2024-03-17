@@ -12,11 +12,11 @@ type Token = {
 }[]
 
 type SemanticTokenColors = Record<string, string | {
-  foreground?: string,
-  italic?: boolean,
-  bold?: boolean,
-  strikethrough?: boolean,
-  underline?: boolean,
+  foreground?: string
+  italic?: boolean
+  bold?: boolean
+  strikethrough?: boolean
+  underline?: boolean
 }>
 
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
@@ -488,8 +488,12 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'support.class.component.js',
-        'support.class.component.vue',
+        'support.class.component.ts',
+        'support.class.component.jsx',
         'support.class.component.tsx',
+        'support.class.component.vue',
+        'support.class.component.svelte',
+        'support.class.component.astro',
       ],
       foreground: maple('js.component'),
     },
