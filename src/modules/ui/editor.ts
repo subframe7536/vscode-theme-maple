@@ -34,8 +34,8 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
     lineHighlightBorder: parseColor(ui.selection, 0.3),
 
     // range highlight
-    rangeHighlightBackground: ui.rangeBackground,
-    rangeHighlightBorder: ui.rangeBorder,
+    rangeHighlightBackground: parseColor(ui.rangeBackground, 0.9),
+    rangeHighlightBorder: parseColor(ui.rangeBorder, 0.9),
   },
   editorLink: {
     activeForeground: ui.secondary,
@@ -52,8 +52,8 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
     foreground: ui.cursor,
   },
   editorIndentGuide: {
-    activeBackground: parseColor(ui.foreground, 0.8),
-    background: parseColor(ui.foreground, 0.25),
+    activeBackground1: parseColor(ui.foreground, 0.8),
+    background1: parseColor(ui.foreground, 0.25),
   },
   editorInlayHint: {
     foreground: parseColor('hsl(33, 60%, 90%)'),
