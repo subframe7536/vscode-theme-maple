@@ -3,7 +3,7 @@ import { brighten, parseColor } from '../util'
 import { blue, gray } from './common'
 import type { Colors } from '.'
 
-const base: BaseColor = {
+export const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 60%)'),
   red: parseColor('hsl(0, 60%, 56%)'),
   orange: parseColor('hsl(28, 68%, 48%)'),

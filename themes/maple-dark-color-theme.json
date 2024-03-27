@@ -28,16 +28,16 @@
     "editor.hoverHighlightBackground": "#4755694d",
     "editor.lineHighlightBackground": "#47556940",
     "editor.lineHighlightBorder": "#4755694d",
-    "editor.rangeHighlightBackground": "#1e293b66",
-    "editor.rangeHighlightBorder": "#334155",
+    "editor.rangeHighlightBackground": "#1e293be6",
+    "editor.rangeHighlightBorder": "#334155e6",
     "editorLink.activeForeground": "#8dbe74",
     "editorGroupHeader.tabsBackground": "#171718",
     "editorGroupHeader.tabsBorder": "#232a39",
     "editorLineNumber.foreground": "#808080b3",
     "editorLineNumber.activeForeground": "#fafafa",
     "editorCursor.foreground": "#73839a",
-    "editorIndentGuide.activeBackground": "#cbd5e1cc",
-    "editorIndentGuide.background": "#cbd5e140",
+    "editorIndentGuide.activeBackground1": "#cbd5e1cc",
+    "editorIndentGuide.background1": "#cbd5e140",
     "editorInlayHint.foreground": "#f5e7d6",
     "editorInlayHint.background": "#3b5b7d",
     "peekView.border": "#2c2c2f",
@@ -297,7 +297,7 @@
         "punctuation.separator"
       ],
       "settings": {
-        "foreground": "#c2dcfa99"
+        "foreground": "#c2dcfacc"
       }
     },
     {
@@ -838,8 +838,12 @@
     {
       "scope": [
         "support.class.component.js",
+        "support.class.component.ts",
+        "support.class.component.jsx",
+        "support.class.component.tsx",
         "support.class.component.vue",
-        "support.class.component.tsx"
+        "support.class.component.svelte",
+        "support.class.component.astro"
       ],
       "settings": {
         "foreground": "#a8f0f0"
