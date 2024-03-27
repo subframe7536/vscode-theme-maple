@@ -75,7 +75,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'punctuation.terminator',
         'punctuation.separator',
       ],
-      foreground: maple('punctuation', 0.6),
+      foreground: maple('punctuation', 0.8),
     },
     {
       scope: [
