@@ -78,8 +78,8 @@
     "dropdown.foreground": "#cbd5e1",
     "dropdown.border": "#2c2c2f",
     "dropdown.listBackground": "#1e1e1f",
-    "scrollbarSlider.background": "#3d4b5f99",
-    "scrollbarSlider.hoverBackground": "#3d4b5fb3",
+    "scrollbarSlider.background": "#3d4b5f80",
+    "scrollbarSlider.hoverBackground": "#3d4b5f99",
     "scrollbarSlider.activeBackground": "#3d4b5fcc",
     "badge.background": "#8dbe74",
     "badge.foreground": "#171718",
@@ -93,7 +93,7 @@
     "list.focusHighlightForeground": "#8dbe74",
     "list.focusAndSelectionOutline": "#64748b",
     "list.highlightForeground": "#8dbe74",
-    "list.hoverBackground": "#202935",
+    "list.hoverBackground": "#2d3a4b",
     "list.inactiveFocusOutline": "#2c2c2f",
     "list.inactiveSelectionBackground": "#242d3b",
     "list.filterMatchBackground": "#8dbe74b3",
@@ -149,7 +149,7 @@
     "gitDecoration.conflictingResourceForeground": "#85c2ff",
     "gitDecoration.deletedResourceForeground": "#f49a9a",
     "gitDecoration.modifiedResourceForeground": "#f4d09a",
-    "minimap.background": "#171718cc",
+    "minimap.background": "#212122",
     "minimap.findMatchHighlight": "#8dbe74cc",
     "minimap.selectionHighlight": "#6285a780",
     "minimap.errorHighlight": "#f49a9a99",
@@ -221,7 +221,10 @@
     "function.builtin": {
       "bold": true
     },
-    "namespace": "#ebc2d8",
+    "namespace": {
+      "foreground": "#ebc2d8",
+      "bold": true
+    },
     "struct": "#a8f0f0",
     "class": {
       "foreground": "#a8f0f0",

@@ -93,7 +93,7 @@
     "list.focusHighlightForeground": "#85987c",
     "list.focusAndSelectionOutline": "#94a3b8",
     "list.highlightForeground": "#85987c",
-    "list.hoverBackground": "#fafff4",
+    "list.hoverBackground": "#e9efe3",
     "list.inactiveFocusOutline": "#8393aa66",
     "list.inactiveSelectionBackground": "#f5fbef",
     "list.filterMatchBackground": "#85987cb3",
@@ -149,7 +149,7 @@
     "gitDecoration.conflictingResourceForeground": "#18a8dc",
     "gitDecoration.deletedResourceForeground": "#d24b4b",
     "gitDecoration.modifiedResourceForeground": "#cc9600",
-    "minimap.background": "#faf4edcc",
+    "minimap.background": "#fffef7",
     "minimap.findMatchHighlight": "#85987ccc",
     "minimap.selectionHighlight": "#d9dfd380",
     "minimap.errorHighlight": "#d24b4b99",
@@ -221,7 +221,10 @@
     "function.builtin": {
       "bold": true
     },
-    "namespace": "#ce6487",
+    "namespace": {
+      "foreground": "#ce6487",
+      "bold": true
+    },
     "struct": "#36b586",
     "class": {
       "foreground": "#36b586",
