@@ -1,5 +1,5 @@
 import type { GenerateUIWithBaseFn } from '../../type'
-import { parseColor } from '../../util'
+import { brighten, parseColor } from '../../util'
 
 export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
   activityBar: {
@@ -29,7 +29,7 @@ export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
     modifiedResourceForeground: base.yellow,
   },
   minimap: {
-    background: parseColor(ui.background, 0.8),
+    background: brighten(ui.background, 4),
     findMatchHighlight: parseColor(ui.secondary, 0.8),
     selectionHighlight: parseColor(ui.primary, 0.5),
     errorHighlight: parseColor(base.red, 0.6),
