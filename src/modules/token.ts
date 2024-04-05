@@ -640,7 +640,10 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'function.builtin': {
         bold: true,
       },
-      'namespace': maple('namespace'),
+      'namespace': {
+        foreground: maple('namespace'),
+        bold: true,
+      },
       'struct': maple('class'),
       'class': {
         foreground: maple('class'),
