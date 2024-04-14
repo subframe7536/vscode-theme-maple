@@ -3,7 +3,7 @@
   "name": "theme-maple",
   "displayName": "Maple Theme",
   "type": "module",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Maple theme for VS Code",
   "license": "MIT",
   "repository": {
