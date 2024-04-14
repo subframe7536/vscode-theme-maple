@@ -5,7 +5,7 @@ import type { Colors } from '.'
 
 export const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 60%)'),
-  red: parseColor('hsl(0, 60%, 56%)'),
+  red: parseColor('hsl(0, 60%, 62%)'),
   orange: parseColor('hsl(32, 66%, 52%)'),
   yellow: parseColor('hsl(48, 96%, 41%)'),
   yellowLight: parseColor('hsl(52, 80%, 40%)'),
@@ -14,7 +14,7 @@ export const base: BaseColor = {
   cyan: parseColor('hsl(158, 54%, 46%)'),
   sky: parseColor('hsl(180, 45%, 58%)'),
   blue: parseColor('hsl(196, 80%, 48%)'),
-  purple: parseColor('hsl(247, 32%, 60%)'),
+  purple: parseColor('hsl(247, 32%, 64%)'),
   pink: parseColor('hsl(340, 52%, 60%)'),
 }
 
