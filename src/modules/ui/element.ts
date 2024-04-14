@@ -52,8 +52,8 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
   },
   list: {
     activeSelectionBackground: ui.listItem,
-    dropBackground: ui.backgroundEditorAlt,
     activeSelectionForeground: ui.foreground,
+    dropBackground: ui.backgroundEditorAlt,
     focusBackground: altParseColor(ui.listItem, 5), // include notification
     focusForeground: ui.foreground,
     focusOutline: parseColor(ui.borderActive, 0.8),
@@ -62,7 +62,7 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
     highlightForeground: ui.secondary,
     hoverBackground: altParseColor(ui.listItem, 3),
     inactiveFocusOutline: ui.borderNormal,
-    inactiveSelectionBackground: altParseColor(ui.listItem, 8),
+    inactiveSelectionBackground: altParseColor(ui.listItem, 6),
     filterMatchBackground: parseColor(ui.secondary, 0.7),
     filterMatchBorder: ui.secondary,
   },
