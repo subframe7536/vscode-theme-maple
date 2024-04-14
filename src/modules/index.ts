@@ -23,7 +23,7 @@ export function buildTheme(
       ...generateEditorColor(base, ui, isDark),
       ...generateElementColor(ui, isDark, altParseColor),
       ...generateViewColor(base, ui, isDark),
-      ...generateTerminalColor(base, ui, isDark),
+      ...generateTerminalColor(ui),
     }),
     ...generateTokenColor(token, ui.foreground),
   }
