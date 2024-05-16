@@ -665,6 +665,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         italic: true,
         underline: false,
       },
+      'selfKeyword': {
+        foreground: maple('keyword.alt'),
+        italic: true,
+        underline: false,
+      },
       'enumMember': maple('enum'),
       // rust cfg
       'builtinAttribute': maple('parameter'),
