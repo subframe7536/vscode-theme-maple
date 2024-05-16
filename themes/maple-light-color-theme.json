@@ -246,6 +246,11 @@
       "italic": true,
       "underline": false
     },
+    "selfKeyword": {
+      "foreground": "#ce6487",
+      "italic": true,
+      "underline": false
+    },
     "enumMember": "#d58a34",
     "builtinAttribute": "#cda504",
     "tomlTableKey": "#cda504"
