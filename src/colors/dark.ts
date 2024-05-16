@@ -25,7 +25,7 @@ const uiColor: UIColor = {
   backgroundEditor: '#1e1e1f',
   backgroundEditorAlt: parseColor('hsl(220, 24%, 18%)'),
   borderActive: blue[500],
-  borderNormal: brighten(gray[800], 2),
+  borderNormal: brighten(gray[700], 2),
   primary: parseColor('hsl(210, 28%, 52%)'),
   secondary: parseColor('hsl(100, 36%, 60%)'),
   cursor: brighten(blue[500], 6),
