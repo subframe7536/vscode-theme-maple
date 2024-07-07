@@ -1,0 +1,9 @@
+{
+  "codeimg.showLineNumbers": true,
+  "codeimg.boxShadow": "none",
+  // "codeimg.border": false,
+  "codeimg.containerPadding": "0",
+  "editor.fontLigatures": false,
+  "codeimg.background": "none",
+  "codeimg.format": "jpg"
+}
