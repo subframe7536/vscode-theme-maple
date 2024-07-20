@@ -2,7 +2,7 @@ import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, parseColor } from '../../util'
 
 export const generateTerminalColor: GenerateUIWithBaseFn = (base, ui, isDark) => {
-  const brightenDelta = isDark ? 10 : 25
+  const brightenDelta = isDark ? 10 : 0
   return {
     terminalCursor: {
       background: ui.backgroundEditor,
