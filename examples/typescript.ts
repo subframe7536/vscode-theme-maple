@@ -65,10 +65,20 @@ function isTest(n: unknown | null): n is typeof testnum {
   return testnum.a === 1;
 }
 
-type test = {
-  a: number
+export const base = {
+  gray: 'hsl(0, 0%, 60%)',
+  red: 'hsl(0, 45%, 53%)',
+  orange: 'hsl(32, 64%, 44%)',
+  yellow: 'hsl(50, 70%, 30%)',
+  yellowLight: 'hsl(50, 60%, 40%)',
+  greenLight: 'hsl(78, 80%, 30%)',
+  green: 'hsl(110, 60%, 32%)',
+  cyan: 'hsl(160, 70%, 30%)',
+  sky: 'hsl(180, 50%, 40%)',
+  blue: 'hsl(196, 80%, 35%)',
+  purple: 'hsl(247, 30%, 55%)',
+  pink: 'hsl(340, 46%, 57%)',
 }
-
 export type ConvertObject<T extends string[], P = {}> = T extends [infer F, ...infer R]
   ? F extends `${infer A}.${infer B}`
   ? ConvertObject<Extract<R, string[]>, P & Partial<{ [K in A]: Partial<{ [P in B]: string }> }>>

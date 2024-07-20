@@ -5,20 +5,20 @@ import type { Colors } from '.'
 
 export const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 60%)'),
-  red: parseColor('hsl(0, 75%, 60%)'),
-  orange: parseColor('hsl(32, 70%, 52%)'),
-  yellow: parseColor('hsl(48, 180%, 36%)'),
-  yellowLight: parseColor('hsl(54, 40%, 40%)'),
-  greenLight: parseColor('hsl(78, 80%, 40%)'),
-  green: parseColor('hsl(110, 48%, 45%)'),
-  cyan: parseColor('hsl(158, 60%, 42%)'),
-  sky: parseColor('hsl(180, 45%, 54%)'),
-  blue: parseColor('hsl(196, 90%, 45%)'),
-  purple: parseColor('hsl(247, 50%, 64%)'),
-  pink: parseColor('hsl(340, 52%, 60%)'),
+  red: parseColor('hsl(0, 45%, 53%)'),
+  orange: parseColor('hsl(32, 64%, 44%)'),
+  yellow: parseColor('hsl(50, 70%, 30%)'),
+  yellowLight: parseColor('hsl(50, 60%, 40%)'),
+  greenLight: parseColor('hsl(78, 80%, 30%)'),
+  green: parseColor('hsl(110, 60%, 32%)'),
+  cyan: parseColor('hsl(160, 70%, 30%)'),
+  sky: parseColor('hsl(180, 50%, 40%)'),
+  blue: parseColor('hsl(196, 80%, 35%)'),
+  purple: parseColor('hsl(247, 30%, 55%)'),
+  pink: parseColor('hsl(340, 46%, 57%)'),
 }
 
-const bg = parseColor('hsl(36, 42%, 96%)')
+const bg = parseColor('hsl(60, 10%, 98%)')
 const primaryColor = parseColor('hsl(90, 16%, 85%)')
 const secondaryColor = parseColor('hsl(100, 12%, 54%)')
 const uiColor: UIColor = {
@@ -52,13 +52,13 @@ export const tokenColor: TokenColor = {
   operator: base.sky,
   function: base.blue,
   property: {
-    normal: base.yellowLight,
-    declaration: base.yellowLight,
+    normal: base.yellow,
+    declaration: base.yellow,
     defaultLib: base.greenLight,
   },
-  parameter: base.yellow,
+  parameter: base.yellowLight,
   variable: {
-    local: base.yellow,
+    local: base.yellowLight,
     defaultLib: base.pink,
   },
   constant: base.orange,
@@ -70,7 +70,7 @@ export const tokenColor: TokenColor = {
   },
   type: {
     normal: base.orange,
-    parameter: base.yellow,
+    parameter: base.yellowLight,
     primitive: base.purple,
     defaultLib: base.greenLight,
   },
