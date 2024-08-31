@@ -19,17 +19,18 @@ type SemanticTokenColors = Record<string, string | {
   underline?: boolean
 }>
 
-export function generateTokenColor(tokens: TokenColor, plainColor: string) {
-  const maple = (key: Path<typeof tokens>, alpha?: number) => parseColor(
-    pathGet(tokens, key) as string,
-    alpha,
-  )
-  const font = (
-    ...styles: (typeof fontStyles[number])[] | []
-  ) => styles.slice(0, 4)
+function font(...styles: (typeof fontStyles[number])[] | []) {
+  return styles.slice(0, 4)
     .filter(Boolean)
     .sort((a, b) => fontStyles.indexOf(a) - fontStyles.indexOf(b))
     .join(' ')
+}
+
+export function generateTokenColor(tokens: TokenColor, plainColor: string) {
+  const maple = (
+    key: Path<typeof tokens>,
+    alpha?: number,
+  ) => parseColor(pathGet(tokens, key) as string, alpha)
 
   const token: Token = [
     {
@@ -657,9 +658,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         bold: true,
       },
       'class.typeHint': maple('type.primitive'),
-      'method.static': {
-        italic: true,
-      },
       'selfParameter': {
         foreground: maple('keyword.alt'),
         italic: true,
@@ -674,6 +672,13 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       // rust cfg
       'builtinAttribute': maple('parameter'),
       'tomlTableKey': maple('parameter'),
+      '*.static': {
+        italic: true,
+        underline: true,
+      },
+      '*.async': {
+        italic: true,
+      },
     } satisfies SemanticTokenColors,
     tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
       name,
