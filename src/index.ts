@@ -22,12 +22,12 @@ async function generateTheme({
 }: GenerateOption) {
   await writeFile(
     `./themes/${name.replace(/\s/g, '-').toLowerCase()}-color-theme.json`,
-  `${JSON.stringify({
-    name,
-    author,
-    base: isDark ? 'vs-dark' : 'vs',
-    ...buildTheme(baseColor, tokenColor, uiColor, isDark),
-  }, null, 2)}\n`,
+    `${JSON.stringify({
+      name,
+      author,
+      base: isDark ? 'vs-dark' : 'vs',
+      ...buildTheme(baseColor, tokenColor, uiColor, isDark),
+    }, null, 2)}\n`,
   )
 }
 

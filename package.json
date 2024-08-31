@@ -44,22 +44,22 @@
     "build": "esno src/index.ts",
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
     "update:key": "esno resources/update-keys.ts",
-    "lint": "eslint . --cache --fix",
+    "format": "eslint . --cache --fix",
     "preview": "vsce package --no-dependencies",
     "release": "pnpm run build && bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^0.7.2",
-    "@types/node": "^20.14.11",
+    "@subframe7536/eslint-config": "^0.8.0",
+    "@types/node": "^20.16.2",
     "@types/tinycolor2": "^1.4.6",
-    "@vscode/vsce": "^2.31.1",
-    "bumpp": "^9.4.1",
-    "eslint": "^9.7.0",
+    "@vscode/vsce": "^3.0.0",
+    "bumpp": "^9.5.2",
+    "eslint": "^9.9.1",
     "esno": "^4.7.0",
     "nodemon": "^3.1.4",
     "object-path-access": "^4.0.0",
     "tinycolor2": "^1.6.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "preview": true
 }
