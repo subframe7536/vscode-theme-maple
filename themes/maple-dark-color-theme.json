@@ -238,9 +238,6 @@
       "bold": true
     },
     "class.typeHint": "#c5bef9",
-    "method.static": {
-      "italic": true
-    },
     "selfParameter": {
       "foreground": "#ebc2d8",
       "italic": true,
@@ -253,7 +250,14 @@
     },
     "enumMember": "#f4b89a",
     "builtinAttribute": "#f4d09a",
-    "tomlTableKey": "#f4d09a"
+    "tomlTableKey": "#f4d09a",
+    "*.static": {
+      "italic": true,
+      "underline": true
+    },
+    "*.async": {
+      "italic": true
+    }
   },
   "tokenColors": [
     {
