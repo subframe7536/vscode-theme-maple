@@ -674,10 +674,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'tomlTableKey': maple('parameter'),
       '*.static': {
         italic: true,
-        underline: true,
       },
       '*.async': {
-        italic: true,
+        bold: true,
       },
     } satisfies SemanticTokenColors,
     tokenColors: token.map(({ scope, fontStyle, foreground, name }) => ({
