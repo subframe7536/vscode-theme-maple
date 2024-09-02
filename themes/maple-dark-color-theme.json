@@ -252,11 +252,10 @@
     "builtinAttribute": "#f4d09a",
     "tomlTableKey": "#f4d09a",
     "*.static": {
-      "italic": true,
-      "underline": true
+      "italic": true
     },
     "*.async": {
-      "italic": true
+      "bold": true
     }
   },
   "tokenColors": [
