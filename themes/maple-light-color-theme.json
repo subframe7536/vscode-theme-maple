@@ -1004,6 +1004,14 @@
       "settings": {
         "foreground": "#475569"
       }
+    },
+    {
+      "scope": [
+        "invalid.illegal.character-not-allowed-here.html"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
     }
   ]
 }
