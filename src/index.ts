@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
+import { colors } from './colors'
 import { buildTheme } from './modules'
 import type { BaseColor, TokenColor, UIColor } from './type'
-import { colors } from './colors'
 
 const author = 'subframe7536'
 

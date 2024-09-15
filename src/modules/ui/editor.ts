@@ -1,5 +1,5 @@
-import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, getTextColor, parseColor } from '../../util'
+import type { GenerateUIWithBaseFn } from '../../type'
 
 export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => ({
   editor: {
