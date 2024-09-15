@@ -612,6 +612,12 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       ],
       foreground: plainColor,
     },
+    {
+      scope: [
+        'invalid.illegal.character-not-allowed-here.html',
+      ],
+      fontStyle: font(),
+    },
   ]
   return {
     semanticHighlighting: true,
