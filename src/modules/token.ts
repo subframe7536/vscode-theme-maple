@@ -615,6 +615,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'invalid.illegal.character-not-allowed-here.html',
+        'invalid.deprecated.entity.other.attribute-name.html',
       ],
       fontStyle: font(),
     },
