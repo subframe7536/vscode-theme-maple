@@ -6,6 +6,8 @@ a colorful VSCode theme, light / dark, medium brightness, low saturation
 ![](resources/light.png)
 
 - font: [Maple Mono](https://github.com/subframe7536/maple-font)
+- icon: [Catppuccin Icons for VSCode](https://github.com/catppuccin/vscode-icons)
+- change ui: [Custom UI Style](https://github.com/subframe7536/vscode-custom-ui-style)
 
 ## credit
 
