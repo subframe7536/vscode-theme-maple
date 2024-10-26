@@ -5,17 +5,17 @@ import type { BaseColor, TokenColor, UIColor } from '../type'
 
 export const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 50%)'),
-  red: parseColor('hsl(0, 80%, 78%)'),
-  orange: parseColor('hsl(20, 80%, 78%)'),
-  yellow: parseColor('hsl(36, 80%, 78%)'),
-  yellowLight: parseColor('hsl(28, 32%, 84%)'),
-  greenLight: parseColor('hsl(76, 80%, 78%)'),
-  green: parseColor('hsl(130, 42%, 72%)'),
-  cyan: parseColor('hsl(180, 70%, 80%)'),
+  red: parseColor('hsl(0, 72%, 80%)'),
+  orange: parseColor('hsl(20, 70%, 80%)'),
+  yellow: parseColor('hsl(36, 70%, 78%)'),
+  yellowLight: parseColor('hsl(28, 24%, 84%)'),
+  greenLight: parseColor('hsl(76, 80%, 74%)'),
+  green: parseColor('hsl(130, 48%, 76%)'),
+  cyan: parseColor('hsl(178, 60%, 77%)'),
   sky: parseColor('hsl(212, 85%, 87%)'),
   blue: parseColor('hsl(210, 100%, 76%)'),
-  purple: parseColor('hsl(247, 82%, 86%)'),
-  pink: parseColor('hsl(328, 50%, 84%)'),
+  purple: parseColor('hsl(247, 90%, 88%)'),
+  pink: parseColor('hsl(285, 45%, 86%)'),
 }
 
 const uiColor: UIColor = {
