@@ -4,7 +4,7 @@ import { brighten, parseColor } from '../util'
 import { blue, gray } from './common'
 
 export const base: BaseColor = {
-  gray: parseColor('hsl(0, 0%, 60%)'),
+  gray: parseColor('hsl(0, 0%, 35%)'),
   red: parseColor('hsl(0, 45%, 53%)'),
   orange: parseColor('hsl(32, 64%, 50%)'),
   yellow: parseColor('hsl(45, 70%, 32%)'),
