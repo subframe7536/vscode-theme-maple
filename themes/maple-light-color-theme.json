@@ -33,7 +33,7 @@
     "editorLink.activeForeground": "#85987c",
     "editorGroupHeader.tabsBackground": "#fafaf9",
     "editorGroupHeader.tabsBorder": "#ffffff",
-    "editorLineNumber.foreground": "#999999b3",
+    "editorLineNumber.foreground": "#595959b3",
     "editorLineNumber.activeForeground": "#1d1d1d",
     "editorCursor.foreground": "#6e7e95",
     "editorIndentGuide.activeBackground1": "#475569cc",
@@ -262,11 +262,20 @@
     {
       "scope": [
         "comment",
-        "punctuation.definition.comment",
         "string.comment"
       ],
       "settings": {
-        "foreground": "#999999"
+        "foreground": "#595959",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.comment"
+      ],
+      "settings": {
+        "foreground": "#595959",
+        "fontStyle": ""
       }
     },
     {
@@ -728,7 +737,7 @@
         "markup.untracked"
       ],
       "settings": {
-        "foreground": "#999999"
+        "foreground": "#595959"
       }
     },
     {
