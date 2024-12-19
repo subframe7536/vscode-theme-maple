@@ -45,13 +45,26 @@ async function scrapeThemeAvailableKeys() {
 async function parseKeys() {
   const keys = await scrapeThemeAvailableKeys()
   const ret = {}
-  keys.forEach((s) => {
-    pathSet(ret, s as any, 'string')
-  })
-  return JSON.stringify(ret, null, 2).replace(/[",]/g, '').replace(/:/g, '?:')
+  for (const key of keys) {
+    try {
+      pathSet(ret, key as any, 'string')
+    } catch (e) {
+      const [key1, key2, key3] = key.split('.')
+      if (key3) {
+        ret[key1][`${key2}.${key3}`] = 'string'
+      } else {
+        console.error(key, e)
+      }
+    }
+  }
+  return JSON.stringify(ret, null, 2)
+    .replace(/"string"/g, 'string')
+    .replace(/:/g, '?:')
+    .replace(/__/g, '"')
 }
 
-const types = `// auto generate by \`pnpm run update:key\`
+const types = `// auto generate by \`pnpm run update\`
+/* eslint-disable */
 export type UI = ${await parseKeys()}
 `
 

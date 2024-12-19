@@ -43,7 +43,7 @@
   "scripts": {
     "build": "esno src/index.ts",
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
-    "update:key": "esno resources/update-keys.ts",
+    "update": "esno resources/update-keys.ts",
     "format": "eslint . --cache --fix",
     "preview": "vsce package --no-dependencies",
     "release": "pnpm run build && bumpp --all && vsce publish --no-dependencies"
