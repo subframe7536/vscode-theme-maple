@@ -1,5 +1,5 @@
-import { parseColor } from '../../util'
 import type { GenerateUIFn } from '../../type'
+import { parseColor } from '../../util'
 
 export const generateBaseColor: GenerateUIFn = ui => ({
   focusBorder: ui.borderActive,

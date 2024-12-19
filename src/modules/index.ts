@@ -1,3 +1,4 @@
+import type { BaseColor, TokenColor, UIColor } from '../type'
 import { brighten, buildUI, darken } from '../util'
 import { generateTokenColor } from './token'
 import { generateBaseColor } from './ui/base'
@@ -5,7 +6,6 @@ import { generateEditorColor } from './ui/editor'
 import { generateElementColor } from './ui/element'
 import { generateTerminalColor } from './ui/terminal'
 import { generateViewColor } from './ui/view'
-import type { BaseColor, TokenColor, UIColor } from '../type'
 
 export function buildTheme(
   base: BaseColor,

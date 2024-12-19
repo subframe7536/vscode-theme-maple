@@ -1,5 +1,5 @@
-import tinycolor from 'tinycolor2'
 import type { UI } from './type'
+import tinycolor from 'tinycolor2'
 
 /**
  * unify color string to hex string with alpha

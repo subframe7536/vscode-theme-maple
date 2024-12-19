@@ -1,5 +1,5 @@
-import { brighten, parseColor } from '../../util'
 import type { GenerateUIWithBaseFn } from '../../type'
+import { brighten, parseColor } from '../../util'
 
 export const generateTerminalColor: GenerateUIWithBaseFn = (base, ui, isDark) => {
   const brightenDelta = isDark ? 10 : 0

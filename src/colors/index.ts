@@ -1,6 +1,6 @@
+import type { BaseColor, TokenColor, UIColor } from '../type'
 import dark from './dark'
 import light from './light'
-import type { BaseColor, TokenColor, UIColor } from '../type'
 
 export type Colors = {
   isDark: boolean

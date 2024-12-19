@@ -1,6 +1,6 @@
+import type { TokenColor } from '../type'
 import { type Path, pathGet } from 'object-path-access'
 import { parseColor } from '../util'
-import type { TokenColor } from '../type'
 
 const fontStyles = ['italic', 'bold', 'underline', 'strikethrough'] as const
 
