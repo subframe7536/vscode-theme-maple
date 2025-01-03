@@ -39,14 +39,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'string.comment',
       ],
       foreground: maple('comment'),
-      fontStyle: font('italic'),
-    },
-    {
-      scope: [
-        'punctuation.definition.comment',
-      ],
-      foreground: maple('comment'),
-      fontStyle: font(),
     },
     {
       scope: [
