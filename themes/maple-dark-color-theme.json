@@ -265,17 +265,7 @@
         "string.comment"
       ],
       "settings": {
-        "foreground": "#a6a6a6",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": [
-        "punctuation.definition.comment"
-      ],
-      "settings": {
-        "foreground": "#a6a6a6",
-        "fontStyle": ""
+        "foreground": "#a6a6a6"
       }
     },
     {
