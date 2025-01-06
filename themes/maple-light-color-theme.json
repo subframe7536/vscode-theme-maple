@@ -262,7 +262,9 @@
     {
       "scope": [
         "comment",
-        "string.comment"
+        "string.comment",
+        "comment.line",
+        "punctuation.definition.comment"
       ],
       "settings": {
         "foreground": "#595959"
@@ -854,14 +856,6 @@
         "support.class.component.vue",
         "support.class.component.svelte",
         "support.class.component.astro"
-      ],
-      "settings": {
-        "foreground": "#127d52"
-      }
-    },
-    {
-      "scope": [
-        "punctuation.definition.template-expression"
       ],
       "settings": {
         "foreground": "#127d52"
