@@ -83,7 +83,6 @@ export const tokenColor: TokenColor = {
   regex: base.green,
   js: {
     component: base.cyan,
-    templateExpression: base.cyan,
   },
   css: {
     variable: base.cyan,

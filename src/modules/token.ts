@@ -501,12 +501,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: [
-        'punctuation.definition.template-expression',
-      ],
-      foreground: maple('js.templateExpression'),
-    },
-    {
-      scope: [
         'meta.fstring.python constant.character.format.placeholder',
       ],
       foreground: maple('python.fstring'),

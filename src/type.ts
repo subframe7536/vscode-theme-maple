@@ -61,7 +61,6 @@ export type TokenColor = {
   regex: string
   js: {
     component: string
-    templateExpression: string
   }
   css: {
     variable: string
