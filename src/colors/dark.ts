@@ -12,9 +12,9 @@ export const base: BaseColor = {
   greenLight: parseColor('hsl(76, 80%, 74%)'),
   green: parseColor('hsl(130, 48%, 76%)'),
   cyan: parseColor('hsl(178, 60%, 77%)'),
-  sky: parseColor('hsl(212, 85%, 87%)'),
-  blue: parseColor('hsl(210, 100%, 76%)'),
-  purple: parseColor('hsl(247, 90%, 88%)'),
+  sky: parseColor('hsl(212, 85%, 85%)'),
+  blue: parseColor('hsl(210, 100%, 78%)'),
+  purple: parseColor('hsl(247, 90%, 90%)'),
   pink: parseColor('hsl(285, 45%, 86%)'),
 }
 
