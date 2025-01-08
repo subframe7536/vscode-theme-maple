@@ -4,17 +4,17 @@ import { brighten, parseColor } from '../util'
 import { blue, gray } from './common'
 
 export const base: BaseColor = {
-  gray: parseColor('hsl(0, 0%, 35%)'),
+  gray: parseColor('hsl(0, 0%, 50%)'),
   red: parseColor('hsl(0, 45%, 53%)'),
   orange: parseColor('hsl(33, 70%, 40%)'),
-  yellow: parseColor('hsl(52, 75%, 33%)'),
-  yellowLight: parseColor('hsl(45, 70%, 32%)'),
-  greenLight: parseColor('hsl(78, 90%, 28%)'),
-  green: parseColor('hsl(100, 60%, 32%)'),
+  yellow: parseColor('hsl(46, 96%, 30%)'),
+  yellowLight: parseColor('hsl(52, 40%, 38%)'),
+  greenLight: parseColor('hsl(78, 90%, 34%)'),
+  green: parseColor('hsl(100, 75%, 32%)'),
   cyan: parseColor('hsl(156, 75%, 28%)'),
-  sky: parseColor('hsl(180, 50%, 39%)'),
-  blue: parseColor('hsl(193, 80%, 34%)'),
-  purple: parseColor('hsl(260, 30%, 54%)'),
+  sky: parseColor('hsl(185, 24%, 55%)'),
+  blue: parseColor('hsl(193, 96%, 34%)'),
+  purple: parseColor('hsl(260, 34%, 54%)'),
   pink: parseColor('hsl(340, 46%, 54%)'),
 }
 
@@ -52,13 +52,13 @@ export const tokenColor: TokenColor = {
   operator: base.sky,
   function: base.blue,
   property: {
-    normal: base.yellow,
-    declaration: base.yellow,
+    normal: base.yellowLight,
+    declaration: base.yellowLight,
     defaultLib: base.greenLight,
   },
-  parameter: base.yellowLight,
+  parameter: base.yellow,
   variable: {
-    local: base.yellowLight,
+    local: base.yellow,
     defaultLib: base.pink,
   },
   constant: base.orange,
@@ -70,7 +70,7 @@ export const tokenColor: TokenColor = {
   },
   type: {
     normal: base.orange,
-    parameter: base.yellowLight,
+    parameter: base.yellow,
     primitive: base.purple,
     defaultLib: base.greenLight,
   },
