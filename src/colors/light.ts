@@ -6,16 +6,16 @@ import { blue, gray } from './common'
 export const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 50%)'),
   red: parseColor('hsl(0, 45%, 53%)'),
-  orange: parseColor('hsl(33, 70%, 40%)'),
+  orange: parseColor('hsl(31, 70%, 40%)'),
   yellow: parseColor('hsl(46, 96%, 30%)'),
-  yellowLight: parseColor('hsl(52, 40%, 38%)'),
-  greenLight: parseColor('hsl(78, 90%, 34%)'),
-  green: parseColor('hsl(100, 75%, 32%)'),
+  yellowLight: parseColor('hsl(52, 30%, 38%)'),
+  greenLight: parseColor('hsl(75, 100%, 30%)'),
+  green: parseColor('hsl(95, 75%, 32%)'),
   cyan: parseColor('hsl(156, 75%, 28%)'),
   sky: parseColor('hsl(185, 24%, 55%)'),
-  blue: parseColor('hsl(193, 96%, 34%)'),
-  purple: parseColor('hsl(260, 34%, 54%)'),
-  pink: parseColor('hsl(340, 46%, 54%)'),
+  blue: parseColor('hsl(193, 94%, 34%)'),
+  purple: parseColor('hsl(260, 20%, 52%)'),
+  pink: parseColor('hsl(340, 30%, 54%)'),
 }
 
 const bg = parseColor('hsl(60, 10%, 98%)')
