@@ -19,7 +19,7 @@ export const generateTerminalColor: GenerateUIWithBaseFn = (base, ui, isDark) =>
       ansiBrightRed: brighten(base.red, brightenDelta),
       ansiBrightWhite: parseColor('hsl(0, 0%, 100%)'),
       ansiBrightYellow: brighten(isDark ? base.yellow : darken(base.orange, 4), brightenDelta),
-      ansiBlack: parseColor('hsl(0, 0%, 9%)'),
+      ansiBlack: parseColor('hsl(0, 0%, 20%)'),
       ansiBlue: isDark ? base.blue : darken(base.blue, 2),
       ansiCyan: base.cyan,
       ansiGreen: isDark ? base.green : darken(base.greenLight, 8),
