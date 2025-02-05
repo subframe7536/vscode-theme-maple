@@ -920,7 +920,9 @@
         "keyword.function",
         "storage.type",
         "storage.modifier",
-        "variable.language.this"
+        "variable.language.this",
+        "constant.language.undefined",
+        "constant.language.null"
       ],
       "settings": {
         "fontStyle": "italic"
