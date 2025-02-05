@@ -2,7 +2,7 @@ export function App(cls: string[]) {
   for (let i = 0; i < cls.length; i++) {
     // [TODO]
     const result = checkCondition(cls[i]);
-    if (result) {
+    if (result !== null) {
       alert(`${i}: ${result}, @test`);
     }
   }

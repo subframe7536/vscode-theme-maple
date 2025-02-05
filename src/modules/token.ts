@@ -549,6 +549,8 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'storage.type',
         'storage.modifier',
         'variable.language.this',
+        'constant.language.undefined',
+        'constant.language.null',
       ],
       fontStyle: font('italic'),
     },
