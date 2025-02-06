@@ -559,6 +559,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       scope: [
         'keyword.control',
         'keyword.function',
+        'keyword.operator.borrow.and.rust',
         'storage.type',
         'storage.modifier',
         'variable.language.this',
@@ -690,10 +691,22 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         italic: true,
         underline: false,
       },
-      'enumMember': maple('enum'),
+      'enum': maple('enum'),
+      'enumMember': maple('property.declaration'),
       // rust cfg
       'builtinAttribute': maple('parameter'),
       'tomlTableKey': maple('parameter'),
+      'enum.defaultLibrary': {
+        foreground: maple('interface.defaultLib'),
+        bold: true,
+      },
+      'enumMember.defaultLibrary': {
+        foreground: maple('interface.defaultLib'),
+        bold: true,
+      },
+      '*.defaultLibrary': {
+        bold: true,
+      },
       '*.static': {
         italic: true,
       },

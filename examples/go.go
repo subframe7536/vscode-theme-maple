@@ -48,6 +48,7 @@ fmt.Println("dcl:", b)
 
 // Function
 func main() {
+	var ptr *int = nil
   res := plus(1, 2)
   fmt.Println("1+2 =", res)
 
