@@ -24,7 +24,7 @@
     "editor.findMatchBorder": "#64748b",
     "editor.findMatchHighlightBackground": "#8dbe7433",
     "editor.findRangeHighlightBackground": "#1e293b66",
-    "editor.findRangeHighlightBorder": "#334155",
+    "editor.findRangeHighlightBorder": "#334155cc",
     "editor.hoverHighlightBackground": "#4755694d",
     "editor.lineHighlightBackground": "#47556940",
     "editor.lineHighlightBorder": "#4755694d",
@@ -48,16 +48,16 @@
     "peekViewResult.matchHighlightBackground": "#8dbe7433",
     "peekViewResult.selectionBackground": "#6285a733",
     "peekViewTitle.background": "#232a39",
-    "editorError.foreground": "#f1a7a7",
+    "editorError.foreground": "#edabab",
     "editorWarning.foreground": "#eecfa0",
     "editorInfo.foreground": "#8fc7ff",
     "editorGutter.addedBackground": "#a4dfaecc",
-    "editorGutter.deletedBackground": "#f1a7a7cc",
+    "editorGutter.deletedBackground": "#edababcc",
     "editorGutter.modifiedBackground": "#8fc7ffcc",
     "diffEditor.insertedTextBackground": "#a4dfae66",
     "diffEditor.insertedLineBackground": "#a4dfae33",
-    "diffEditor.removedTextBackground": "#f1a7a766",
-    "diffEditor.removedLineBackground": "#f1a7a733",
+    "diffEditor.removedTextBackground": "#edabab66",
+    "diffEditor.removedLineBackground": "#edabab33",
     "textCodeBlock.background": "#171718",
     "textLink.foreground": "#8dbe74",
     "textLink.activeForeground": "#a1d288",
@@ -147,12 +147,12 @@
     "gitDecoration.addedResourceForeground": "#a4dfae",
     "gitDecoration.untrackedResourceForeground": "#8fc7ff",
     "gitDecoration.conflictingResourceForeground": "#8fc7ff",
-    "gitDecoration.deletedResourceForeground": "#f1a7a7",
+    "gitDecoration.deletedResourceForeground": "#edabab",
     "gitDecoration.modifiedResourceForeground": "#eecfa0",
     "minimap.background": "#212122",
     "minimap.findMatchHighlight": "#8dbe74cc",
     "minimap.selectionHighlight": "#6285a780",
-    "minimap.errorHighlight": "#f1a7a799",
+    "minimap.errorHighlight": "#edabab99",
     "titleBar.activeBackground": "#171718",
     "titleBar.activeForeground": "#cbd5e1",
     "titleBar.border": "#44444b",
@@ -169,7 +169,7 @@
     "statusBarItem.prominentForeground": "#171718",
     "statusBarItem.remoteBackground": "#8dbe74",
     "statusBarItem.remoteForeground": "#171718",
-    "statusBarItem.errorBackground": "#f1a7a7",
+    "statusBarItem.errorBackground": "#edabab",
     "statusBarItem.errorForeground": "#171718",
     "statusBarItem.warningBackground": "#eecfa0",
     "statusBarItem.warningForeground": "#171718",
@@ -182,7 +182,7 @@
     "terminal.ansiBrightCyan": "#bafffe",
     "terminal.ansiBrightGreen": "#bdf8c7",
     "terminal.ansiBrightMagenta": "#ebe5ff",
-    "terminal.ansiBrightRed": "#ffc0c0",
+    "terminal.ansiBrightRed": "#ffc4c4",
     "terminal.ansiBrightWhite": "#ffffff",
     "terminal.ansiBrightYellow": "#ffe8b9",
     "terminal.ansiBlack": "#333333",
@@ -190,7 +190,7 @@
     "terminal.ansiCyan": "#a1e8e5",
     "terminal.ansiGreen": "#a4dfae",
     "terminal.ansiMagenta": "#d2ccff",
-    "terminal.ansiRed": "#f1a7a7",
+    "terminal.ansiRed": "#edabab",
     "terminal.ansiWhite": "#f3f2f2",
     "terminal.ansiYellow": "#eecfa0"
   },
@@ -237,7 +237,13 @@
     "class.builtin": {
       "bold": true
     },
-    "class.typeHint": "#d2ccff",
+    "builtinConstant.typeHint": {
+      "bold": true
+    },
+    "class.typeHint": {
+      "foreground": "#d2ccff",
+      "bold": true
+    },
     "selfParameter": {
       "foreground": "#e3cbeb",
       "italic": true,
@@ -248,9 +254,21 @@
       "italic": true,
       "underline": false
     },
-    "enumMember": "#f0c0a8",
+    "enum": "#a1e8e5",
+    "enumMember": "#ded6cf",
     "builtinAttribute": "#eecfa0",
     "tomlTableKey": "#eecfa0",
+    "enum.defaultLibrary": {
+      "foreground": "#f0c0a8",
+      "bold": true
+    },
+    "enumMember.defaultLibrary": {
+      "foreground": "#f0c0a8",
+      "bold": true
+    },
+    "*.defaultLibrary": {
+      "bold": true
+    },
     "*.static": {
       "italic": true
     },
@@ -344,7 +362,7 @@
         "tag.html"
       ],
       "settings": {
-        "foreground": "#f1a7a7"
+        "foreground": "#edabab"
       }
     },
     {
@@ -381,12 +399,29 @@
       "scope": [
         "storage",
         "storage.type",
-        "support.type.builtin",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "foreground": "#d2ccff"
+      }
+    },
+    {
+      "scope": [
         "constant.language.undefined",
         "constant.language.null"
       ],
       "settings": {
-        "foreground": "#d2ccff"
+        "foreground": "#e3cbeb",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "support.type.primitive",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "fontStyle": "bold"
       }
     },
     {
@@ -525,14 +560,14 @@
     {
       "scope": "invalid",
       "settings": {
-        "foreground": "#f1a7a7",
+        "foreground": "#edabab",
         "fontStyle": "strikethrough"
       }
     },
     {
       "scope": "message.error",
       "settings": {
-        "foreground": "#f1a7a7"
+        "foreground": "#edabab"
       }
     },
     {
@@ -693,7 +728,7 @@
         "fenced_code.block.language"
       ],
       "settings": {
-        "foreground": "#f1a7a7"
+        "foreground": "#edabab"
       }
     },
     {
@@ -702,7 +737,7 @@
         "punctuation.definition.deleted"
       ],
       "settings": {
-        "foreground": "#f1a7a7"
+        "foreground": "#edabab"
       }
     },
     {
@@ -774,7 +809,7 @@
     {
       "scope": "brackethighlighter.unmatched",
       "settings": {
-        "foreground": "#f1a7a7"
+        "foreground": "#edabab"
       }
     },
     {
@@ -918,11 +953,10 @@
       "scope": [
         "keyword.control",
         "keyword.function",
+        "keyword.operator.borrow.and.rust",
         "storage.type",
         "storage.modifier",
-        "variable.language.this",
-        "constant.language.undefined",
-        "constant.language.null"
+        "variable.language.this"
       ],
       "settings": {
         "fontStyle": "italic"

@@ -24,7 +24,7 @@
     "editor.findMatchBorder": "#94a3b8",
     "editor.findMatchHighlightBackground": "#85987c33",
     "editor.findRangeHighlightBackground": "#d9dfd366",
-    "editor.findRangeHighlightBorder": "#94a3b8",
+    "editor.findRangeHighlightBorder": "#94a3b8cc",
     "editor.hoverHighlightBackground": "#dee4d84d",
     "editor.lineHighlightBackground": "#dee4d840",
     "editor.lineHighlightBorder": "#dee4d84d",
@@ -237,7 +237,13 @@
     "class.builtin": {
       "bold": true
     },
-    "class.typeHint": "#7c6c9d",
+    "builtinConstant.typeHint": {
+      "bold": true
+    },
+    "class.typeHint": {
+      "foreground": "#7c6c9d",
+      "bold": true
+    },
     "selfParameter": {
       "foreground": "#ad677e",
       "italic": true,
@@ -248,9 +254,21 @@
       "italic": true,
       "underline": false
     },
-    "enumMember": "#ad681f",
+    "enum": "#127d52",
+    "enumMember": "#7e7644",
     "builtinAttribute": "#967403",
     "tomlTableKey": "#967403",
+    "enum.defaultLibrary": {
+      "foreground": "#ad681f",
+      "bold": true
+    },
+    "enumMember.defaultLibrary": {
+      "foreground": "#ad681f",
+      "bold": true
+    },
+    "*.defaultLibrary": {
+      "bold": true
+    },
     "*.static": {
       "italic": true
     },
@@ -381,12 +399,29 @@
       "scope": [
         "storage",
         "storage.type",
-        "support.type.builtin",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "foreground": "#7c6c9d"
+      }
+    },
+    {
+      "scope": [
         "constant.language.undefined",
         "constant.language.null"
       ],
       "settings": {
-        "foreground": "#7c6c9d"
+        "foreground": "#ad677e",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "support.type.primitive",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "fontStyle": "bold"
       }
     },
     {
@@ -918,11 +953,10 @@
       "scope": [
         "keyword.control",
         "keyword.function",
+        "keyword.operator.borrow.and.rust",
         "storage.type",
         "storage.modifier",
-        "variable.language.this",
-        "constant.language.undefined",
-        "constant.language.null"
+        "variable.language.this"
       ],
       "settings": {
         "fontStyle": "italic"
