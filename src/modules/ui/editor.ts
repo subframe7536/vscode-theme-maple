@@ -24,7 +24,7 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
     findMatchBorder: ui.borderActive,
     findMatchHighlightBackground: parseColor(ui.secondary, 0.2),
     findRangeHighlightBackground: ui.rangeBackground,
-    findRangeHighlightBorder: ui.rangeBorder,
+    findRangeHighlightBorder: parseColor(ui.rangeBorder, 0.8),
 
     // hover panel matched text
     hoverHighlightBackground: parseColor(ui.selection, 0.3),
