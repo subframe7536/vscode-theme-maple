@@ -1,19 +1,20 @@
 ## Maple Dark Theme for VSCode
 
-a colorful VSCode theme, light / dark, medium brightness, low saturation
+A colorful VSCode theme, support light or dark mode, with medium brightness and low saturation.
 
-![](resources/dark.png)
-![](resources/light.png)
+![](resources/dark.jpg)
+![](resources/light.jpg)
 
-- font: [Maple Mono](https://github.com/subframe7536/maple-font)
-- icon: [Catppuccin Icons for VSCode](https://github.com/catppuccin/vscode-icons)
-- change ui: [Custom UI Style](https://github.com/subframe7536/vscode-custom-ui-style)
+- Font: [Maple Mono](https://github.com/subframe7536/maple-font)
+- Icon: [Catppuccin Icons for VSCode](https://github.com/catppuccin/vscode-icons)
+- UI: [Custom UI Style](https://github.com/subframe7536/vscode-custom-ui-style)
+- Terminal: PowerShell + [Starship](https://starship.rs/)
 
-## credit
+## Credit
 
-- design inspiration: [moegi](https://github.com/moegi-design/vscode-theme)
-- project structure: [vitesse](https://github.com/antfu/vscode-theme-vitesse)
-- type check: [dracula](https://github.com/dracula/visual-studio-code)
+- Design inspiration: [moegi](https://github.com/moegi-design/vscode-theme)
+- Project structure: [vitesse](https://github.com/antfu/vscode-theme-vitesse)
+- Type check: [dracula](https://github.com/dracula/visual-studio-code)
 
 ## License
 MIT
