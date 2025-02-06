@@ -15,3 +15,6 @@ export function App(cls: string[]) {
     </TestProvider>
   )
 }
+
+function checkCondition(data: any) {}
+function TestProvider(data: any) {}

@@ -5,13 +5,13 @@ import { readFileSync } from 'node:fs';
 
 readFileSync('test.txt', { encoding: 'utf-8' })
 
-@test()
+@log
 class Greeter {
-  @test() greeting: string;
+  @log greeting: string;
   constructor(message: string) {
     this.greeting = message
   }
-  @test()
+  @log
   showGreeting() {
     console.log(this.greeting)
   }
@@ -44,8 +44,7 @@ declare namespace GreetingLib {
   }
 }
 
-function test1(asd: number, bcd: number) {
-  console.log(asd, bcd);
+function log(target: any, descriptor: DecoratorContext) {
 }
 
 export const test1a = {
@@ -53,7 +52,7 @@ export const test1a = {
   biography: 2
 }
 
-function test1(asd: number, bcd: number) {
+function test3(asd: number, bcd: number) {
   console.log(asd, bcd);
 }
 
@@ -62,6 +61,10 @@ const testnum = {
 } as const
 
 function isTest(n: unknown | null): n is typeof testnum {
+  return testnum.a === 1;
+}
+
+function isUndefined(n: unknown | null): n is undefined {
   return testnum.a === 1;
 }
 
@@ -85,7 +88,7 @@ export type ConvertObject<T extends string[], P = {}> = T extends [infer F, ...i
   : ConvertObject<Extract<R, string[]>, P & Partial<{ [K in Extract<F, string>]: string }>>
   : P
 
-export const test1 = {
+export const test2 = {
   a: 1,
   b: 'asd'
 }
@@ -110,3 +113,8 @@ export function get<T extends string>(url: T): Promise<string> {
 }
 
 new Greeter("hello, world").showGreeting()
+
+export const is = {
+  null: (value: unknown): value is null => value === null,
+  undefined: (value: unknown): value is undefined => value === undefined,
+}

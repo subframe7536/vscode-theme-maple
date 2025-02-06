@@ -137,10 +137,23 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'storage',
         'storage.type',
         'support.type.builtin',
+      ],
+      foreground: maple('builtin'),
+    },
+    {
+      scope: [
         'constant.language.undefined',
         'constant.language.null',
       ],
-      foreground: maple('builtin'),
+      foreground: maple('keyword.alt'),
+      fontStyle: font('italic'),
+    },
+    {
+      scope: [
+        'support.type.primitive',
+        'support.type.builtin',
+      ],
+      fontStyle: font('bold'),
     },
     {
       scope: [
@@ -549,8 +562,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'storage.type',
         'storage.modifier',
         'variable.language.this',
-        'constant.language.undefined',
-        'constant.language.null',
       ],
       fontStyle: font('italic'),
     },
@@ -661,7 +672,14 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'class.builtin': {
         bold: true,
       },
-      'class.typeHint': maple('type.primitive'),
+      // python types
+      'builtinConstant.typeHint': {
+        bold: true,
+      },
+      'class.typeHint': {
+        foreground: maple('type.primitive'),
+        bold: true,
+      },
       'selfParameter': {
         foreground: maple('keyword.alt'),
         italic: true,
