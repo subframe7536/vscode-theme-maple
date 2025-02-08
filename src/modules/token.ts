@@ -704,9 +704,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         foreground: maple('interface.defaultLib'),
         bold: true,
       },
-      '*.defaultLibrary': {
-        bold: true,
-      },
       '*.static': {
         italic: true,
       },
