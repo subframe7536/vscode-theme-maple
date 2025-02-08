@@ -266,9 +266,6 @@
       "foreground": "#f0c0a8",
       "bold": true
     },
-    "*.defaultLibrary": {
-      "bold": true
-    },
     "*.static": {
       "italic": true
     },
