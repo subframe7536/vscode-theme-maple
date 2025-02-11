@@ -405,7 +405,8 @@
     {
       "scope": [
         "constant.language.undefined",
-        "constant.language.null"
+        "constant.language.null",
+        "constant.language.nullptr"
       ],
       "settings": {
         "foreground": "#ad677e",
@@ -495,7 +496,8 @@
         "support.type.property-name.toml",
         "support.type.property-name.array.toml",
         "keyword.other.definition.ini",
-        "variable.other.normal.shell"
+        "variable.other.normal.shell",
+        "meta.var"
       ],
       "settings": {
         "foreground": "#967403"
@@ -647,7 +649,8 @@
     },
     {
       "scope": [
-        "keyword.other.unit"
+        "keyword.other.unit",
+        "punctuation.definition.constant.css"
       ],
       "settings": {
         "foreground": "#0585a8"
@@ -927,7 +930,10 @@
         "storage.modifier.import",
         "keyword.operator.expression.import",
         "source.css keyword.other.important",
-        "keyword.other.using"
+        "keyword.other.using",
+        "keyword.control.at-rule.import.css",
+        "keyword.control.at-rule.import.scss",
+        "keyword.control.at-rule.import.less"
       ],
       "settings": {
         "foreground": "#ad677e"
