@@ -144,6 +144,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       scope: [
         'constant.language.undefined',
         'constant.language.null',
+        'constant.language.nullptr',
       ],
       foreground: maple('keyword.alt'),
       fontStyle: font('italic'),
@@ -218,6 +219,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'support.type.property-name.array.toml',
         'keyword.other.definition.ini',
         'variable.other.normal.shell',
+        'meta.var',
       ],
       foreground: maple('variable.local'),
     },
@@ -331,6 +333,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'keyword.other.unit',
+        'punctuation.definition.constant.css',
       ],
       foreground: maple('css.unit'),
     },
@@ -543,6 +546,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'keyword.operator.expression.import',
         'source.css keyword.other.important',
         'keyword.other.using',
+        'keyword.control.at-rule.import.css',
+        'keyword.control.at-rule.import.scss',
+        'keyword.control.at-rule.import.less',
       ],
       foreground: maple('keyword.alt'),
     },
