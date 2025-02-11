@@ -397,6 +397,9 @@ export type UI = {
     "background"?: string,
     "headerBackground"?: string
   },
+  "editorMinimap"?: {
+    "inlineChatInserted"?: string
+  },
   "editorMultiCursor"?: {
     "primary"?: {
       "background"?: string,
@@ -540,6 +543,33 @@ export type UI = {
     "border"?: string,
     "focusBorder"?: string,
     "placeholderForeground"?: string
+  },
+  "inlineEdit"?: {
+    "gutterIndicator"?: {
+      "background"?: string,
+      "primaryBackground"?: string,
+      "primaryForeground"?: string,
+      "secondaryBackground"?: string,
+      "secondaryForeground"?: string,
+      "successfulBackground"?: string,
+      "successfulForeground"?: string
+    },
+    "indicator"?: {
+      "background"?: string,
+      "border"?: string,
+      "foreground"?: string
+    },
+    "modifiedBackground"?: string,
+    "modifiedBorder"?: string,
+    "modifiedChangedLineBackground"?: string,
+    "modifiedChangedTextBackground"?: string,
+    "originalBackground"?: string,
+    "originalBorder"?: string,
+    "originalChangedLineBackground"?: string,
+    "originalChangedTextBackground"?: string,
+    "wordReplacementView"?: {
+      "background"?: string
+    }
   },
   "input"?: {
     "background"?: string,
