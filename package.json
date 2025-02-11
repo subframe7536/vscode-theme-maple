@@ -41,27 +41,25 @@
     ]
   },
   "scripts": {
-    "build": "esno src/index.ts",
-    "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
-    "update": "esno resources/update-keys.ts",
-    "prepare": "pnpm run update",
-    "vscode:prepublish": "pnpm run build",
+    "build": "bun src/index.ts",
+    "dev": "bun --hot src/index.ts",
+    "update": "bun resources/update-keys.ts",
+    "prepare": "bun run update",
+    "vscode:prepublish": "bun run build",
     "format": "eslint . --cache --fix",
     "pack": "vsce package --no-dependencies",
-    "release": "pnpm run build && bumpp --all && vsce publish --no-dependencies"
+    "release": "bun run build && bumpp --all && vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@subframe7536/eslint-config": "^1.0.0",
-    "@types/node": "^20.17.10",
+    "@subframe7536/eslint-config": "^1.1.8",
+    "@types/node": "^20.17.17",
     "@types/tinycolor2": "^1.4.6",
     "@vscode/vsce": "^3.2.1",
-    "bumpp": "^9.9.1",
-    "eslint": "^9.17.0",
-    "esno": "^4.8.0",
-    "nodemon": "^3.1.9",
+    "bumpp": "^10.0.2",
+    "eslint": "^9.20.0",
     "object-path-access": "^4.0.0",
     "tinycolor2": "^1.6.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "preview": true
 }

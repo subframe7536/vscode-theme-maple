@@ -32,4 +32,6 @@ async function generateTheme({
 }
 
 const tasks = Object.entries(colors).map(([name, value]) => generateTheme({ name, ...value }))
-Promise.all(tasks).catch(console.error)
+Promise.all(tasks)
+  .catch(console.error)
+  .then(() => console.log('Theme updated'))
