@@ -115,7 +115,7 @@
     "breadcrumb.background": "#fffffe",
     "breadcrumbPicker.background": "#fffffe",
     "pickerGroup.foreground": "#85987c",
-    "quickInput.background": "#fffffe",
+    "quickInput.background": "#fafaf9",
     "quickInputList.focusBackground": "#e1e7db",
     "commandCenter.foreground": "#475569",
     "commandCenter.activeBackground": "#e1e7db",
