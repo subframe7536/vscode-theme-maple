@@ -97,7 +97,7 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
     foreground: ui.secondary,
   },
   quickInput: {
-    background: ui.backgroundEditor,
+    background: ui.background,
   },
   quickInputList: {
     focusBackground: ui.listItem,
