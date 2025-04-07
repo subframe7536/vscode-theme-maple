@@ -9,6 +9,7 @@
     "widget.border": "#8393aa66",
     "widget.shadow": "#fafaf9cc",
     "sash.hoverBorder": "#d9dfd3",
+    "git.blame.editorDecorationForeground": "#808080e6",
     "editor.foreground": "#475569",
     "editor.background": "#fffffe",
     "editor.selectionBackground": "#dee4d8e6",
