@@ -323,6 +323,8 @@ export type UI = {
     "commentUnresolvedGlyphForeground"?: string,
     "deletedBackground"?: string,
     "foldingControlForeground"?: string,
+    "itemBackground"?: string,
+    "itemGlyphForeground"?: string,
     "modifiedBackground"?: string
   },
   "editorHint"?: {
@@ -502,12 +504,22 @@ export type UI = {
   },
   "extensionIcon"?: {
     "preReleaseForeground"?: string,
+    "privateForeground"?: string,
     "sponsorForeground"?: string,
     "starForeground"?: string,
     "verifiedForeground"?: string
   },
   "focusBorder"?: string,
   "foreground"?: string,
+  "gauge"?: {
+    "background"?: string,
+    "border"?: string,
+    "errorBackground"?: string,
+    "errorForeground"?: string,
+    "foreground"?: string,
+    "warningBackground"?: string,
+    "warningForeground"?: string
+  },
   "git"?: {
     "blame"?: {
       "editorDecorationForeground"?: string
@@ -548,16 +560,14 @@ export type UI = {
     "gutterIndicator"?: {
       "background"?: string,
       "primaryBackground"?: string,
+      "primaryBorder"?: string,
       "primaryForeground"?: string,
       "secondaryBackground"?: string,
+      "secondaryBorder"?: string,
       "secondaryForeground"?: string,
       "successfulBackground"?: string,
+      "successfulBorder"?: string,
       "successfulForeground"?: string
-    },
-    "indicator"?: {
-      "background"?: string,
-      "border"?: string,
-      "foreground"?: string
     },
     "modifiedBackground"?: string,
     "modifiedBorder"?: string,
@@ -567,9 +577,8 @@ export type UI = {
     "originalBorder"?: string,
     "originalChangedLineBackground"?: string,
     "originalChangedTextBackground"?: string,
-    "wordReplacementView"?: {
-      "background"?: string
-    }
+    "tabWillAcceptModifiedBorder"?: string,
+    "tabWillAcceptOriginalBorder"?: string
   },
   "input"?: {
     "background"?: string,
@@ -708,6 +717,7 @@ export type UI = {
   },
   "minimap"?: {
     "background"?: string,
+    "chatEditHighlight"?: string,
     "errorHighlight"?: string,
     "findMatchHighlight"?: string,
     "foregroundOpacity"?: string,
@@ -827,6 +837,10 @@ export type UI = {
     "activeForeground"?: string,
     "border"?: string,
     "inactiveForeground"?: string
+  },
+  "panelTitleBadge"?: {
+    "background"?: string,
+    "foreground"?: string
   },
   "peekView"?: {
     "border"?: string
@@ -1158,6 +1172,17 @@ export type UI = {
   },
   "terminalStickyScrollHover"?: {
     "background"?: string
+  },
+  "terminalSymbolIcon"?: {
+    "aliasForeground"?: string,
+    "argumentForeground"?: string,
+    "fileForeground"?: string,
+    "flagForeground"?: string,
+    "folderForeground"?: string,
+    "inlineSuggestionForeground"?: string,
+    "methodForeground"?: string,
+    "optionForeground"?: string,
+    "optionValueForeground"?: string
   },
   "testing"?: {
     "coverCountBadgeBackground"?: string,
