@@ -38,20 +38,21 @@ export function getTextColor(bgColorString: string) {
 }
 
 export function buildUI(themeDev: UI) {
-  const theme = {}
+  const theme: Record<string, any> = {}
 
-  for (const key in themeDev) {
-    const value = themeDev[key]
+  function flatten(obj: any, prefix = '') {
+    for (const key in obj) {
+      const value = obj[key]
+      const newKey = prefix ? `${prefix}.${key}` : key
 
-    if (typeof value === 'object') {
-      for (const i in value) {
-        const e = value[i]
-        theme[`${key}.${i}`] = e
+      if (value && typeof value === 'object') {
+        flatten(value, newKey)
+      } else {
+        theme[newKey] = value
       }
-    } else {
-      theme[key] = value
     }
   }
 
+  flatten(themeDev)
   return theme
 }

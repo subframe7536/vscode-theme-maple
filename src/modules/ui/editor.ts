@@ -2,6 +2,11 @@ import type { GenerateUIWithBaseFn } from '../../type'
 import { brighten, getTextColor, parseColor } from '../../util'
 
 export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => ({
+  git: {
+    blame: {
+      editorDecorationForeground: parseColor(base.gray, isDark ? 0.8 : 0.9),
+    },
+  },
   editor: {
     foreground: ui.foreground,
     background: ui.backgroundEditor,
