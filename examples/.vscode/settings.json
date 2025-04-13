@@ -5,5 +5,6 @@
   "codeimg.containerPadding": "0",
   "editor.fontLigatures": false,
   "codeimg.background": "none",
-  "codeimg.format": "jpg"
+  "codeimg.format": "jpg",
+  // "editor.cursorStyle": "block"
 }

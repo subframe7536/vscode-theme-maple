@@ -55,6 +55,7 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
   },
   editorCursor: {
     foreground: ui.cursor,
+    background: ui.backgroundEditor,
   },
   editorIndentGuide: {
     activeBackground1: parseColor(ui.foreground, 0.8),
