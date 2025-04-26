@@ -657,6 +657,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         bold: true,
       },
       'variable.defaultLibrary': maple('variable.defaultLib'),
+      'variable.callable': maple('function'),
       'type': maple('type.normal'),
       'type.defaultLibrary': maple('type.defaultLib'),
       'function': maple('function'),
