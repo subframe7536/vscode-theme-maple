@@ -1,5 +1,6 @@
 import type { Colors } from '.'
 import type { BaseColor, TokenColor, UIColor } from '../type'
+
 import { brighten, parseColor } from '../util'
 import { blue, gray } from './common'
 

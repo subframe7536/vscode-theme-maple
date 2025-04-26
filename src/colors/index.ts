@@ -1,4 +1,5 @@
 import type { BaseColor, TokenColor, UIColor } from '../type'
+
 import dark from './dark'
 import light from './light'
 

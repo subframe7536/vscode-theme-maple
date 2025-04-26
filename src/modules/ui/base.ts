@@ -1,4 +1,5 @@
 import type { GenerateUIFn } from '../../type'
+
 import { parseColor } from '../../util'
 
 export const generateBaseColor: GenerateUIFn = ui => ({

@@ -1,6 +1,7 @@
 // reference from https://github.com/dracula/visual-studio-code/blob/master/scripts/lint.js
 import { writeFile } from 'node:fs/promises'
 import https from 'node:https'
+
 import { pathSet } from 'object-path-access'
 
 const THEME_COLOR_REFERENCE_URL = 'https://code.visualstudio.com/api/references/theme-color'

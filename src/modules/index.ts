@@ -1,4 +1,5 @@
 import type { BaseColor, TokenColor, UIColor } from '../type'
+
 import { brighten, buildUI, darken } from '../util'
 import { generateTokenColor } from './token'
 import { generateBaseColor } from './ui/base'

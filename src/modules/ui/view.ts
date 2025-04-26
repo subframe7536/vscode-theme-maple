@@ -1,4 +1,5 @@
 import type { GenerateUIWithBaseFn } from '../../type'
+
 import { brighten, parseColor } from '../../util'
 
 export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({

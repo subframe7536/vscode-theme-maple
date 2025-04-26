@@ -1,4 +1,5 @@
 import type { GenerateUIFn } from '../../type'
+
 import { brighten, getTextColor, parseColor } from '../../util'
 
 export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) => ({
