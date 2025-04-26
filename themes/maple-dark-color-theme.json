@@ -214,6 +214,7 @@
       "bold": true
     },
     "variable.defaultLibrary": "#e3cbeb",
+    "variable.callable": "#8fc7ff",
     "type": "#f0c0a8",
     "type.defaultLibrary": "#d5f288",
     "function": "#8fc7ff",
