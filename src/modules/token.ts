@@ -637,6 +637,21 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       ],
       fontStyle: font(),
     },
+    // nix
+    {
+      scope: [
+        'source.nix invalid',
+      ],
+      foreground: maple('operator'),
+      fontStyle: font(),
+    },
+    {
+      scope: [
+        'source.nix invalid.illegal.reserved',
+      ],
+      foreground: maple('keyword.normal'),
+      fontStyle: font(),
+    },
   ]
   return {
     semanticHighlighting: true,
