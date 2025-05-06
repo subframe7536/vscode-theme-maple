@@ -576,6 +576,10 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       fontStyle: font('italic'),
     },
     {
+      scope: 'meta.decorator',
+      fontStyle: font('bold'),
+    },
+    {
       scope: 'source.go storage.type',
       fontStyle: font(),
     },
