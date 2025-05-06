@@ -17,6 +17,10 @@ A colorful VSCode theme, support light or dark mode, with medium brightness and 
 - Different color on types
 - Alternative color for some keywords, like `export` / `null` / `!important`
 
+#### JetBrains IDE Color Scheme
+
+https://github.com/subframe7536/vscode-theme-maple/releases/tag/v0.7.0
+
 ### Italic Style On Keywords
 
 If you just want the italic style on keywords like the theme do, just add this snippet into your `settings.json`
