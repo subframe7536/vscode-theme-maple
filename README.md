@@ -10,6 +10,13 @@ A colorful VSCode theme, support light or dark mode, with medium brightness and 
 - UI: [Custom UI Style](https://github.com/subframe7536/vscode-custom-ui-style)
 - Terminal: PowerShell + [Starship](https://starship.rs/)
 
+### Features
+
+- Underline style function parameters
+- Italic style keywords
+- Different color on types
+- Alternative color for some keywords, like `export` / `null` / `!important`
+
 ### Italic Style On Keywords
 
 If you just want the italic style on keywords like the theme do, just add this snippet into your `settings.json`

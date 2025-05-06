@@ -52,11 +52,11 @@
   },
   "devDependencies": {
     "@subframe7536/eslint-config": "^1.2.4",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.12",
     "@types/tinycolor2": "^1.4.6",
     "@vscode/vsce": "^3.3.2",
     "bumpp": "^10.1.0",
-    "eslint": "^9.25.1",
+    "eslint": "^9.26.0",
     "object-path-access": "^4.0.0",
     "tinycolor2": "^1.6.0",
     "typescript": "^5.8.3"
