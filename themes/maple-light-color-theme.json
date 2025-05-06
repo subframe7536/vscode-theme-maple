@@ -210,12 +210,15 @@
       "italic": true
     },
     "interface.defaultLibrary": {
-      "foreground": "#ad681f",
+      "foreground": "#739900",
       "bold": true
     },
     "variable.defaultLibrary": "#ad677e",
     "variable.callable": "#0585a8",
-    "type": "#ad681f",
+    "type": {
+      "bold": true,
+      "foreground": "#ad681f"
+    },
     "type.defaultLibrary": "#739900",
     "function": "#0585a8",
     "function.defaultLibrary": {
@@ -228,13 +231,14 @@
       "foreground": "#ad677e",
       "bold": true
     },
-    "struct": "#127d52",
+    "struct": "#ad681f",
     "class": {
-      "foreground": "#127d52",
+      "foreground": "#ad681f",
       "italic": false,
       "bold": false
     },
     "class.defaultLibrary": {
+      "foreground": "#127d52",
       "bold": true
     },
     "class.builtin": {
@@ -262,11 +266,11 @@
     "builtinAttribute": "#967403",
     "tomlTableKey": "#967403",
     "enum.defaultLibrary": {
-      "foreground": "#ad681f",
+      "foreground": "#739900",
       "bold": true
     },
     "enumMember.defaultLibrary": {
-      "foreground": "#ad681f",
+      "foreground": "#739900",
       "bold": true
     },
     "*.static": {
@@ -873,7 +877,7 @@
         "meta.parameter.initialization"
       ],
       "settings": {
-        "foreground": "#127d52"
+        "foreground": "#ad681f"
       }
     },
     {
@@ -943,6 +947,16 @@
       }
     },
     {
+      "scope": [
+        "source.css keyword.other.important",
+        "source.sass keyword.other.important",
+        "source.less keyword.other.important"
+      ],
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
       "scope": "keyword.control.import.python",
       "settings": {
         "foreground": "#7c6c9d"
@@ -966,6 +980,16 @@
       ],
       "settings": {
         "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "meta.decorator entity.name.function",
+        "meta.decorator variable.other.readwrite",
+        "meta.declaration storage.type.annotation.java"
+      ],
+      "settings": {
+        "fontStyle": "bold"
       }
     },
     {
@@ -1046,6 +1070,24 @@
         "invalid.deprecated.entity.other.attribute-name.html"
       ],
       "settings": {
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.nix invalid"
+      ],
+      "settings": {
+        "foreground": "#71a3a8",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "source.nix invalid.illegal.reserved"
+      ],
+      "settings": {
+        "foreground": "#7c6c9d",
         "fontStyle": ""
       }
     }
