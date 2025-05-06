@@ -497,7 +497,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.name.type.module',
         'meta.parameter.initialization',
       ],
-      foreground: maple('class'),
+      foreground: maple('class.normal'),
     },
     {
       scope: [
@@ -556,6 +556,14 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('keyword.alt'),
     },
     {
+      scope: [
+        'source.css keyword.other.important',
+        'source.sass keyword.other.important',
+        'source.less keyword.other.important',
+      ],
+      fontStyle: font('bold'),
+    },
+    {
       scope: 'keyword.control.import.python',
       foreground: maple('keyword.normal'),
     },
@@ -576,7 +584,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       fontStyle: font('italic'),
     },
     {
-      scope: 'meta.decorator',
+      scope: [
+        'meta.decorator entity.name.function',
+        'meta.decorator variable.other.readwrite',
+        'meta.declaration storage.type.annotation.java',
+      ],
       fontStyle: font('bold'),
     },
     {
@@ -677,7 +689,10 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       },
       'variable.defaultLibrary': maple('variable.defaultLib'),
       'variable.callable': maple('function'),
-      'type': maple('type.normal'),
+      'type': {
+        bold: true,
+        foreground: maple('type.normal'),
+      },
       'type.defaultLibrary': maple('type.defaultLib'),
       'function': maple('function'),
       'function.defaultLibrary': {
@@ -690,13 +705,14 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         foreground: maple('namespace'),
         bold: true,
       },
-      'struct': maple('class'),
+      'struct': maple('class.normal'),
       'class': {
-        foreground: maple('class'),
+        foreground: maple('class.normal'),
         italic: false,
         bold: false,
       },
       'class.defaultLibrary': {
+        foreground: maple('class.defaultLib'),
         bold: true,
       },
       'class.builtin': {

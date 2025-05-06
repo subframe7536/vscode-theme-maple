@@ -41,7 +41,10 @@ export type TokenColor = {
   }
   constant: string
   enum: string
-  class: string
+  class: {
+    normal: string
+    defaultLib: string
+  }
   interface: {
     normal: string
     defaultLib: string

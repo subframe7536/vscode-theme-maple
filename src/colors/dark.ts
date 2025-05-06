@@ -61,10 +61,13 @@ export const tokenColor: TokenColor = {
   },
   constant: base.orange,
   enum: base.cyan,
-  class: base.cyan,
+  class: {
+    normal: base.orange,
+    defaultLib: base.cyan,
+  },
   interface: {
     normal: base.orange,
-    defaultLib: base.orange,
+    defaultLib: base.greenLight,
   },
   type: {
     normal: base.orange,
