@@ -207,11 +207,11 @@
     "property.defaultLibrary": "#d5f288",
     "interface": {
       "foreground": "#f0c0a8",
-      "italic": true
+      "italic": true,
+      "bold": true
     },
     "interface.defaultLibrary": {
-      "foreground": "#d5f288",
-      "bold": true
+      "foreground": "#d5f288"
     },
     "variable.defaultLibrary": "#e3cbeb",
     "variable.callable": "#8fc7ff",
@@ -1095,6 +1095,15 @@
       ],
       "settings": {
         "foreground": "#d2ccff",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type.rust"
+      ],
+      "settings": {
+        "foreground": "#f0c0a8",
         "fontStyle": ""
       }
     }
