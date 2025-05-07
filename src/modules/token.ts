@@ -632,7 +632,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.name.type.class.java',
       ],
       foreground: maple('java.class'),
-      fontStyle: font('bold'),
     },
     {
       scope: [
