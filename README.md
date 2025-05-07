@@ -55,6 +55,7 @@ If you just want the italic style on keywords like the theme do, just add this s
           "meta.type keyword.operator.expression.keyof",
           "keyword.control",
           "keyword.function",
+          "keyword.operator.new",
           "keyword.operator.borrow.and.rust",
           "storage.type",
           "storage.modifier",

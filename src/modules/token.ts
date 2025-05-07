@@ -122,7 +122,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.name.package',
         'entity.name.import',
         'keyword.operator.expression.infer',
-        'keyword.operator.expression.is.ts',
         'keyword.control.satisfies',
         'keyword.control.as.ts',
       ],
@@ -552,6 +551,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'storage.modifier.package',
         'storage.modifier.import',
         'keyword.operator.expression.import',
+        'keyword.operator.expression.infer',
         'source.css keyword.other.important',
         'keyword.other.using',
         'keyword.control.at-rule.import.css',
@@ -581,6 +581,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       scope: [
         'keyword.control',
         'keyword.function',
+        'keyword.operator.new',
         'keyword.operator.borrow.and.rust',
         'storage.type',
         'storage.modifier',
