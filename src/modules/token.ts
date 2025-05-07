@@ -526,6 +526,12 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: [
+        'string.quoted.docstring.multi.python keyword.control',
+      ],
+      fontStyle: font(),
+    },
+    {
+      scope: [
         'invalid.illegal.unrecognized-tag.html',
       ],
       fontStyle: font(),

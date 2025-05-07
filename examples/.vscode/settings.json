@@ -3,7 +3,7 @@
   "codeimg.boxShadow": "none",
   // "codeimg.border": false,
   "codeimg.containerPadding": "0",
-  "editor.fontLigatures": false,
+  // "editor.fontLigatures": false,
   "codeimg.background": "none",
   "codeimg.format": "jpg",
   // "editor.cursorStyle": "block"

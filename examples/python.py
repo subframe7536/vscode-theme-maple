@@ -39,6 +39,9 @@ printme("Again second call to the same function")
 
 
 def __init__(self, *args, **kwargs):
+    """
+    >>> print('test')
+    """
     super().__init__(*args, **kwargs)
     #self
     self.error = MDText()
