@@ -757,6 +757,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       // rust cfg
       'builtinAttribute': maple('parameter'),
       'generic.attribute': maple('parameter'),
+      'deriveHelper.attribute': maple('function'),
       'tomlTableKey': maple('parameter'),
       'enum.defaultLibrary': {
         foreground: maple('interface.defaultLib'),
