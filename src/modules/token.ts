@@ -184,10 +184,8 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       scope: [
         'property',
         'meta.property-name',
-        'meta.attribute',
         'meta.object-literal.key',
         'attribute.name',
-        'entity.other.attribute-name',
         'variable.other.object.property',
         'variable.other.property',
       ],
@@ -196,8 +194,9 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'entity.name.tag.yaml',
-        'meta.attribute entity.other.attribute-name.html',
-        'source.css entity.other.attribute-name',
+        'meta.attribute',
+        'meta.attribute entity',
+        'entity.other.attribute-name',
         'source.css support.type.property-name.media',
         'entity.other.attribute-name.tsx',
         'entity.other.attribute-name.js',
@@ -718,13 +717,17 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         foreground: maple('namespace'),
         bold: true,
       },
-      'struct': maple('class.normal'),
       'class': {
         foreground: maple('class.normal'),
         italic: false,
         bold: false,
       },
       'class.defaultLibrary': {
+        foreground: maple('class.defaultLib'),
+        bold: true,
+      },
+      'struct': maple('class.normal'),
+      'struct.defaultLibrary': {
         foreground: maple('class.defaultLib'),
         bold: true,
       },
@@ -753,6 +756,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'enumMember': maple('property.declaration'),
       // rust cfg
       'builtinAttribute': maple('parameter'),
+      'generic.attribute': maple('parameter'),
       'tomlTableKey': maple('parameter'),
       'enum.defaultLibrary': {
         foreground: maple('interface.defaultLib'),
