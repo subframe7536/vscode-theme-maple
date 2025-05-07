@@ -687,10 +687,10 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'interface': {
         foreground: maple('interface.normal'),
         italic: true,
+        bold: true,
       },
       'interface.defaultLibrary': {
         foreground: maple('interface.defaultLib'),
-        bold: true,
       },
       'variable.defaultLibrary': maple('variable.defaultLib'),
       'variable.callable': maple('function'),
