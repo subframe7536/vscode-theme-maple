@@ -673,6 +673,14 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('keyword.normal'),
       fontStyle: font(),
     },
+    // rust
+    {
+      scope: [
+        'entity.name.type.rust',
+      ],
+      foreground: maple('type.normal'),
+      fontStyle: font(),
+    },
   ]
   return {
     semanticHighlighting: true,
