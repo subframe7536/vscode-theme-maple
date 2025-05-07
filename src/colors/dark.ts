@@ -67,7 +67,7 @@ export const tokenColor: TokenColor = {
   },
   interface: {
     normal: base.orange,
-    defaultLib: base.greenLight,
+    defaultLib: base.cyan,
   },
   type: {
     normal: base.orange,

@@ -100,7 +100,7 @@ import https from "https";
  * @param {string} url test
  * @returns test
  */
-export function get<T extends string>(url: T): Promise<string> {
+export function get<T extends string>(url: T): Promise<Pick<T, string>> {
   return new Promise((resolve, reject) => {
     https.get(url, (res) => {
       let body = ''
@@ -111,6 +111,8 @@ export function get<T extends string>(url: T): Promise<string> {
     })
   })
 }
+
+console.log()
 
 new Greeter("hello, world").showGreeting()
 
