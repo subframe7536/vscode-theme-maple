@@ -211,7 +211,7 @@
       "bold": true
     },
     "interface.defaultLibrary": {
-      "foreground": "#d5f288"
+      "foreground": "#a1e8e5"
     },
     "variable.defaultLibrary": "#e3cbeb",
     "variable.callable": "#8fc7ff",
@@ -231,13 +231,17 @@
       "foreground": "#e3cbeb",
       "bold": true
     },
-    "struct": "#f0c0a8",
     "class": {
       "foreground": "#f0c0a8",
       "italic": false,
       "bold": false
     },
     "class.defaultLibrary": {
+      "foreground": "#a1e8e5",
+      "bold": true
+    },
+    "struct": "#f0c0a8",
+    "struct.defaultLibrary": {
       "foreground": "#a1e8e5",
       "bold": true
     },
@@ -264,6 +268,9 @@
     "enum": "#a1e8e5",
     "enumMember": "#ded6cf",
     "builtinAttribute": "#eecfa0",
+    "generic.attribute": "#eecfa0",
+    "deriveHelper.attribute": "#8fc7ff",
+    "builtinAttribute.attribute": "#8fc7ff",
     "tomlTableKey": "#eecfa0",
     "enum.defaultLibrary": {
       "foreground": "#d5f288",
@@ -382,7 +389,6 @@
         "entity.name.package",
         "entity.name.import",
         "keyword.operator.expression.infer",
-        "keyword.operator.expression.is.ts",
         "keyword.control.satisfies",
         "keyword.control.as.ts"
       ],
@@ -460,10 +466,8 @@
       "scope": [
         "property",
         "meta.property-name",
-        "meta.attribute",
         "meta.object-literal.key",
         "attribute.name",
-        "entity.other.attribute-name",
         "variable.other.object.property",
         "variable.other.property"
       ],
@@ -474,8 +478,9 @@
     {
       "scope": [
         "entity.name.tag.yaml",
-        "meta.attribute entity.other.attribute-name.html",
-        "source.css entity.other.attribute-name",
+        "meta.attribute",
+        "meta.attribute entity",
+        "entity.other.attribute-name",
         "source.css support.type.property-name.media",
         "entity.other.attribute-name.tsx",
         "entity.other.attribute-name.js",
@@ -944,6 +949,7 @@
         "storage.modifier.package",
         "storage.modifier.import",
         "keyword.operator.expression.import",
+        "keyword.operator.expression.infer",
         "source.css keyword.other.important",
         "keyword.other.using",
         "keyword.control.at-rule.import.css",
@@ -981,6 +987,7 @@
       "scope": [
         "keyword.control",
         "keyword.function",
+        "keyword.operator.new",
         "keyword.operator.borrow.and.rust",
         "storage.type",
         "storage.modifier",
