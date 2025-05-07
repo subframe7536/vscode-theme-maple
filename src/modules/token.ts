@@ -752,7 +752,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         italic: true,
         underline: false,
       },
-      'enum': maple('enum'),
+      'enum': maple('enum.normal'),
       'enumMember': maple('property.declaration'),
       // rust cfg
       'builtinAttribute': maple('parameter'),
@@ -761,11 +761,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       'builtinAttribute.attribute': maple('function'),
       'tomlTableKey': maple('parameter'),
       'enum.defaultLibrary': {
-        foreground: maple('interface.defaultLib'),
+        foreground: maple('enum.defaultLib'),
         bold: true,
       },
       'enumMember.defaultLibrary': {
-        foreground: maple('interface.defaultLib'),
+        foreground: maple('enum.defaultLib'),
         bold: true,
       },
       '*.static': {
