@@ -934,6 +934,15 @@
     },
     {
       "scope": [
+        "source.vue meta.tag.other.unrecognized.html"
+      ],
+      "settings": {
+        "foreground": "#b8d7f9",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "keyword.control.directive",
         "keyword.control.import",
         "keyword.control.from",
