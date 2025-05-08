@@ -536,6 +536,13 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: [
+        'source.vue meta.tag.other.unrecognized.html',
+      ],
+      foreground: maple('operator'),
+      fontStyle: font(),
+    },
+    {
+      scope: [
         'keyword.control.directive',
         'keyword.control.import',
         'keyword.control.from',
