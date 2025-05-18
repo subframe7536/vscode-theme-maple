@@ -25,9 +25,13 @@ export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
   gitDecoration: {
     addedResourceForeground: base.green,
     untrackedResourceForeground: base.blue,
-    conflictingResourceForeground: base.blue,
+    conflictingResourceForeground: base.purple,
     deletedResourceForeground: base.red,
     modifiedResourceForeground: base.yellow,
+    renamedResourceForeground: base.pink,
+    stageDeletedResourceForeground: parseColor(base.red, 0.8),
+    stageModifiedResourceForeground: parseColor(base.yellow, 0.8),
+    submoduleResourceForeground: base.cyan,
   },
   minimap: {
     background: brighten(ui.background, 4),

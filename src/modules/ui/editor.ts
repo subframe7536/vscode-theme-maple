@@ -92,9 +92,12 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
     foreground: base.blue,
   },
   editorGutter: {
-    addedBackground: parseColor(base.green, 0.8),
-    deletedBackground: parseColor(base.red, 0.8),
-    modifiedBackground: parseColor(base.blue, 0.8),
+    addedBackground: parseColor(base.green, 0.9),
+    addedSecondaryBackground: parseColor(base.green, 0.7),
+    deletedBackground: parseColor(base.red, 0.9),
+    deletedSecondaryBackground: parseColor(base.red, 0.7),
+    modifiedBackground: parseColor(base.blue, 0.9),
+    modifiedSecondaryBackground: parseColor(base.blue, 0.7),
   },
   diffEditor: {
     insertedTextBackground: parseColor(base.green, 0.4),
