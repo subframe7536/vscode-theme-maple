@@ -89,6 +89,10 @@ export type UI = {
   "checkbox"?: {
     "background"?: string,
     "border"?: string,
+    "disabled"?: {
+      "background"?: string,
+      "foreground"?: string
+    },
     "foreground"?: string,
     "selectBackground"?: string,
     "selectBorder"?: string
@@ -317,15 +321,18 @@ export type UI = {
   },
   "editorGutter"?: {
     "addedBackground"?: string,
+    "addedSecondaryBackground"?: string,
     "background"?: string,
     "commentGlyphForeground"?: string,
     "commentRangeForeground"?: string,
     "commentUnresolvedGlyphForeground"?: string,
     "deletedBackground"?: string,
+    "deletedSecondaryBackground"?: string,
     "foldingControlForeground"?: string,
     "itemBackground"?: string,
     "itemGlyphForeground"?: string,
-    "modifiedBackground"?: string
+    "modifiedBackground"?: string,
+    "modifiedSecondaryBackground"?: string
   },
   "editorHint"?: {
     "border"?: string,
@@ -898,6 +905,12 @@ export type UI = {
   },
   "progressBar"?: {
     "background"?: string
+  },
+  "prompt"?: {
+    "frontMatter"?: {
+      "background"?: string,
+      "inactiveBackground"?: string
+    }
   },
   "quickInput"?: {
     "background"?: string,
