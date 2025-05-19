@@ -56,7 +56,11 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
   },
   editorCursor: {
     foreground: ui.cursor,
-    background: ui.backgroundEditor,
+  },
+  editorMultiCursor: {
+    secondary: {
+      foreground: parseColor(ui.cursor, 0.8),
+    },
   },
   editorIndentGuide: {
     activeBackground1: parseColor(ui.foreground, 0.8),
