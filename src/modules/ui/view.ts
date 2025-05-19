@@ -28,9 +28,9 @@ export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
     conflictingResourceForeground: base.purple,
     deletedResourceForeground: base.red,
     modifiedResourceForeground: base.yellow,
-    renamedResourceForeground: base.pink,
-    stageDeletedResourceForeground: parseColor(base.red, 0.8),
-    stageModifiedResourceForeground: parseColor(base.yellow, 0.8),
+    renamedResourceForeground: base.sky,
+    stageDeletedResourceForeground: parseColor(base.red, 0.9),
+    stageModifiedResourceForeground: base.orange,
     submoduleResourceForeground: base.cyan,
   },
   minimap: {
