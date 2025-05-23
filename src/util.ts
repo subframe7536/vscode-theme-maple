@@ -1,5 +1,7 @@
 import type { UI } from './type'
 
+import { readFileSync, writeFileSync } from 'node:fs'
+
 import tinycolor from 'tinycolor2'
 
 /**
@@ -56,4 +58,46 @@ export function buildUI(themeDev: UI) {
 
   flatten(themeDev)
   return theme
+}
+
+export async function replaceReadmeBlock(
+  blockName: string,
+  newContent: string,
+  lang: string = '',
+) {
+  const filePath = 'README.md'
+  const startTag = `<!-- ${blockName} -->`
+  const endTag = `<!-- ${blockName} -->`
+
+  let content = readFileSync(filePath, 'utf-8')
+  const regex = new RegExp(
+    `${startTag}[\\s\\S]*?${endTag}`,
+    'g',
+  )
+  const replacement = `${startTag}\n\`\`\`${lang}\n${newContent}\n\`\`\`\n${endTag}`
+  content = content.replace(regex, replacement)
+
+  writeFileSync(filePath, content, 'utf-8')
+}
+
+export function generateWindowsTermnialScheme(name: string, term: NonNullable<UI['terminal']>) {
+  const basicColors = Object.entries(term)
+    .map(([k, v]) => [
+      k.startsWith('ansi')
+        ? (k[4].toLowerCase() + k.substring(5))
+            .replace('magenta', 'purple')
+            .replace('Magenta', 'Purple')
+        : k,
+      v,
+    ])
+  return {
+    schemes: [
+      Object.fromEntries([
+        ['name', name],
+        ['selectionBackground', term.foreground],
+        ['cursorColor', term.foreground],
+        ...basicColors,
+      ]),
+    ],
+  }
 }

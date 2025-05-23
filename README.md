@@ -17,9 +17,47 @@ A colorful VSCode theme, support light or dark mode, with medium brightness and 
 - Different color on types
 - Alternative color for some keywords, like `export` / `null` / `!important`
 
+### Other IDE / Terminal (Dark Only)
+
 #### JetBrains IDE Color Scheme
 
-https://github.com/subframe7536/vscode-theme-maple/releases/tag/v0.7.0
+https://github.com/subframe7536/vscode-theme-maple/releases/latest
+
+#### Windows Terminal
+
+In `settings.json`
+
+<!-- WT -->
+```json
+{
+  "schemes": [
+    {
+      "name": "Maple Dark",
+      "selectionBackground": "#cbd5e1",
+      "cursorColor": "#cbd5e1",
+      "background": "#1e1e1f",
+      "foreground": "#cbd5e1",
+      "brightBlack": "#666666",
+      "brightBlue": "#a8e0ff",
+      "brightCyan": "#bafffe",
+      "brightGreen": "#bdf8c7",
+      "brightPurple": "#ebe5ff",
+      "brightRed": "#ffc4c4",
+      "brightWhite": "#ffffff",
+      "brightYellow": "#ffe8b9",
+      "black": "#333333",
+      "blue": "#8fc7ff",
+      "cyan": "#a1e8e5",
+      "green": "#a4dfae",
+      "purple": "#d2ccff",
+      "red": "#edabab",
+      "white": "#f3f2f2",
+      "yellow": "#eecfa0"
+    }
+  ]
+}
+```
+<!-- WT -->
 
 ### Italic Style On Keywords
 
