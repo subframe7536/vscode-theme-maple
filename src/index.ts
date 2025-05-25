@@ -4,7 +4,7 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 
 import { colors } from './colors'
 import { buildTheme } from './modules'
-import { generateWindowsTermnialScheme, replaceReadmeBlock } from './util'
+import { generateGhosttyTheme, generateWindowsTermnialScheme, replaceReadmeBlock } from './util'
 
 const author = 'subframe7536'
 
@@ -53,6 +53,10 @@ async function main() {
             2,
           ),
           'json',
+        )
+        replaceReadmeBlock(
+          'GTTY',
+          generateGhosttyTheme(term).join('\n'),
         )
       }
       console.log('Theme updated')

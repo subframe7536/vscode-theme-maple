@@ -100,3 +100,40 @@ export function generateWindowsTermnialScheme(name: string, term: NonNullable<UI
     ],
   }
 }
+
+const terminalColorMap = {
+  black: 0,
+  red: 1,
+  green: 2,
+  yellow: 3,
+  blue: 4,
+  magenta: 5,
+  cyan: 6,
+  white: 7,
+  brightBlack: 8,
+  brightRed: 9,
+  brightGreen: 10,
+  brightYellow: 11,
+  brightBlue: 12,
+  brightMagenta: 13,
+  brightCyan: 14,
+  brightWhite: 15,
+} as const
+
+export function generateGhosttyTheme(term: NonNullable<UI['terminal']>) {
+  const result = Object.entries(term)
+    .map(([k, v]) => {
+      if (k.startsWith('ansi')) {
+        return `palette = ${terminalColorMap[k[4].toLowerCase() + k.substring(5)]}=${v}`
+      }
+      return `${k} = ${v}`
+    })
+
+  result.push(
+    `cursor-color = ${term.foreground}`,
+    `selection-background = ${term.foreground}`,
+    `selection-foreground = ${term.background}`,
+  )
+
+  return result
+}
