@@ -45,13 +45,15 @@ async function main() {
     for (const [name, value] of Object.entries(colors)) {
       const [isDark, term] = await generateTheme({ name, ...value })
       if (isDark) {
-        await Promise.all([
-          replaceReadmeBlock(
-            'WT',
-            JSON.stringify(generateWindowsTermnialScheme(name, term), null, 2),
-            'json',
+        replaceReadmeBlock(
+          'WT',
+          JSON.stringify(
+            generateWindowsTermnialScheme(name, term),
+            null,
+            2,
           ),
-        ])
+          'json',
+        )
       }
       console.log('Theme updated')
     }

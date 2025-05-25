@@ -60,21 +60,20 @@ export function buildUI(themeDev: UI) {
   return theme
 }
 
-export async function replaceReadmeBlock(
+export function replaceReadmeBlock(
   blockName: string,
   newContent: string,
   lang: string = '',
 ) {
   const filePath = 'README.md'
-  const startTag = `<!-- ${blockName} -->`
-  const endTag = `<!-- ${blockName} -->`
+  const tag = `<!-- ${blockName} -->`
 
   let content = readFileSync(filePath, 'utf-8')
   const regex = new RegExp(
-    `${startTag}[\\s\\S]*?${endTag}`,
+    `${tag}[\\s\\S]*?${tag}`,
     'g',
   )
-  const replacement = `${startTag}\n\`\`\`${lang}\n${newContent}\n\`\`\`\n${endTag}`
+  const replacement = `${tag}\n\`\`\`${lang}\n${newContent}\n\`\`\`\n${tag}`
   content = content.replace(regex, replacement)
 
   writeFileSync(filePath, content, 'utf-8')
