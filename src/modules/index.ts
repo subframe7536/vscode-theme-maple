@@ -14,15 +14,15 @@ export function buildTheme(
   ui: UIColor,
   isDark: boolean,
 ) {
-  const altParseColor = (color: string, alpha: number | [dark: number, light: number]) => {
-    const data = typeof alpha === 'number' ? alpha : alpha[isDark ? 0 : 1]
+  const changeColor = (color: string, amount: number | [dark: number, light: number]) => {
+    const data = typeof amount === 'number' ? amount : amount[isDark ? 0 : 1]
     return (isDark ? darken : brighten)(color, data)
   }
   return {
     colors: buildUI({
-      ...generateBaseColor(ui, isDark, altParseColor),
+      ...generateBaseColor(ui, isDark, changeColor),
       ...generateEditorColor(base, ui, isDark),
-      ...generateElementColor(ui, isDark, altParseColor),
+      ...generateElementColor(ui, isDark, changeColor),
       ...generateViewColor(base, ui, isDark),
       ...generateTerminalColor(base, ui, isDark),
     }),

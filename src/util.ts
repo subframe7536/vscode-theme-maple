@@ -35,7 +35,7 @@ export function darken(colorString: string, amount: number) {
   return tinycolor(colorString).darken(amount).toHexString()
 }
 
-export function getTextColor(bgColorString: string) {
+export function getSchemeTextColor(bgColorString: string) {
   const parsedColor = tinycolor(bgColorString)
   return parsedColor.getBrightness() < 60 ? '#fafafa' : '#1d1d1d'
 }

@@ -1,8 +1,8 @@
-import type { GenerateUIWithBaseFn } from '../../type'
+import type { GenerateUIWithBaseColor } from '../../type'
 
-import { brighten, getTextColor, parseColor } from '../../util'
+import { brighten, getSchemeTextColor, parseColor } from '../../util'
 
-export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => ({
+export const generateEditorColor: GenerateUIWithBaseColor = (base, ui, isDark) => ({
   git: {
     blame: {
       editorDecorationForeground: parseColor(base.gray, isDark ? 0.8 : 0.9),
@@ -52,7 +52,7 @@ export const generateEditorColor: GenerateUIWithBaseFn = (base, ui, isDark) => (
   },
   editorLineNumber: {
     foreground: parseColor(base.gray, 0.7),
-    activeForeground: getTextColor(ui.background),
+    activeForeground: getSchemeTextColor(ui.background),
   },
   editorCursor: {
     foreground: ui.cursor,

@@ -1,8 +1,8 @@
-import type { GenerateUIWithBaseFn } from '../../type'
+import type { GenerateUIWithBaseColor } from '../../type'
 
 import { brighten, darken, parseColor } from '../../util'
 
-export const generateTerminalColor: GenerateUIWithBaseFn = (base, ui, isDark) => {
+export const generateTerminalColor: GenerateUIWithBaseColor = (base, ui, isDark) => {
   const brightenDelta = isDark ? 10 : 0
   return {
     terminalCursor: {

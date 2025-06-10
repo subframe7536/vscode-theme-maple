@@ -1,8 +1,8 @@
-import type { GenerateUIWithBaseFn } from '../../type'
+import type { GenerateUIWithBaseColor } from '../../type'
 
 import { brighten, parseColor } from '../../util'
 
-export const generateViewColor: GenerateUIWithBaseFn = (base, ui) => ({
+export const generateViewColor: GenerateUIWithBaseColor = (base, ui) => ({
   activityBar: {
     background: ui.background,
     border: ui.borderNormal,

@@ -1,8 +1,8 @@
 import type { GenerateUIFn } from '../../type'
 
-import { brighten, getTextColor, parseColor } from '../../util'
+import { brighten, getSchemeTextColor, parseColor } from '../../util'
 
-export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) => ({
+export const generateElementColor: GenerateUIFn = (ui, isDark, changeColor) => ({
   textCodeBlock: {
     background: ui.background,
   },
@@ -18,10 +18,10 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
   },
   button: {
     background: ui.primary,
-    foreground: getTextColor(ui.background),
+    foreground: getSchemeTextColor(ui.background),
     hoverBackground: parseColor(ui.primary, 0.9),
     secondaryBackground: parseColor(ui.secondary, isDark ? 0.7 : 0.5),
-    secondaryForeground: getTextColor(ui.background),
+    secondaryForeground: getSchemeTextColor(ui.background),
     secondaryHoverBackground: parseColor(ui.secondary, 0.6),
   },
   input: {
@@ -56,15 +56,15 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
     activeSelectionBackground: ui.listItem,
     activeSelectionForeground: ui.foreground,
     dropBackground: ui.backgroundEditorAlt,
-    focusBackground: altParseColor(ui.listItem, 5), // include notification
+    focusBackground: changeColor(ui.listItem, 5), // include notification
     focusForeground: ui.foreground,
     focusOutline: parseColor(ui.borderActive, 0.8),
     focusHighlightForeground: ui.secondary,
     focusAndSelectionOutline: ui.borderActive,
     highlightForeground: ui.secondary,
-    hoverBackground: altParseColor(ui.listItem, 3),
+    hoverBackground: changeColor(ui.listItem, 3),
     inactiveFocusOutline: ui.borderNormal,
-    inactiveSelectionBackground: altParseColor(ui.listItem, 6),
+    inactiveSelectionBackground: changeColor(ui.listItem, 6),
     filterMatchBackground: parseColor(ui.secondary, 0.7),
     filterMatchBorder: ui.secondary,
   },
@@ -131,7 +131,7 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, altParseColor) =>
     resizeBorder: ui.primary,
   },
   banner: {
-    foreground: getTextColor(ui.primary),
+    foreground: getSchemeTextColor(ui.primary),
     background: ui.primary,
   },
 })
