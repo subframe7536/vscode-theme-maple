@@ -688,6 +688,43 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('type.normal'),
       fontStyle: font(),
     },
+    // log
+    {
+      scope: [
+        'log.error',
+      ],
+      foreground: maple('log.error'),
+    },
+    {
+      scope: [
+        'log.warning',
+      ],
+      foreground: maple('log.warn'),
+    },
+    {
+      scope: [
+        'log.info',
+      ],
+      foreground: maple('log.info'),
+    },
+    {
+      scope: [
+        'log.debug',
+      ],
+      foreground: maple('log.debug'),
+    },
+    {
+      scope: [
+        'log.verbose',
+      ],
+      foreground: maple('log.trace'),
+    },
+    {
+      scope: [
+        'log.date',
+      ],
+      foreground: maple('log.date'),
+    },
   ]
   return {
     semanticHighlighting: true,

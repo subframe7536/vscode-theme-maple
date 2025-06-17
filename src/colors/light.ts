@@ -119,6 +119,14 @@ export const tokenColor: TokenColor = {
     header: base.blue,
     range: base.purple,
   },
+  log: {
+    error: base.red,
+    warn: base.yellow,
+    info: base.green,
+    debug: base.blue,
+    trace: base.sky,
+    date: base.gray,
+  },
 }
 
 const colors: Colors = {

@@ -96,6 +96,14 @@ export type TokenColor = {
     header: string
     range: string
   }
+  log: {
+    error: string
+    warn: string
+    info: string
+    debug: string
+    trace: string
+    date: string
+  }
 }
 
 export type UIColor = {
