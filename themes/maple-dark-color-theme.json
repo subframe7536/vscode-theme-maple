@@ -1130,6 +1130,54 @@
         "foreground": "#f0c0a8",
         "fontStyle": ""
       }
+    },
+    {
+      "scope": [
+        "log.error"
+      ],
+      "settings": {
+        "foreground": "#edabab"
+      }
+    },
+    {
+      "scope": [
+        "log.warning"
+      ],
+      "settings": {
+        "foreground": "#eecfa0"
+      }
+    },
+    {
+      "scope": [
+        "log.info"
+      ],
+      "settings": {
+        "foreground": "#a4dfae"
+      }
+    },
+    {
+      "scope": [
+        "log.debug"
+      ],
+      "settings": {
+        "foreground": "#8fc7ff"
+      }
+    },
+    {
+      "scope": [
+        "log.verbose"
+      ],
+      "settings": {
+        "foreground": "#b8d7f9"
+      }
+    },
+    {
+      "scope": [
+        "log.date"
+      ],
+      "settings": {
+        "foreground": "#999999"
+      }
     }
   ]
 }
