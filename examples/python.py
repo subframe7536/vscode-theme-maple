@@ -27,9 +27,9 @@ if __name__ == '__main__':
 #!/usr/bin/python
 
 # Function definition is here
-def printme( str ):
+def printme(str: str):
    "This prints a passed string into this function"
-   print str
+   print(str)
    return;
 
 # Now you can call printme function

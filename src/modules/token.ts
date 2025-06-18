@@ -259,6 +259,13 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: [
+        'meta.type.annotation',
+        'support.type',
+      ],
+      foreground: maple('interface.normal'),
+    },
+    {
+      scope: [
         'keyword.operator',
         'keyword.operator.assignment.compound',
         'meta.var.expr.ts',
