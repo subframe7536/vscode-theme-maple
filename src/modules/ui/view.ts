@@ -2,7 +2,7 @@ import type { GenerateUIWithBaseColor } from '../../type'
 
 import { brighten, parseColor } from '../../util'
 
-export const generateViewColor: GenerateUIWithBaseColor = (base, ui) => ({
+export const generateViewColor: GenerateUIWithBaseColor = (base, ui, isDark) => ({
   activityBar: {
     background: ui.background,
     border: ui.borderNormal,
@@ -48,8 +48,8 @@ export const generateViewColor: GenerateUIWithBaseColor = (base, ui) => ({
     background: ui.background,
     foreground: ui.foreground,
     border: ui.borderNormal,
-    debuggingForeground: ui.background,
-    debuggingBackground: ui.secondary,
+    debuggingForeground: ui.foreground,
+    debuggingBackground: parseColor(ui.secondary, isDark ? 0.4 : 0.3),
     debuggingBorder: ui.borderNormal,
     noFolderForeground: ui.foreground,
     noFolderBackground: ui.background,
