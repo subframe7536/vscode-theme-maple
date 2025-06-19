@@ -169,8 +169,8 @@
     "statusBar.background": "#171718",
     "statusBar.foreground": "#cbd5e1",
     "statusBar.border": "#44444b",
-    "statusBar.debuggingForeground": "#171718",
-    "statusBar.debuggingBackground": "#8dbe74",
+    "statusBar.debuggingForeground": "#cbd5e1",
+    "statusBar.debuggingBackground": "#8dbe7466",
     "statusBar.debuggingBorder": "#44444b",
     "statusBar.noFolderForeground": "#cbd5e1",
     "statusBar.noFolderBackground": "#171718",
@@ -564,6 +564,15 @@
       "scope": "namespace",
       "settings": {
         "foreground": "#e3cbeb"
+      }
+    },
+    {
+      "scope": [
+        "meta.type.annotation",
+        "support.type"
+      ],
+      "settings": {
+        "foreground": "#f0c0a8"
       }
     },
     {
