@@ -83,6 +83,8 @@ export type UI = {
     "editedFileForeground"?: string,
     "requestBackground"?: string,
     "requestBorder"?: string,
+    "requestBubbleBackground"?: string,
+    "requestCodeBorder"?: string,
     "slashCommandBackground"?: string,
     "slashCommandForeground"?: string
   },
@@ -905,12 +907,6 @@ export type UI = {
   },
   "progressBar"?: {
     "background"?: string
-  },
-  "prompt"?: {
-    "frontMatter"?: {
-      "background"?: string,
-      "inactiveBackground"?: string
-    }
   },
   "quickInput"?: {
     "background"?: string,
