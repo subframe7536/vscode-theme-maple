@@ -81,9 +81,12 @@ export type UI = {
     "avatarBackground"?: string,
     "avatarForeground"?: string,
     "editedFileForeground"?: string,
+    "linesAddedForeground"?: string,
+    "linesRemovedForeground"?: string,
     "requestBackground"?: string,
     "requestBorder"?: string,
     "requestBubbleBackground"?: string,
+    "requestBubbleHoverBackground"?: string,
     "requestCodeBorder"?: string,
     "slashCommandBackground"?: string,
     "slashCommandForeground"?: string
@@ -455,6 +458,9 @@ export type UI = {
     "background"?: string,
     "border"?: string,
     "shadow"?: string
+  },
+  "editorStickyScrollGutter"?: {
+    "background"?: string
   },
   "editorStickyScrollHover"?: {
     "background"?: string
@@ -865,6 +871,9 @@ export type UI = {
   "peekViewEditorStickyScroll"?: {
     "background"?: string
   },
+  "peekViewEditorStickyScrollGutter"?: {
+    "background"?: string
+  },
   "peekViewResult"?: {
     "background"?: string,
     "fileForeground"?: string,
@@ -1191,7 +1200,9 @@ export type UI = {
     "inlineSuggestionForeground"?: string,
     "methodForeground"?: string,
     "optionForeground"?: string,
-    "optionValueForeground"?: string
+    "optionValueForeground"?: string,
+    "symbolicLinkFileForeground"?: string,
+    "symbolicLinkFolderForeground"?: string
   },
   "testing"?: {
     "coverCountBadgeBackground"?: string,
