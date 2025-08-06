@@ -40,26 +40,6 @@ export function getSchemeTextColor(bgColorString: string) {
   return parsedColor.getBrightness() < 60 ? '#fafafa' : '#1d1d1d'
 }
 
-export function buildUI(themeDev: UI) {
-  const theme: Record<string, any> = {}
-
-  function flatten(obj: any, prefix = '') {
-    for (const key in obj) {
-      const value = obj[key]
-      const newKey = prefix ? `${prefix}.${key}` : key
-
-      if (value && typeof value === 'object') {
-        flatten(value, newKey)
-      } else {
-        theme[newKey] = value
-      }
-    }
-  }
-
-  flatten(themeDev)
-  return theme
-}
-
 export function replaceReadmeBlock(
   blockName: string,
   newContent: string,
@@ -79,7 +59,7 @@ export function replaceReadmeBlock(
   writeFileSync(filePath, content, 'utf-8')
 }
 
-export function generateWindowsTermnialScheme(name: string, term: NonNullable<UI['terminal']>) {
+export function generateWindowsTerminalScheme(name: string, term: NonNullable<UI['terminal']>) {
   const basicColors = Object.entries(term)
     .map(([k, v]) => [
       k.startsWith('ansi')
@@ -124,7 +104,8 @@ export function generateGhosttyTheme(term: NonNullable<UI['terminal']>) {
   const result = Object.entries(term)
     .map(([k, v]) => {
       if (k.startsWith('ansi')) {
-        return `palette = ${terminalColorMap[k[4].toLowerCase() + k.substring(5)]}=${v}`
+        const key = terminalColorMap[k[4].toLowerCase() + k.substring(5) as keyof typeof terminalColorMap]
+        return `palette = ${key}=${v}`
       }
       return `${k} = ${v}`
     })

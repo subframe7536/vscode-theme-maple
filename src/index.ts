@@ -1,14 +1,12 @@
 import type { BaseColor, TokenColor, UI, UIColor } from './type'
 
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { writeFileSync } from 'node:fs'
 
+import { publisher as author } from '../package.json'
 import { colors } from './colors'
 import { buildTheme } from './modules'
-import { generateGhosttyTheme, generateWindowsTermnialScheme, replaceReadmeBlock } from './util'
+import { generateGhosttyTheme, generateWindowsTerminalScheme, replaceReadmeBlock } from './util'
 
-const author = 'subframe7536'
-
-mkdirSync('./themes', { recursive: true })
 export interface GenerateOption {
   name: string
   isDark?: boolean
@@ -16,7 +14,7 @@ export interface GenerateOption {
   tokenColor: TokenColor
   uiColor: UIColor
 }
-async function generateTheme({
+function generateVSCodeTheme({
   name,
   isDark = true,
   baseColor,
@@ -24,40 +22,37 @@ async function generateTheme({
   uiColor,
 }: GenerateOption) {
   const theme = buildTheme(baseColor, tokenColor, uiColor, isDark)
+  const themeJson = {
+    name,
+    author,
+    base: isDark ? 'vs-dark' : 'vs',
+    ...theme,
+  }
   writeFileSync(
     `./themes/${name.replace(/\s/g, '-').toLowerCase()}-color-theme.json`,
-    `${JSON.stringify({
-      name,
-      author,
-      base: isDark ? 'vs-dark' : 'vs',
-      ...theme,
-    }, null, 2)}\n`,
+    `${JSON.stringify(themeJson, null, 2)}\n`,
   )
   const term = Object.keys(theme.colors)
     .filter(k => k.startsWith('terminal.'))
     .map(k => [k.substring(9), theme.colors[k]] as const)
 
-  return [isDark, Object.fromEntries(term) as UI['terminal']] as const
+  return [isDark, Object.fromEntries(term) as NonNullable<UI['terminal']>] as const
 }
 
-async function main() {
+function generaterTerminal(name: string, term: NonNullable<UI['terminal']>) {
+  const windowsTerminal = generateWindowsTerminalScheme(name, term)
+  replaceReadmeBlock('WT', JSON.stringify(windowsTerminal, null, 2), 'json')
+
+  const ghostty = generateGhosttyTheme(term)
+  replaceReadmeBlock('GTTY', ghostty.join('\n'))
+}
+
+function main() {
   try {
     for (const [name, value] of Object.entries(colors)) {
-      const [isDark, term] = await generateTheme({ name, ...value })
+      const [isDark, term] = generateVSCodeTheme({ name, ...value })
       if (isDark) {
-        replaceReadmeBlock(
-          'WT',
-          JSON.stringify(
-            generateWindowsTermnialScheme(name, term),
-            null,
-            2,
-          ),
-          'json',
-        )
-        replaceReadmeBlock(
-          'GTTY',
-          generateGhosttyTheme(term).join('\n'),
-        )
+        generaterTerminal(name, term)
       }
       console.log('Theme updated')
     }

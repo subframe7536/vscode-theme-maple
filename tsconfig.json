@@ -1,13 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true
-  }
+  "extends": "@subframe7536/type-utils"
 }

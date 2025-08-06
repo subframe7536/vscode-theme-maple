@@ -5,11 +5,12 @@
       "name": "theme-maple",
       "devDependencies": {
         "@subframe7536/eslint-config": "^1.2.4",
-        "@types/node": "^22.15.2",
+        "@subframe7536/type-utils": "^0.2.0",
+        "@types/node": "^22.15.12",
         "@types/tinycolor2": "^1.4.6",
         "@vscode/vsce": "^3.3.2",
         "bumpp": "^10.1.0",
-        "eslint": "^9.25.1",
+        "eslint": "^9.26.0",
         "object-path-access": "^4.0.0",
         "tinycolor2": "^1.6.0",
         "typescript": "^5.8.3",
@@ -98,6 +99,8 @@
     "@stylistic/eslint-plugin": ["@stylistic/eslint-plugin@4.2.0", "https://registry.npmmirror.com/@stylistic/eslint-plugin/-/eslint-plugin-4.2.0.tgz", { "dependencies": { "@typescript-eslint/utils": "^8.23.0", "eslint-visitor-keys": "^4.2.0", "espree": "^10.3.0", "estraverse": "^5.3.0", "picomatch": "^4.0.2" }, "peerDependencies": { "eslint": ">=9.0.0" } }, "sha512-8hXezgz7jexGHdo5WN6JBEIPHCSFyyU4vgbxevu4YLVS5vl+sxqAAGyXSzfNDyR6xMNSH5H1x67nsXcYMOHtZA=="],
 
     "@subframe7536/eslint-config": ["@subframe7536/eslint-config@1.2.4", "https://registry.npmmirror.com/@subframe7536/eslint-config/-/eslint-config-1.2.4.tgz", { "dependencies": { "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0", "@eslint/markdown": "^6.4.0", "@stylistic/eslint-plugin": "^4.2.0", "@typescript-eslint/eslint-plugin": "^8.31.0", "@typescript-eslint/parser": "^8.31.0", "eslint-config-flat-gitignore": "^2.1.0", "eslint-merge-processors": "^2.0.0", "eslint-plugin-antfu": "^3.1.1", "eslint-plugin-command": "^3.2.0", "eslint-plugin-import-x": "^4.10.6", "eslint-plugin-jsdoc": "^50.6.9", "eslint-plugin-jsonc": "^2.20.0", "eslint-plugin-n": "^17.17.0", "eslint-plugin-no-only-tests": "^3.3.0", "eslint-plugin-perfectionist": "^4.12.1", "eslint-plugin-regexp": "^2.7.0", "eslint-plugin-toml": "^0.12.0", "eslint-plugin-unicorn": "^57.0.0", "eslint-plugin-unused-imports": "^4.1.4", "eslint-plugin-yml": "^1.17.0", "globals": "^16.0.0", "jsonc-eslint-parser": "^2.4.0", "local-pkg": "^1.1.1", "parse-gitignore": "^2.0.0", "toml-eslint-parser": "^0.10.0", "yaml-eslint-parser": "^1.3.0" }, "peerDependencies": { "@eslint-react/eslint-plugin": "^1.19.0", "@prettier/plugin-xml": "^3.4.1", "@unocss/eslint-plugin": ">=0.50.0", "@vitest/eslint-plugin": "^1.1.36", "astro-eslint-parser": "^1.2.1", "eslint": "^9.10.0", "eslint-plugin-astro": "^1.2.0", "eslint-plugin-format": ">=0.1.0", "eslint-plugin-react-hooks": "^5.0.0", "eslint-plugin-react-refresh": "^0.4.4", "eslint-plugin-solid": "^0.14.5", "eslint-plugin-svelte": ">=2.35.1", "eslint-plugin-vue": "^10.0.0", "eslint-processor-vue-blocks": "^2.0.0", "prettier-plugin-astro": "^0.14.0", "prettier-plugin-slidev": "^1.0.5", "svelte-eslint-parser": ">=0.37.0", "vue-eslint-parser": "^10.0.0" }, "optionalPeers": ["@eslint-react/eslint-plugin", "@prettier/plugin-xml", "@unocss/eslint-plugin", "@vitest/eslint-plugin", "astro-eslint-parser", "eslint-plugin-astro", "eslint-plugin-format", "eslint-plugin-react-hooks", "eslint-plugin-react-refresh", "eslint-plugin-solid", "eslint-plugin-svelte", "eslint-plugin-vue", "eslint-processor-vue-blocks", "prettier-plugin-astro", "prettier-plugin-slidev", "svelte-eslint-parser", "vue-eslint-parser"] }, "sha512-GAPHMkBiqGaXltQZ39INTGBOK1lvzlfd+/YC86jb8rwSJcmhJjSYFFMLpQ8RLtcPmBkv9UJpEBNcBFstVtUmNg=="],
+
+    "@subframe7536/type-utils": ["@subframe7536/type-utils@0.2.0", "https://registry.npmmirror.com/@subframe7536/type-utils/-/type-utils-0.2.0.tgz", {}, "sha512-5OmY4NfRPBVcsVReZLU1sh7bZppZUWFnnN2ybjOQS7i2suOR1ds3qsFJmZNLpWV5gLmL0RVAmHgMQU0salMJOw=="],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.9.0", "https://registry.npmmirror.com/@tybys/wasm-util/-/wasm-util-0.9.0.tgz", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw=="],
 

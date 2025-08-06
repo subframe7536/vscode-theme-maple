@@ -132,6 +132,6 @@ export type UIColor = {
 export type GenerateUIFn = (
   color: UIColor,
   isDark: boolean,
-  changeColor: (color: string, amount?: number | [dark: number, light: number]) => string
+  changeColor: (color: string, amount: number | [dark: number, light: number]) => string
 ) => UI
 export type GenerateUIWithBaseColor = (base: BaseColor, color: UIColor, isDark: boolean) => UI

@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@subframe7536/eslint-config": "^1.2.4",
+    "@subframe7536/type-utils": "^0.2.0",
     "@types/node": "^22.15.12",
     "@types/tinycolor2": "^1.4.6",
     "@vscode/vsce": "^3.3.2",
