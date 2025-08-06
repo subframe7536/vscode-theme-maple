@@ -4,7 +4,7 @@ import type { BaseColor, TokenColor, UIColor } from '../type'
 import { brighten, parseColor } from '../util'
 import { blue, gray } from './common'
 
-export const base: BaseColor = {
+const base: BaseColor = {
   gray: parseColor('hsl(0, 0%, 60%)'),
   red: parseColor('hsl(0, 64%, 80%)'),
   orange: parseColor('hsl(20, 70%, 80%)'),

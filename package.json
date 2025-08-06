@@ -4,7 +4,7 @@
   "displayName": "Maple Theme",
   "type": "module",
   "version": "0.7.11",
-  "description": "Maple theme for VSCode",
+  "description": "A colorful editor theme, support light or dark mode, with medium brightness and low saturation.",
   "license": "MIT",
   "repository": {
     "type": "git",
