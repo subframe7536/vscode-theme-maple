@@ -1,6 +1,6 @@
 import type { GenerateUIWithBaseColor } from '../../type'
 
-import { brighten, getSchemeTextColor, parseColor } from '../../util'
+import { brighten, darken, getSchemeTextColor, parseColor } from '../../util'
 
 export const generateEditorColor: GenerateUIWithBaseColor = (base, ui, isDark) => ({
   git: {
@@ -42,6 +42,30 @@ export const generateEditorColor: GenerateUIWithBaseColor = (base, ui, isDark) =
     // range highlight
     rangeHighlightBackground: parseColor(ui.rangeBackground, 0.9),
     rangeHighlightBorder: parseColor(ui.rangeBorder, 0.9),
+  },
+  editorBracketHighlight: {
+    foreground1: base.sky,
+    foreground2: (isDark ? darken : brighten)(
+      base.pink,
+      10,
+      c => isDark
+        ? c.desaturate(30)
+        : c.spin(5).saturate(15),
+    ),
+    foreground3: (isDark ? darken : brighten)(
+      base.cyan,
+      10,
+      c => isDark
+        ? c.desaturate(20)
+        : c.spin(5).saturate(15),
+    ),
+    foreground4: (isDark ? darken : brighten)(
+      base.orange,
+      10,
+      c => isDark
+        ? c.desaturate(20)
+        : c.spin(5).saturate(15),
+    ),
   },
   editorLink: {
     activeForeground: ui.secondary,

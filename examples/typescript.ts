@@ -120,3 +120,4 @@ export const is = {
   null: (value: unknown): value is null => value === null,
   undefined: (value: unknown): value is undefined => value === undefined,
 }
+const data = ((((('')))))

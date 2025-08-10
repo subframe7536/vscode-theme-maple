@@ -1,4 +1,5 @@
 import type { UI } from './type'
+import type { Instance } from 'tinycolor2'
 
 import { readFileSync, writeFileSync } from 'node:fs'
 
@@ -21,18 +22,28 @@ export function parseColor(colorString: string, alpha?: number) {
  * brighten the color string
  * @param colorString color string
  * @param amount brighten amount (0-100)
+ * @param handle handle color instance
  */
-export function brighten(colorString: string, amount: number) {
-  return tinycolor(colorString).brighten(amount).toHexString()
+export function brighten(
+  colorString: string,
+  amount: number,
+  handle: (c: Instance) => Instance = c => c,
+) {
+  return handle(tinycolor(colorString).brighten(amount)).toHexString()
 }
 
 /**
  * brighten the color string
  * @param colorString color string
  * @param amount brighten amount (0-100)
+ * @param handle handle color instance
  */
-export function darken(colorString: string, amount: number) {
-  return tinycolor(colorString).darken(amount).toHexString()
+export function darken(
+  colorString: string,
+  amount: number,
+  handle: (c: Instance) => Instance = c => c,
+) {
+  return handle(tinycolor(colorString).darken(amount)).toHexString()
 }
 
 export function getSchemeTextColor(bgColorString: string) {
