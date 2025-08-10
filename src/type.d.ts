@@ -80,6 +80,7 @@ export type UI = {
   "chat"?: {
     "avatarBackground"?: string,
     "avatarForeground"?: string,
+    "checkpointSeparator"?: string,
     "editedFileForeground"?: string,
     "linesAddedForeground"?: string,
     "linesRemovedForeground"?: string,
