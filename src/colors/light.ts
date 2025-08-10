@@ -38,6 +38,8 @@ const uiColor: UIColor = {
   listItem: brighten(primaryColor, 3),
   rangeBackground: parseColor(primaryColor, 0.4),
   rangeBorder: blue[400],
+  inlineHint: blue[700],
+  inlineHintBackground: blue[200],
 }
 
 export const tokenColor: TokenColor = {

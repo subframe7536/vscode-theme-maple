@@ -100,7 +100,7 @@ import https from "https";
  * @param {string} url test
  * @returns test
  */
-export function get<T extends string>(url: T): Promise<Pick<T, string>> {
+export function get<T extends string>(url: T): Promise<Pick<T, 'length'>> {
   return new Promise((resolve, reject) => {
     https.get(url, (res) => {
       let body = ''

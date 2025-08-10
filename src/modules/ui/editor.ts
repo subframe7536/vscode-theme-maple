@@ -67,8 +67,8 @@ export const generateEditorColor: GenerateUIWithBaseColor = (base, ui, isDark) =
     background1: parseColor(ui.foreground, 0.25),
   },
   editorInlayHint: {
-    foreground: parseColor('hsl(33, 60%, 90%)'),
-    background: parseColor('hsl(211, 36%, 36%)'),
+    foreground: ui.inlineHint,
+    background: ui.inlineHintBackground,
   },
   peekView: {
     border: ui.borderNormal,

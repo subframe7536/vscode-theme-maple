@@ -122,6 +122,8 @@ export type UIColor = {
   listItem: string
   rangeBackground: string
   rangeBorder: string
+  inlineHint: string
+  inlineHintBackground: string
 }
 
 /**

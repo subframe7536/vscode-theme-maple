@@ -35,6 +35,8 @@ const uiColor: UIColor = {
   listItem: blue[700],
   rangeBackground: parseColor(blue[800], 0.4),
   rangeBorder: blue[700],
+  inlineHint: parseColor('hsl(33, 60%, 90%)'),
+  inlineHintBackground: parseColor('hsl(211, 36%, 36%)'),
 }
 
 export const tokenColor: TokenColor = {

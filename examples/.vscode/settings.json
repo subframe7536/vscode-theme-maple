@@ -7,4 +7,6 @@
   "codeimg.background": "none",
   "codeimg.format": "jpg",
   // "editor.cursorStyle": "block"
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.parameterNames.enabled": "all"
 }
