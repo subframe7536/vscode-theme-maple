@@ -1,5 +1,5 @@
 import type { TokenColor } from '../type'
-import type { Path } from 'object-path-access'
+import type { PathRecord } from 'object-path-access'
 
 import { pathGet } from 'object-path-access'
 
@@ -31,7 +31,7 @@ function font(...styles: (typeof fontStyles[number])[] | []) {
 
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
   const maple = (
-    key: Path<TokenColor>,
+    key: PathRecord<TokenColor>,
     alpha?: number,
   ) => parseColor(pathGet(tokens, key) as string, alpha)
 

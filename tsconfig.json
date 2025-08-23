@@ -1,6 +1,6 @@
 {
   "extends": "@subframe7536/type-utils",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext"]
   }
 }
