@@ -31,7 +31,7 @@ function font(...styles: (typeof fontStyles[number])[] | []) {
 
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
   const maple = (
-    key: Path<typeof tokens>,
+    key: Path<TokenColor>,
     alpha?: number,
   ) => parseColor(pathGet(tokens, key) as string, alpha)
 
@@ -283,7 +283,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     {
       scope: 'string variable',
-      foreground: maple('string'),
+      foreground: maple('variable.local'),
     },
     {
       scope: ['source.regexp', 'string.regexp'],
