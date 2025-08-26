@@ -176,25 +176,10 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('string', 0.7),
     },
     {
-      scope: 'support',
-      foreground: maple('property.normal'),
-    },
-    {
-      scope: [
-        'property',
-        'meta.property-name',
-        'meta.object-literal.key',
-        'attribute.name',
-        'variable.other.object.property',
-        'variable.other.property',
-      ],
-      foreground: maple('property.normal'),
-    },
-    {
       scope: [
         'entity.name.tag.yaml',
-        'meta.attribute',
         'meta.attribute entity',
+        'source.rust meta.attribute',
         'entity.other.attribute-name',
         'source.css support.type.property-name.media',
         'entity.other.attribute-name.tsx',
@@ -202,6 +187,22 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'entity.other.attribute-name.xml',
       ],
       foreground: maple('parameter'),
+    },
+    {
+      scope: 'support',
+      foreground: maple('property.normal'),
+    },
+    {
+      scope: [
+        'property',
+        'meta.property-name',
+        'meta.member.access',
+        'meta.object-literal.key',
+        'attribute.name',
+        'variable.other.object.property',
+        'variable.other.property',
+      ],
+      foreground: maple('property.normal'),
     },
     {
       scope: [
