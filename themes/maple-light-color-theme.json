@@ -469,6 +469,21 @@
       }
     },
     {
+      "scope": [
+        "entity.name.tag.yaml",
+        "meta.attribute entity",
+        "source.rust meta.attribute",
+        "entity.other.attribute-name",
+        "source.css support.type.property-name.media",
+        "entity.other.attribute-name.tsx",
+        "entity.other.attribute-name.js",
+        "entity.other.attribute-name.xml"
+      ],
+      "settings": {
+        "foreground": "#aa830e"
+      }
+    },
+    {
       "scope": "support",
       "settings": {
         "foreground": "#8d8949"
@@ -478,6 +493,7 @@
       "scope": [
         "property",
         "meta.property-name",
+        "meta.member.access",
         "meta.object-literal.key",
         "attribute.name",
         "variable.other.object.property",
@@ -485,21 +501,6 @@
       ],
       "settings": {
         "foreground": "#8d8949"
-      }
-    },
-    {
-      "scope": [
-        "entity.name.tag.yaml",
-        "meta.attribute",
-        "meta.attribute entity",
-        "entity.other.attribute-name",
-        "source.css support.type.property-name.media",
-        "entity.other.attribute-name.tsx",
-        "entity.other.attribute-name.js",
-        "entity.other.attribute-name.xml"
-      ],
-      "settings": {
-        "foreground": "#aa830e"
       }
     },
     {

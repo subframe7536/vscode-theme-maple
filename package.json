@@ -3,7 +3,7 @@
   "name": "theme-maple",
   "displayName": "Maple Theme",
   "type": "module",
-  "version": "0.7.14",
+  "version": "0.7.15",
   "description": "A colorful editor theme, support light or dark mode, with medium brightness and low saturation.",
   "license": "MIT",
   "repository": {
