@@ -13,9 +13,6 @@ export const generateElementColor: GenerateUIFn = (ui, isDark, changeColor) => (
   textBlockQuote: {
     border: ui.borderNormal,
   },
-  toolbar: {
-    hoverBackground: ui.background,
-  },
   button: {
     background: ui.primary,
     foreground: getSchemeTextColor(ui.background),
