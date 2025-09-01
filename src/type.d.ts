@@ -1,4 +1,4 @@
-// auto generate by `pnpm run update`
+// auto generate by `bun run update`
 /* eslint-disable */
 export type UI = {
   "actionBar"?: {

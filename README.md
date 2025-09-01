@@ -1,4 +1,4 @@
-## Maple Dark Theme for VSCode
+## Maple Theme for VSCode
 
 A colorful VSCode theme, support light or dark mode, with medium brightness and low saturation.
 

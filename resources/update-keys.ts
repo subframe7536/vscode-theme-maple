@@ -1,5 +1,5 @@
 // reference from https://github.com/dracula/visual-studio-code/blob/master/scripts/lint.js
-import { writeFile } from 'node:fs/promises'
+import { writeFileSync } from 'node:fs'
 import https from 'node:https'
 
 import { pathSet } from 'object-path-access'
@@ -52,6 +52,7 @@ async function parseKeys() {
     } catch (e) {
       const [key1, key2, key3] = key.split('.')
       if (key3) {
+        // @ts-expect-error fxxk ts
         ret[key1][`${key2}.${key3}`] = 'string'
       } else {
         console.error(key, e)
@@ -64,9 +65,9 @@ async function parseKeys() {
     .replace(/__/g, '"')
 }
 
-const types = `// auto generate by \`pnpm run update\`
+const types = `// auto generate by \`bun run update\`
 /* eslint-disable */
 export type UI = ${await parseKeys()}
 `
 
-writeFile('./src/type.d.ts', types, 'utf8')
+writeFileSync('./src/type.d.ts', types, 'utf8')
