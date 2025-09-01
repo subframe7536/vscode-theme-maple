@@ -58,11 +58,18 @@ export const generateViewColor: GenerateUIWithBaseColor = (base, ui, isDark) => 
   statusBarItem: {
     prominentBackground: ui.secondary,
     prominentForeground: ui.background,
+    prominentHoverForeground: ui.backgroundEditor,
     remoteBackground: ui.secondary,
     remoteForeground: ui.background,
+    remoteHoverForeground: ui.backgroundEditor,
     errorBackground: base.red,
     errorForeground: ui.background,
+    errorHoverForeground: ui.backgroundEditor,
     warningBackground: base.yellow,
     warningForeground: ui.background,
+    warningHoverForeground: ui.backgroundEditor,
+    offlineBackground: base.cyan,
+    offlineForeground: ui.background,
+    offlineHoverForeground: ui.backgroundEditor,
   },
 })
