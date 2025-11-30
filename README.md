@@ -23,6 +23,14 @@ A colorful VSCode theme, support light or dark mode, with medium brightness and 
 
 https://github.com/subframe7536/vscode-theme-maple/releases/latest
 
+#### Zed Editor
+
+https://github.com/subframe7536/zed-theme-maple
+
+#### Visual Studio
+
+[#17](https://github.com/subframe7536/vscode-theme-maple/issues/17#issuecomment-3592439153)
+
 #### Windows Terminal
 
 In `settings.json`
