@@ -1,19 +1,14 @@
-import type { BaseColor, TokenColor, UI, UIColor } from './type'
+import type { GenerateOption } from './opencode'
+import type { UI } from './type'
 
 import { writeFileSync } from 'node:fs'
 
 import { publisher as author } from '../package.json'
 import { colors } from './colors'
 import { buildTheme } from './modules'
+import { generateOpenCodeTheme } from './opencode'
 import { generateGhosttyTheme, generateWindowsTerminalScheme, replaceReadmeBlock } from './util'
 
-export interface GenerateOption {
-  name: string
-  isDark?: boolean
-  baseColor: BaseColor
-  tokenColor: TokenColor
-  uiColor: UIColor
-}
 function generateVSCodeTheme({
   name,
   isDark = true,
@@ -49,13 +44,19 @@ function generaterTerminal(name: string, term: NonNullable<UI['terminal']>) {
 
 function main() {
   try {
+    let darkEntry, lightEntry
     for (const [name, value] of Object.entries(colors)) {
-      const [isDark, term] = generateVSCodeTheme({ name, ...value })
+      const entry = { name, ...value }
+      const [isDark, term] = generateVSCodeTheme(entry)
       if (isDark) {
         generaterTerminal(name, term)
+        darkEntry = entry
+      } else {
+        lightEntry = entry
       }
-      console.log('Theme updated')
+      console.log(`${name} updated`)
     }
+    generateOpenCodeTheme(darkEntry!, lightEntry!)
   } catch (error) {
     console.error(error)
   }

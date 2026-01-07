@@ -23,6 +23,10 @@ A colorful VSCode theme, support light or dark mode, with medium brightness and 
 
 https://github.com/subframe7536/vscode-theme-maple/releases/latest
 
+#### Opencode
+
+[maple.json](./opencode/maple.json)
+
 #### Zed Editor
 
 https://github.com/subframe7536/zed-theme-maple
