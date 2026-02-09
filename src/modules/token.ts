@@ -297,6 +297,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     {
       scope: [
         'keyword.control.anchor.regexp',
+        'keyword.control.flow.block-scalar.literal.yaml',
         'storage.modifier.reference',
       ],
       fontStyle: font(),
