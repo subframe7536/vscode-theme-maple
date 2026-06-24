@@ -1,7 +1,7 @@
 {
   "name": "theme-maple",
   "displayName": "Maple Theme",
-  "version": "0.7.17",
+  "version": "1.0.0",
   "description": "A colorful editor theme, support light or dark mode, with medium brightness and low saturation.",
   "categories": [
     "Themes"

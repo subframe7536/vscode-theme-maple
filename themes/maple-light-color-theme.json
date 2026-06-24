@@ -467,6 +467,22 @@
     },
     {
       "scope": [
+        "punctuation.definition.template-expression",
+        "punctuation.definition.template-string",
+        "punctuation.definition.string.template.begin",
+        "punctuation.definition.string.template.end",
+        "meta.fstring.python constant.character.format.placeholder",
+        "string.interpolated",
+        "meta.interpolation",
+        "punctuation.section.interpolation",
+        "punctuation.definition.template-expression"
+      ],
+      "settings": {
+        "foreground": "#127d52"
+      }
+    },
+    {
+      "scope": [
         "punctuation.definition.string",
         "punctuation.support.type.property-name"
       ],
@@ -932,14 +948,6 @@
         "support.class.component.vue",
         "support.class.component.svelte",
         "support.class.component.astro"
-      ],
-      "settings": {
-        "foreground": "#127d52"
-      }
-    },
-    {
-      "scope": [
-        "meta.fstring.python constant.character.format.placeholder"
       ],
       "settings": {
         "foreground": "#127d52"
