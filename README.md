@@ -27,6 +27,24 @@ https://github.com/subframe7536/vscode-theme-maple/releases/latest
 
 [maple.json](./opencode/maple.json)
 
+#### Codex
+
+##### Dark
+
+<!-- CODEX-DARK -->
+```text
+codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#6285a7","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#cbd5e1","opaqueWindows":false,"semanticColors":{"diffAdded":"#a4dfae","diffRemoved":"#edabab","skill":"#d2ccff"},"surface":"#171718"},"variant":"dark"}
+```
+<!-- CODEX-DARK -->
+
+##### Light
+
+<!-- CODEX-LIGHT -->
+```text
+codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#d9dfd3","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#475569","opaqueWindows":false,"semanticColors":{"diffAdded":"#478f14","diffRemoved":"#bd5151","skill":"#726293"},"surface":"#fafaf9"},"variant":"light"}
+```
+<!-- CODEX-LIGHT -->
+
 #### Zed Editor
 
 https://github.com/subframe7536/zed-theme-maple
@@ -40,7 +58,6 @@ https://github.com/subframe7536/zed-theme-maple
 In `settings.json`
 
 <!-- WT -->
-
 ```json
 {
   "schemes": [
@@ -70,7 +87,6 @@ In `settings.json`
   ]
 }
 ```
-
 <!-- WT -->
 
 #### Ghostty
@@ -78,7 +94,6 @@ In `settings.json`
 https://ghostty.org/docs/features/theme
 
 <!-- GTTY -->
-
 ```
 background = #1e1e1f
 foreground = #cbd5e1
@@ -102,7 +117,6 @@ cursor-color = #cbd5e1
 selection-background = #cbd5e1
 selection-foreground = #1e1e1f
 ```
-
 <!-- GTTY -->
 
 ### Italic Style On Keywords

@@ -2,6 +2,7 @@ import { writeFileSync } from 'node:fs'
 
 import { publisher as author } from '../package.json'
 
+import { generateCodexThemes } from './codex'
 import { colors } from './colors'
 import { buildTheme } from './modules'
 import type { GenerateOption } from './opencode'
@@ -57,6 +58,7 @@ function main() {
       console.log(`${name} updated`)
     }
     generateOpenCodeTheme(darkEntry!, lightEntry!)
+    generateCodexThemes(darkEntry!, lightEntry!)
   } catch (error) {
     console.error(error)
   }
