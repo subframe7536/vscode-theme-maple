@@ -1,12 +1,12 @@
-import type { GenerateOption } from './opencode'
-import type { UI } from './type'
-
 import { writeFileSync } from 'node:fs'
 
 import { publisher as author } from '../package.json'
+
 import { colors } from './colors'
 import { buildTheme } from './modules'
+import type { GenerateOption } from './opencode'
 import { generateOpenCodeTheme } from './opencode'
+import type { UI } from './type'
 import { generateGhosttyTheme, generateWindowsTerminalScheme, replaceReadmeBlock } from './util'
 
 function generateVSCodeTheme({
@@ -28,8 +28,8 @@ function generateVSCodeTheme({
     `${JSON.stringify(themeJson, null, 2)}\n`,
   )
   const term = Object.keys(theme.colors)
-    .filter(k => k.startsWith('terminal.'))
-    .map(k => [k.substring(9), theme.colors[k]] as const)
+    .filter((k) => k.startsWith('terminal.'))
+    .map((k) => [k.substring(9), theme.colors[k]] as const)
 
   return [isDark, Object.fromEntries(term) as NonNullable<UI['terminal']>] as const
 }

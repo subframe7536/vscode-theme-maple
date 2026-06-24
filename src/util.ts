@@ -1,9 +1,9 @@
-import type { UI } from './type'
-import type { Instance } from 'tinycolor2'
-
 import { readFileSync, writeFileSync } from 'node:fs'
 
+import type { Instance } from 'tinycolor2'
 import tinycolor from 'tinycolor2'
+
+import type { UI } from './type'
 
 /**
  * unify color string to hex string with alpha
@@ -27,7 +27,7 @@ export function parseColor(colorString: string, alpha?: number) {
 export function brighten(
   colorString: string,
   amount: number,
-  handle: (c: Instance) => Instance = c => c,
+  handle: (c: Instance) => Instance = (c) => c,
 ) {
   return handle(tinycolor(colorString).brighten(amount)).toHexString()
 }
@@ -41,7 +41,7 @@ export function brighten(
 export function darken(
   colorString: string,
   amount: number,
-  handle: (c: Instance) => Instance = c => c,
+  handle: (c: Instance) => Instance = (c) => c,
 ) {
   return handle(tinycolor(colorString).darken(amount)).toHexString()
 }
@@ -51,19 +51,12 @@ export function getSchemeTextColor(bgColorString: string) {
   return parsedColor.getBrightness() < 60 ? '#fafafa' : '#1d1d1d'
 }
 
-export function replaceReadmeBlock(
-  blockName: string,
-  newContent: string,
-  lang: string = '',
-) {
+export function replaceReadmeBlock(blockName: string, newContent: string, lang: string = '') {
   const filePath = 'README.md'
   const tag = `<!-- ${blockName} -->`
 
   let content = readFileSync(filePath, 'utf-8')
-  const regex = new RegExp(
-    `${tag}[\\s\\S]*?${tag}`,
-    'g',
-  )
+  const regex = new RegExp(`${tag}[\\s\\S]*?${tag}`, 'g')
   const replacement = `${tag}\n\`\`\`${lang}\n${newContent}\n\`\`\`\n${tag}`
   content = content.replace(regex, replacement)
 
@@ -71,15 +64,14 @@ export function replaceReadmeBlock(
 }
 
 export function generateWindowsTerminalScheme(name: string, term: NonNullable<UI['terminal']>) {
-  const basicColors = Object.entries(term)
-    .map(([k, v]) => [
-      k.startsWith('ansi')
-        ? (k[4].toLowerCase() + k.substring(5))
-            .replace('magenta', 'purple')
-            .replace('Magenta', 'Purple')
-        : k,
-      v,
-    ])
+  const basicColors = Object.entries(term).map(([k, v]) => [
+    k.startsWith('ansi')
+      ? (k[4]!.toLowerCase() + k.substring(5))
+          .replace('magenta', 'purple')
+          .replace('Magenta', 'Purple')
+      : k,
+    v,
+  ])
   return {
     schemes: [
       Object.fromEntries([
@@ -112,14 +104,14 @@ const terminalColorMap = {
 } as const
 
 export function generateGhosttyTheme(term: NonNullable<UI['terminal']>) {
-  const result = Object.entries(term)
-    .map(([k, v]) => {
-      if (k.startsWith('ansi')) {
-        const key = terminalColorMap[k[4].toLowerCase() + k.substring(5) as keyof typeof terminalColorMap]
-        return `palette = ${key}=${v}`
-      }
-      return `${k} = ${v}`
-    })
+  const result = Object.entries(term).map(([k, v]) => {
+    if (k.startsWith('ansi')) {
+      const key =
+        terminalColorMap[(k[4]!.toLowerCase() + k.substring(5)) as keyof typeof terminalColorMap]
+      return `palette = ${key}=${v}`
+    }
+    return `${k} = ${v}`
+  })
 
   result.push(
     `cursor-color = ${term.foreground}`,

@@ -1,6 +1,7 @@
 {
-  "extends": "@subframe7536/type-utils",
+  "extends": "@subf/config/tsconfig-lib",
   "compilerOptions": {
-    "lib": ["ESNext"]
-  }
+    "types": ["node"]
+  },
+  "exclude": ["examples"]
 }

@@ -1,5 +1,4 @@
 import type { BaseColor } from './type'
-
 import { brighten, darken, parseColor } from './util'
 
 export function buildTerminalColor(
@@ -12,11 +11,17 @@ export function buildTerminalColor(
     [buildKey('black', true)]: parseColor('hsl(0, 0%, 40%)'),
     [buildKey('blue', true)]: brighten(isDark ? base.blue : darken(base.blue, 2), brightenDelta),
     [buildKey('cyan', true)]: brighten(base.cyan, brightenDelta),
-    [buildKey('green', true)]: brighten(isDark ? base.green : darken(base.greenLight, 8), brightenDelta),
+    [buildKey('green', true)]: brighten(
+      isDark ? base.green : darken(base.greenLight, 8),
+      brightenDelta,
+    ),
     [buildKey('magenta', true)]: brighten(base.purple, brightenDelta),
     [buildKey('red', true)]: brighten(base.red, brightenDelta),
     [buildKey('white', true)]: parseColor('hsl(0, 0%, 100%)'),
-    [buildKey('yellow', true)]: brighten(isDark ? base.yellow : darken(base.orange, 4), brightenDelta),
+    [buildKey('yellow', true)]: brighten(
+      isDark ? base.yellow : darken(base.orange, 4),
+      brightenDelta,
+    ),
     [buildKey('black')]: parseColor('hsl(0, 0%, 20%)'),
     [buildKey('blue')]: isDark ? base.blue : darken(base.blue, 2),
     [buildKey('cyan')]: base.cyan,

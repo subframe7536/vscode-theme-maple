@@ -1,5 +1,4 @@
 import type { GenerateUIWithBaseColor } from '../../type'
-
 import { brighten, parseColor } from '../../util'
 
 export const generateViewColor: GenerateUIWithBaseColor = (base, ui, isDark) => ({

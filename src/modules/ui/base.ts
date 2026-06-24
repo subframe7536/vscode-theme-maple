@@ -1,8 +1,7 @@
 import type { GenerateUIFn } from '../../type'
-
 import { parseColor } from '../../util'
 
-export const generateBaseColor: GenerateUIFn = ui => ({
+export const generateBaseColor: GenerateUIFn = (ui) => ({
   focusBorder: ui.borderActive,
   foreground: ui.foreground,
   // selection in workbench

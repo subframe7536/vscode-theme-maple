@@ -1,6 +1,6 @@
-import type { BaseColor, TokenColor, UIColor } from './type'
-
 import { writeFileSync } from 'node:fs'
+
+import type { BaseColor, TokenColor, UIColor } from './type'
 
 export interface GenerateOption {
   name: string
@@ -42,8 +42,14 @@ export function generateOpenCodeTheme(darkOpts: GenerateOption, lightOpts: Gener
       diffRemovedBg: { dark: darkUi.backgroundEditorAlt, light: lightUi.backgroundEditorAlt },
       diffContextBg: { dark: darkUi.backgroundEditor, light: lightUi.backgroundEditor },
       diffLineNumber: { dark: darkUi.foregroundAlt, light: lightUi.foregroundAlt },
-      diffAddedLineNumberBg: { dark: darkUi.backgroundEditorAlt, light: lightUi.backgroundEditorAlt },
-      diffRemovedLineNumberBg: { dark: darkUi.backgroundEditorAlt, light: lightUi.backgroundEditorAlt },
+      diffAddedLineNumberBg: {
+        dark: darkUi.backgroundEditorAlt,
+        light: lightUi.backgroundEditorAlt,
+      },
+      diffRemovedLineNumberBg: {
+        dark: darkUi.backgroundEditorAlt,
+        light: lightUi.backgroundEditorAlt,
+      },
       markdownText: { dark: darkUi.foreground, light: lightUi.foreground },
       markdownHeading: { dark: darkToken.markdown.title, light: lightToken.markdown.title },
       markdownLink: { dark: darkToken.link, light: lightToken.link },
@@ -70,8 +76,5 @@ export function generateOpenCodeTheme(darkOpts: GenerateOption, lightOpts: Gener
     },
   }
 
-  writeFileSync(
-    `./opencode/maple.json`,
-    `${JSON.stringify(opencodeTheme, null, 2)}\n`,
-  )
+  writeFileSync(`./opencode/maple.json`, `${JSON.stringify(opencodeTheme, null, 2)}\n`)
 }

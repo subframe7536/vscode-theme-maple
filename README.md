@@ -40,6 +40,7 @@ https://github.com/subframe7536/zed-theme-maple
 In `settings.json`
 
 <!-- WT -->
+
 ```json
 {
   "schemes": [
@@ -69,6 +70,7 @@ In `settings.json`
   ]
 }
 ```
+
 <!-- WT -->
 
 #### Ghostty
@@ -76,6 +78,7 @@ In `settings.json`
 https://ghostty.org/docs/features/theme
 
 <!-- GTTY -->
+
 ```
 background = #1e1e1f
 foreground = #cbd5e1
@@ -99,6 +102,7 @@ cursor-color = #cbd5e1
 selection-background = #cbd5e1
 selection-foreground = #1e1e1f
 ```
+
 <!-- GTTY -->
 
 ### Italic Style On Keywords
@@ -111,18 +115,18 @@ If you just want the italic style on keywords like the theme do, just add this s
   "editor.semanticTokenColorCustomizations": {
     "rules": {
       "interface": {
-        "italic": true
+        "italic": true,
       },
       "selfParameter": {
-        "italic": true
+        "italic": true,
       },
       "keyword": {
-        "italic": true
+        "italic": true,
       },
       "*.static": {
-        "italic": true
-      }
-    }
+        "italic": true,
+      },
+    },
   },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -140,14 +144,14 @@ If you just want the italic style on keywords like the theme do, just add this s
           "storage.type",
           "storage.modifier",
           "variable.language.this",
-          "markup.italic"
+          "markup.italic",
         ],
         "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
-  }
+          "fontStyle": "italic",
+        },
+      },
+    ],
+  },
 }
 ```
 
@@ -158,4 +162,5 @@ If you just want the italic style on keywords like the theme do, just add this s
 - Type check: [dracula](https://github.com/dracula/visual-studio-code)
 
 ## License
+
 MIT

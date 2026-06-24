@@ -1,6 +1,6 @@
 import type { BaseColor, TokenColor, UI, UIColor } from '../type'
-
 import { brighten, darken } from '../util'
+
 import { generateTokenColor } from './token'
 import { generateBaseColor } from './ui/base'
 import { generateEditorColor } from './ui/editor'
@@ -28,12 +28,7 @@ function buildUI(themeDev: UI) {
   return theme
 }
 
-export function buildTheme(
-  base: BaseColor,
-  token: TokenColor,
-  ui: UIColor,
-  isDark: boolean,
-) {
+export function buildTheme(base: BaseColor, token: TokenColor, ui: UIColor, isDark: boolean) {
   const changeColor = (color: string, amount: number | [dark: number, light: number]) => {
     const data = typeof amount === 'number' ? amount : amount[isDark ? 0 : 1]
     return (isDark ? darken : brighten)(color, data)

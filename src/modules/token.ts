@@ -1,8 +1,7 @@
-import type { TokenColor } from '../type'
 import type { PathRecord } from 'object-path-access'
-
 import { pathGet } from 'object-path-access'
 
+import type { TokenColor } from '../type'
 import { parseColor } from '../util'
 
 const fontStyles = ['italic', 'bold', 'underline', 'strikethrough'] as const
@@ -14,35 +13,33 @@ type Token = {
   fontStyle?: string
 }[]
 
-type SemanticTokenColors = Record<string, string | {
-  foreground?: string
-  italic?: boolean
-  bold?: boolean
-  strikethrough?: boolean
-  underline?: boolean
-}>
+type SemanticTokenColors = Record<
+  string,
+  | string
+  | {
+      foreground?: string
+      italic?: boolean
+      bold?: boolean
+      strikethrough?: boolean
+      underline?: boolean
+    }
+>
 
-function font(...styles: (typeof fontStyles[number])[] | []) {
-  return styles.slice(0, 4)
+function font(...styles: (typeof fontStyles)[number][] | []) {
+  return styles
+    .slice(0, 4)
     .filter(Boolean)
     .sort((a, b) => fontStyles.indexOf(a) - fontStyles.indexOf(b))
     .join(' ')
 }
 
 export function generateTokenColor(tokens: TokenColor, plainColor: string) {
-  const maple = (
-    key: PathRecord<TokenColor>,
-    alpha?: number,
-  ) => parseColor(pathGet(tokens, key) as string, alpha)
+  const maple = (key: PathRecord<TokenColor>, alpha?: number) =>
+    parseColor(pathGet(tokens, key) as string, alpha)
 
   const token: Token = [
     {
-      scope: [
-        'comment',
-        'string.comment',
-        'comment.line',
-        'punctuation.definition.comment',
-      ],
+      scope: ['comment', 'string.comment', 'comment.line', 'punctuation.definition.comment'],
       foreground: maple('comment'),
     },
     {
@@ -67,19 +64,12 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('operator'),
     },
     {
-      scope: [
-        'punctuation',
-        'meta.brace',
-        'meta.attribute punctuation.separator',
-      ],
+      scope: ['punctuation', 'meta.brace', 'meta.attribute punctuation.separator'],
       foreground: maple('punctuation'),
     },
     // , ;
     {
-      scope: [
-        'punctuation.terminator',
-        'punctuation.separator',
-      ],
+      scope: ['punctuation.terminator', 'punctuation.separator'],
       foreground: maple('punctuation', 0.8),
     },
     {
@@ -105,10 +95,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('function'),
     },
     {
-      scope: [
-        'entity.name.tag',
-        'tag.html',
-      ],
+      scope: ['entity.name.tag', 'tag.html'],
       foreground: maple('htmlTag'),
     },
     {
@@ -128,34 +115,21 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('keyword.normal'),
     },
     {
-      scope: [
-        'storage.type.annotation.java',
-      ],
+      scope: ['storage.type.annotation.java'],
       foreground: maple('java.annotation'),
       fontStyle: font(),
     },
     {
-      scope: [
-        'storage',
-        'storage.type',
-        'support.type.builtin',
-      ],
+      scope: ['storage', 'storage.type', 'support.type.builtin'],
       foreground: maple('builtin'),
     },
     {
-      scope: [
-        'constant.language.undefined',
-        'constant.language.null',
-        'constant.language.nullptr',
-      ],
+      scope: ['constant.language.undefined', 'constant.language.null', 'constant.language.nullptr'],
       foreground: maple('keyword.alt'),
       fontStyle: font('italic'),
     },
     {
-      scope: [
-        'support.type.primitive',
-        'support.type.builtin',
-      ],
+      scope: ['support.type.primitive', 'support.type.builtin'],
       fontStyle: font('bold'),
     },
     {
@@ -175,18 +149,15 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'punctuation.definition.string.template.begin',
         'punctuation.definition.string.template.end',
         'meta.fstring.python constant.character.format.placeholder',
-        "string.interpolated",
-        "meta.interpolation",
-        "punctuation.section.interpolation",
-        "punctuation.definition.template-expression"
+        'string.interpolated',
+        'meta.interpolation',
+        'punctuation.section.interpolation',
+        'punctuation.definition.template-expression',
       ],
       foreground: maple('string.template'),
     },
     {
-      scope: [
-        'punctuation.definition.string',
-        'punctuation.support.type.property-name',
-      ],
+      scope: ['punctuation.definition.string', 'punctuation.support.type.property-name'],
       foreground: maple('string.normal', 0.7),
     },
     {
@@ -219,9 +190,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('property.normal'),
     },
     {
-      scope: [
-        'source.css support.type.property-name',
-      ],
+      scope: ['source.css support.type.property-name'],
       foreground: maple('property.declaration'),
     },
     {
@@ -240,24 +209,16 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('variable.local'),
     },
     {
-      scope: [
-        'support.type.primitive',
-        'entity.name.type.instance.jsdoc',
-      ],
+      scope: ['support.type.primitive', 'entity.name.type.instance.jsdoc'],
       foreground: maple('type.primitive'),
     },
     {
-      scope: [
-        'entity.name.type.parameter',
-      ],
+      scope: ['entity.name.type.parameter'],
       foreground: maple('type.parameter'),
       fontStyle: font('bold'),
     },
     {
-      scope: [
-        'entity.name.type.parameter.cpp',
-        'entity.name.type.ts',
-      ],
+      scope: ['entity.name.type.parameter.cpp', 'entity.name.type.ts'],
       foreground: maple('type.normal'),
     },
     {
@@ -273,18 +234,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('namespace'),
     },
     {
-      scope: [
-        'meta.type.annotation',
-        'support.type',
-      ],
+      scope: ['meta.type.annotation', 'support.type'],
       foreground: maple('interface.normal'),
     },
     {
-      scope: [
-        'keyword.operator',
-        'keyword.operator.assignment.compound',
-        'meta.var.expr.ts',
-      ],
+      scope: ['keyword.operator', 'keyword.operator.assignment.compound', 'meta.var.expr.ts'],
       foreground: maple('operator'),
     },
     {
@@ -332,11 +286,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('escape'),
     },
     {
-      scope: [
-        'constant.numeric',
-        'constant.numeric.hex storage.type.number',
-        'number',
-      ],
+      scope: ['constant.numeric', 'constant.numeric.hex storage.type.number', 'number'],
       foreground: maple('number'),
       fontStyle: font(),
     },
@@ -349,29 +299,19 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('css.pseudo'),
     },
     {
-      scope: [
-        'source.css variable',
-      ],
+      scope: ['source.css variable'],
       foreground: maple('css.variable'),
     },
     {
-      scope: [
-        'keyword.other.unit',
-        'punctuation.definition.constant.css',
-      ],
+      scope: ['keyword.other.unit', 'punctuation.definition.constant.css'],
       foreground: maple('css.unit'),
     },
     {
-      scope: [
-        'source.css support.function',
-      ],
+      scope: ['source.css support.function'],
       foreground: maple('css.function'),
     },
     {
-      scope: [
-        'constant.language.boolean',
-        'constant.language',
-      ],
+      scope: ['constant.language.boolean', 'constant.language'],
       foreground: maple('boolean'),
     },
     {
@@ -415,17 +355,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('markdown.code'),
     },
     {
-      scope: [
-        'markup.deleted',
-        'punctuation.definition.deleted',
-      ],
+      scope: ['markup.deleted', 'punctuation.definition.deleted'],
       foreground: maple('diff.deleted'),
     },
     {
-      scope: [
-        'markup.inserted',
-        'punctuation.definition.inserted',
-      ],
+      scope: ['markup.inserted', 'punctuation.definition.inserted'],
       foreground: maple('diff.inserted'),
     },
     {
@@ -482,32 +416,20 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('link'),
     },
     {
-      scope: [
-        'string.other.link.description',
-        'string.other.link.title',
-      ],
+      scope: ['string.other.link.description', 'string.other.link.title'],
       foreground: maple('string.normal'),
     },
     {
-      scope: [
-        'variable.other.link.underline',
-      ],
+      scope: ['variable.other.link.underline'],
       fontStyle: font('underline'),
     },
     {
-      scope: [
-        'markup.underline.link.markdown',
-        'markup.underline.link.image.markdown',
-      ],
+      scope: ['markup.underline.link.markdown', 'markup.underline.link.image.markdown'],
       foreground: maple('link'),
       fontStyle: font('underline'),
     },
     {
-      scope: [
-        'variable.parameter',
-        'variable.other.jsdoc',
-        'meta.import variable',
-      ],
+      scope: ['variable.parameter', 'variable.other.jsdoc', 'meta.import variable'],
       foreground: maple('parameter'),
     },
     {
@@ -521,10 +443,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('class.normal'),
     },
     {
-      scope: [
-        'entity.name.section.group-title',
-        'support.type.property-name.table.toml',
-      ],
+      scope: ['entity.name.section.group-title', 'support.type.property-name.table.toml'],
       foreground: maple('keyword.normal'),
     },
     {
@@ -540,21 +459,15 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('js.component'),
     },
     {
-      scope: [
-        'string.quoted.docstring.multi.python keyword.control',
-      ],
+      scope: ['string.quoted.docstring.multi.python keyword.control'],
       fontStyle: font(),
     },
     {
-      scope: [
-        'invalid.illegal.unrecognized-tag.html',
-      ],
+      scope: ['invalid.illegal.unrecognized-tag.html'],
       fontStyle: font(),
     },
     {
-      scope: [
-        'source.vue meta.tag.other.unrecognized.html',
-      ],
+      scope: ['source.vue meta.tag.other.unrecognized.html'],
       foreground: maple('operator'),
       fontStyle: font(),
     },
@@ -630,29 +543,20 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       fontStyle: font('bold'),
     },
     {
-      scope: [
-        'storage.type.function.arrow',
-      ],
+      scope: ['storage.type.function.arrow'],
       fontStyle: font(),
     },
     {
-      scope: [
-        'storage.type.java',
-        'punctuation.definition.string.template',
-      ],
+      scope: ['storage.type.java', 'punctuation.definition.string.template'],
       fontStyle: font('bold'),
     },
     // java
     {
-      scope: [
-        'source.java storage.type.primitive',
-      ],
+      scope: ['source.java storage.type.primitive'],
       fontStyle: font('bold'),
     },
     {
-      scope: [
-        'source.java variable.parameter',
-      ],
+      scope: ['source.java variable.parameter'],
       fontStyle: font('underline'),
     },
     {
@@ -664,15 +568,11 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       foreground: maple('java.class'),
     },
     {
-      scope: [
-        'entity.name.namespace',
-      ],
+      scope: ['entity.name.namespace'],
       foreground: maple('java.import'),
     },
     {
-      scope: [
-        'meta.jsx.children',
-      ],
+      scope: ['meta.jsx.children'],
       foreground: plainColor,
     },
     {
@@ -684,76 +584,58 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
     },
     // nix
     {
-      scope: [
-        'source.nix invalid',
-      ],
+      scope: ['source.nix invalid'],
       foreground: maple('operator'),
       fontStyle: font(),
     },
     {
-      scope: [
-        'source.nix invalid.illegal.reserved',
-      ],
+      scope: ['source.nix invalid.illegal.reserved'],
       foreground: maple('keyword.normal'),
       fontStyle: font(),
     },
     // rust
     {
-      scope: [
-        'entity.name.type.rust',
-      ],
+      scope: ['entity.name.type.rust'],
       foreground: maple('type.normal'),
       fontStyle: font(),
     },
     // log
     {
-      scope: [
-        'log.error',
-      ],
+      scope: ['log.error'],
       foreground: maple('log.error'),
     },
     {
-      scope: [
-        'log.warning',
-      ],
+      scope: ['log.warning'],
       foreground: maple('log.warn'),
     },
     {
-      scope: [
-        'log.info',
-      ],
+      scope: ['log.info'],
       foreground: maple('log.info'),
     },
     {
-      scope: [
-        'log.debug',
-      ],
+      scope: ['log.debug'],
       foreground: maple('log.debug'),
     },
     {
-      scope: [
-        'log.verbose',
-      ],
+      scope: ['log.verbose'],
       foreground: maple('log.trace'),
     },
     {
-      scope: [
-        'log.date',
-      ],
+      scope: ['log.date'],
       foreground: maple('log.date'),
     },
   ]
   return {
     semanticHighlighting: true,
     semanticTokenColors: {
-      'parameter': {
+      parameter: {
         foreground: maple('parameter'),
         underline: true,
       },
       'property.declaration': maple('property.declaration'),
       'property.readonly': maple('property.normal'),
       'property.defaultLibrary': maple('property.defaultLib'),
-      'interface': {
+      interface: {
         foreground: maple('interface.normal'),
         italic: true,
         bold: true,
@@ -763,23 +645,23 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
       },
       'variable.defaultLibrary': maple('variable.defaultLib'),
       'variable.callable': maple('function'),
-      'type': {
+      type: {
         bold: true,
         foreground: maple('type.normal'),
       },
       'type.defaultLibrary': maple('type.defaultLib'),
-      'function': maple('function'),
+      function: maple('function'),
       'function.defaultLibrary': {
         bold: true,
       },
       'function.builtin': {
         bold: true,
       },
-      'namespace': {
+      namespace: {
         foreground: maple('namespace'),
         bold: true,
       },
-      'class': {
+      class: {
         foreground: maple('class.normal'),
         italic: false,
         bold: false,
@@ -788,7 +670,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         foreground: maple('class.defaultLib'),
         bold: true,
       },
-      'struct': maple('class.normal'),
+      struct: maple('class.normal'),
       'struct.defaultLibrary': {
         foreground: maple('class.defaultLib'),
         bold: true,
@@ -804,24 +686,24 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         foreground: maple('type.primitive'),
         bold: true,
       },
-      'selfParameter': {
+      selfParameter: {
         foreground: maple('keyword.alt'),
         italic: true,
         underline: false,
       },
-      'selfKeyword': {
+      selfKeyword: {
         foreground: maple('keyword.alt'),
         italic: true,
         underline: false,
       },
-      'enum': maple('enum.normal'),
-      'enumMember': maple('property.declaration'),
+      enum: maple('enum.normal'),
+      enumMember: maple('property.declaration'),
       // rust cfg
-      'builtinAttribute': maple('parameter'),
+      builtinAttribute: maple('parameter'),
       'generic.attribute': maple('parameter'),
       'deriveHelper.attribute': maple('function'),
       'builtinAttribute.attribute': maple('function'),
-      'tomlTableKey': maple('parameter'),
+      tomlTableKey: maple('parameter'),
       'enum.defaultLibrary': {
         foreground: maple('enum.defaultLib'),
         bold: true,
