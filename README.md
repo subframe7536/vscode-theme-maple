@@ -33,7 +33,7 @@ https://github.com/subframe7536/vscode-theme-maple/releases/latest
 
 <!-- CODEX-DARK -->
 ```text
-codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#6285a7","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#cbd5e1","opaqueWindows":false,"semanticColors":{"diffAdded":"#a4dfae","diffRemoved":"#edabab","skill":"#d2ccff"},"surface":"#171718"},"variant":"dark"}
+codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#4d6b89","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#d8e2ee","opaqueWindows":false,"semanticColors":{"diffAdded":"#a4dfae","diffRemoved":"#edabab","skill":"#f0c0a8"},"surface":"#171718"},"variant":"dark"}
 ```
 <!-- CODEX-DARK -->
 
@@ -41,7 +41,7 @@ codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#6285a7","contrast":45,
 
 <!-- CODEX-LIGHT -->
 ```text
-codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#d9dfd3","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#475569","opaqueWindows":false,"semanticColors":{"diffAdded":"#478f14","diffRemoved":"#bd5151","skill":"#726293"},"surface":"#fafaf9"},"variant":"light"}
+codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#bfcab5","contrast":45,"fonts":{"code":"Maple Mono NF CN","ui":null},"ink":"#546276","opaqueWindows":false,"semanticColors":{"diffAdded":"#478f14","diffRemoved":"#bd5151","skill":"#c37522"},"surface":"#fafaf9"},"variant":"light"}
 ```
 <!-- CODEX-LIGHT -->
 

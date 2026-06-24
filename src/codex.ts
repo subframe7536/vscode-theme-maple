@@ -1,5 +1,5 @@
 import type { GenerateOption } from './opencode'
-import { replaceReadmeBlock } from './util'
+import { brighten, darken, replaceReadmeBlock } from './util'
 
 const fonts = {
   code: 'Maple Mono NF CN',
@@ -10,15 +10,15 @@ function generateCodexTheme({ isDark = true, tokenColor, uiColor }: GenerateOpti
   return `codex-theme-v1:${JSON.stringify({
     codeThemeId: 'codex',
     theme: {
-      accent: uiColor.primary,
+      accent: darken(uiColor.primary, 10),
       contrast: 45,
       fonts,
-      ink: uiColor.foreground,
+      ink: brighten(uiColor.foreground, 5),
       opaqueWindows: false,
       semanticColors: {
         diffAdded: tokenColor.diff.inserted,
         diffRemoved: tokenColor.diff.deleted,
-        skill: tokenColor.keyword.normal,
+        skill: tokenColor.class.normal,
       },
       surface: uiColor.background,
     },
