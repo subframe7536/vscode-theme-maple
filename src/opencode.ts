@@ -62,7 +62,7 @@ export function generateOpenCodeTheme(darkOpts: GenerateOption, lightOpts: Gener
       syntaxKeyword: { dark: darkToken.keyword.normal, light: lightToken.keyword.normal },
       syntaxFunction: { dark: darkToken.function, light: lightToken.function },
       syntaxVariable: { dark: darkToken.variable.local, light: lightToken.variable.local },
-      syntaxString: { dark: darkToken.string, light: lightToken.string },
+      syntaxString: { dark: darkToken.string.normal, light: lightToken.string.normal },
       syntaxNumber: { dark: darkToken.number, light: lightToken.number },
       syntaxType: { dark: darkToken.type.normal, light: lightToken.type.normal },
       syntaxOperator: { dark: darkToken.operator, light: lightToken.operator },

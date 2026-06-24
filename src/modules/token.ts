@@ -166,14 +166,28 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'meta.attribute-selector.scss',
         'entity.name.import.go',
       ],
-      foreground: maple('string'),
+      foreground: maple('string.normal'),
+    },
+    {
+      scope: [
+        'punctuation.definition.template-expression',
+        'punctuation.definition.template-string',
+        'punctuation.definition.string.template.begin',
+        'punctuation.definition.string.template.end',
+        'meta.fstring.python constant.character.format.placeholder',
+        "string.interpolated",
+        "meta.interpolation",
+        "punctuation.section.interpolation",
+        "punctuation.definition.template-expression"
+      ],
+      foreground: maple('string.template'),
     },
     {
       scope: [
         'punctuation.definition.string',
         'punctuation.support.type.property-name',
       ],
-      foreground: maple('string', 0.7),
+      foreground: maple('string.normal', 0.7),
     },
     {
       scope: [
@@ -472,7 +486,7 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'string.other.link.description',
         'string.other.link.title',
       ],
-      foreground: maple('string'),
+      foreground: maple('string.normal'),
     },
     {
       scope: [
@@ -524,12 +538,6 @@ export function generateTokenColor(tokens: TokenColor, plainColor: string) {
         'support.class.component.astro',
       ],
       foreground: maple('js.component'),
-    },
-    {
-      scope: [
-        'meta.fstring.python constant.character.format.placeholder',
-      ],
-      foreground: maple('python.fstring'),
     },
     {
       scope: [

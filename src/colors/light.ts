@@ -45,7 +45,10 @@ const uiColor: UIColor = {
 export const tokenColor: TokenColor = {
   htmlTag: base.red,
   comment: base.gray,
-  string: base.green,
+  string: {
+    normal: base.green,
+    template: base.cyan
+  },
   keyword: {
     normal: base.purple,
     alt: base.pink,
@@ -103,9 +106,6 @@ export const tokenColor: TokenColor = {
     class: base.orange,
     import: base.yellow,
     annotation: base.blue,
-  },
-  python: {
-    fstring: base.cyan,
   },
   markdown: {
     title: base.purple,

@@ -20,7 +20,10 @@ export type BaseColor = {
 export type TokenColor = {
   htmlTag: string
   comment: string
-  string: string
+  string: {
+    normal: string
+    template: string
+  }
   keyword: {
     normal: string
     alt: string
@@ -78,9 +81,6 @@ export type TokenColor = {
     class: string
     import: string
     annotation: string
-  }
-  python: {
-    fstring: string
   }
   markdown: {
     title: string
